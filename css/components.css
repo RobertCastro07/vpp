@@ -437,6 +437,7 @@
 .services-impact {
   background: var(--color-bg-dark);
   padding: var(--space-2xl) 0;
+  overflow: hidden; /* evita scroll horizontal por fade-left de AOS */
 }
 
 .services-bento {
