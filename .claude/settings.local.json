@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\css\" \"C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\js\" \"C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\images\\\\logo\" \"C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\images\\\\hero\" \"C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\images\\\\servicios\" \"C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\images\\\\productos\" \"C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\images\\\\sucursales\" \"C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\images\\\\icons\")",
+      "Bash(cp \"C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\Logo-Visual-Point-Y-300x104.png\" \"C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\images\\\\logo\\\\Logo-Visual-Point-Y-300x104.png\")",
+      "Bash(gh auth:*)",
+      "Bash(git --version)",
+      "Bash(powershell -Command \"$c = Get-Content 'C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\images\\\\logo\\\\logo-lb-trp.svg' -Raw -Encoding UTF8; $c.Substring\\(0,600\\)\")",
+      "Bash(cmd /c \"type \"\"C:\\\\Users\\\\Robert Castro\\\\proyectos\\\\vpp\\\\images\\\\logo\\\\logo-lb-trp.svg\"\"\")",
+      "WebSearch",
+      "WebFetch(domain:mapcarta.com)",
+      "WebFetch(domain:www.latlong.net)",
+      "WebFetch(domain:wanderlog.com)",
+      "WebFetch(domain:foursquare.com)",
+      "WebFetch(domain:vymaps.com)",
+      "WebFetch(domain:panama.worldplaces.me)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:commons.wikimedia.org)"
+    ]
+  }
+}

@@ -1,0 +1,344 @@
+/* ================================================
+   Visual Point Panamá — styles.css
+   Variables, reset y estilos globales
+   Mobile First (375px base)
+================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
+
+/* ---- Variables ---- */
+:root {
+  /* Colores principales */
+  --color-primary:    #1a1a1a;
+  --color-gold:       #F5C800;
+  --color-gold-dark:  #C9A800;
+  --color-gold-light: #FFD700;
+
+  /* Fondos */
+  --color-bg:       #ffffff;
+  --color-bg-soft:  #f8f8f8;
+  --color-bg-dark:  #111111;
+
+  /* Textos */
+  --color-text:       #2d2d2d;
+  --color-text-light: #6b7280;
+  --color-text-white: #ffffff;
+
+  /* Utilidades */
+  --color-border:  #e5e7eb;
+  --color-success: #10b981;
+
+  /* Tipografía */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body:    'Open Sans', sans-serif;
+
+  /* Espaciado */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  /* Efectos */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+  --radius:    8px;
+  --radius-lg: 16px;
+  --transition: 0.3s ease;
+
+  /* Layout */
+  --container-max: 1280px;
+  --promo-bar-height: 40px;
+  --navbar-height: 60px;
+  --top-offset: calc(var(--promo-bar-height) + var(--navbar-height));
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ---- Contenedor ---- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---- Tipografía ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+h1 { font-size: clamp(1.75rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+h3 { font-size: clamp(1.125rem, 3vw, 1.5rem); }
+h4 { font-size: clamp(1rem, 2vw, 1.25rem); }
+
+p {
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* ---- Sección global ---- */
+.section {
+  padding: var(--space-xl) 0;
+}
+
+.section--dark {
+  background-color: var(--color-bg-dark);
+}
+
+.section--soft {
+  background-color: var(--color-bg-soft);
+}
+
+/* ---- Encabezado de sección ---- */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.section-header h2 {
+  margin-bottom: var(--space-xs);
+}
+
+.section-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* Línea decorativa dorada bajo títulos */
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 3px;
+  background-color: var(--color-gold);
+  border-radius: 2px;
+}
+
+.section-title--left::after {
+  left: 0;
+  transform: none;
+}
+
+/* ---- Botones ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  min-height: 48px;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  text-transform: uppercase;
+}
+
+.btn--primary {
+  background-color: var(--color-gold);
+  color: var(--color-primary);
+  border: 2px solid var(--color-gold);
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+  background-color: var(--color-gold-dark);
+  border-color: var(--color-gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 200, 0, 0.35);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-text-white);
+  border: 2px solid var(--color-text-white);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.btn--dark {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  border: 2px solid var(--color-primary);
+}
+
+.btn--dark:hover,
+.btn--dark:focus {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.btn--whatsapp {
+  background-color: #25D366;
+  color: #fff;
+  border: 2px solid #25D366;
+}
+
+.btn--whatsapp:hover {
+  background-color: #1ebe5d;
+  border-color: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+/* ---- Grid helper ---- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+/* ---- Placeholders de imágenes ---- */
+.img-placeholder {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius);
+}
+
+/* ---- Utilidades ---- */
+.text-center  { text-align: center; }
+.text-gold    { color: var(--color-gold); }
+.text-white   { color: var(--color-text-white); }
+.text-light   { color: var(--color-text-light); }
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+
+/* ---- Grid de productos home ---- */
+.product-grid-home {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 1024px) {
+  .product-grid-home {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---- Tablet (768px+) ---- */
+@media (min-width: 768px) {
+  :root {
+    --navbar-height: 68px;
+    --top-offset: calc(var(--promo-bar-height) + var(--navbar-height));
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- Escritorio (1024px+) ---- */
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
