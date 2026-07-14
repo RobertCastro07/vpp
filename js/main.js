@@ -90,15 +90,15 @@
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
+        var targetEl = document.querySelector(this.getAttribute('href'));
+        if (targetEl) {
           e.preventDefault();
-          const navbarH = parseInt(
-            getComputedStyle(document.documentElement).getPropertyValue('--navbar-height'),
-            10
-          ) || 64;
-          const top = target.getBoundingClientRect().top + window.scrollY - navbarH - 16;
-          window.scrollTo({ top, behavior: 'smooth' });
+          var promoEl = document.getElementById('promo-bar');
+          var promoH  = (promoEl && promoEl.style.display !== 'none') ? promoEl.offsetHeight : 0;
+          var navEl   = document.querySelector('.navbar');
+          var navH    = navEl ? navEl.offsetHeight : 60;
+          var top     = targetEl.getBoundingClientRect().top + window.scrollY - promoH - navH - 8;
+          window.scrollTo({ top: top, behavior: 'smooth' });
         }
       });
     });

@@ -49,11 +49,23 @@
 
 .promo-bar__link:hover { opacity: 0.7; }
 
-/* En móviles muy pequeños ocultamos el link para que quepa el texto */
+/* En móviles muy pequeños: texto en 2 líneas, altura ajustada */
 @media (max-width: 479px) {
+  :root { --promo-bar-height: 56px; }
+  .promo-bar {
+    padding: 0.45rem 2.5rem 0.45rem 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .promo-bar__link { display: none; }
   .promo-bar__text {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
+    white-space: normal;
+    text-overflow: clip;
+    overflow: visible;
+    text-align: center;
+    line-height: 1.35;
   }
 }
 
@@ -2430,9 +2442,28 @@
   .promo-sparkle--3,
   .promo-sparkle--4 { display: none; }
 
-  /* Stats/contadores */
+  /* Stats/contadores — número más pequeño para no desbordarse en 2 columnas */
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .stat-item { padding: 1.25rem 0.75rem; }
+  .stat-item__number { font-size: clamp(1.5rem, 7vw, 2.5rem); }
+}
+
+/* --- Muy pequeño (< 480px): beneficios 1 columna, texto legible --- */
+@media (max-width: 479px) {
+  .benefits-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  .benefits-grid > div {
+    gap: 0.75rem;
+  }
+  .benefits-grid > div > div:first-child {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+  }
+  .benefits-grid h4 { font-size: 0.9rem !important; }
+  .benefits-grid p  { font-size: 0.82rem !important; }
 }
 
 /* --- Tablet (768px–1023px) --- */
