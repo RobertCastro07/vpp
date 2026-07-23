@@ -602,12 +602,27 @@ body.has-navigated .hint{opacity:0;pointer-events:none;}
   }
 }
 
-/* ---------- print ---------- */
+/* ---------- print: real slide dimensions, no page margins ---------- */
+@page{size:13.333in 7.5in;margin:0;}
 @media print{
+  html,body{margin:0;padding:0;}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
   .rail,.fs-btn,.hint,.counter-fixed,.logo-chip{display:none !important;}
   .deck{height:auto;overflow:visible;}
-  .slide{height:100vh;min-height:100vh;page-break-after:always;}
+  .slide{
+    width:13.333in;height:7.5in;min-height:7.5in;
+    padding:.55in .9in;
+    page-break-after:always;
+    break-after:page;
+    overflow:hidden;
+  }
+  /* the branches grid is the tallest slide — tighten it so all 8 cards fit the fixed page height */
+  .route-line{display:none;}
+  .branches{margin-top:1.2rem !important;gap:.6rem .8rem !important;}
+  .branch{padding:.65rem .75rem .7rem !important;}
+  .branch__head{margin-bottom:.25rem !important;}
+  .branch--group .branch__group-title{margin-bottom:.4rem !important;}
+  .branch__sub-wrap{padding-top:.4rem !important;}
   /* printed pages never scroll, so the scroll-triggered reveal never fires — force every
      entrance animation to its resolved end state instead of leaving content invisible */
   .slide__content,
