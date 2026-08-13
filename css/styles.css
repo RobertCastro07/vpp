@@ -55,6 +55,72 @@
   --top-offset: calc(var(--promo-bar-height) + var(--navbar-height));
 }
 
+/* ================================================
+   ICONOS — subconjunto propio de Font Awesome 6
+   Solo los 52 iconos que usa el sitio (~6.7KB en vez
+   de ~267KB de las fuentes completas de Font Awesome).
+   Generado con fonttools a partir de FA 6.5.0 Free.
+================================================ */
+@font-face{font-family:"Visual Point Icons Solid";font-style:normal;font-weight:900;font-display:block;src:url("../fonts/fa-solid-subset.woff2") format("woff2")}
+@font-face{font-family:"Visual Point Icons Brands";font-style:normal;font-weight:400;font-display:block;src:url("../fonts/fa-brands-subset.woff2") format("woff2")}
+
+.fas,.fab{display:inline-block;font-style:normal;font-variant:normal;line-height:1;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.fas{font-family:"Visual Point Icons Solid";font-weight:900}
+.fab{font-family:"Visual Point Icons Brands";font-weight:400}
+
+.fa-arrow-down:before{content:"\f063"}
+.fa-arrow-right:before{content:"\f061"}
+.fa-arrows-rotate:before{content:"\f021"}
+.fa-box:before{content:"\f466"}
+.fa-building:before{content:"\f1ad"}
+.fa-bullseye:before{content:"\f140"}
+.fa-calendar-check:before{content:"\f274"}
+.fa-check:before{content:"\f00c"}
+.fa-check-circle:before,.fa-circle-check:before{content:"\f058"}
+.fa-circle-half-stroke:before{content:"\f042"}
+.fa-clock:before{content:"\f017"}
+.fa-cloud-sun:before{content:"\f6c4"}
+.fa-envelope:before{content:"\f0e0"}
+.fa-eye:before{content:"\f06e"}
+.fa-file-invoice:before{content:"\f570"}
+.fa-file-invoice-dollar:before{content:"\f571"}
+.fa-fire:before{content:"\f06d"}
+.fa-gift:before{content:"\f06b"}
+.fa-glasses:before{content:"\f530"}
+.fa-hashtag:before{content:"\23"}
+.fa-headset:before{content:"\f590"}
+.fa-heart:before{content:"\f004"}
+.fa-id-badge:before{content:"\f2c1"}
+.fa-layer-group:before{content:"\f5fd"}
+.fa-list:before{content:"\f03a"}
+.fa-location-dot:before,.fa-map-marker-alt:before{content:"\f3c5"}
+.fa-map:before{content:"\f279"}
+.fa-map-location-dot:before{content:"\f5a0"}
+.fa-map-pin:before{content:"\f276"}
+.fa-medal:before{content:"\f5a2"}
+.fa-microscope:before{content:"\f610"}
+.fa-mobile-screen-button:before{content:"\f3cd"}
+.fa-paper-plane:before{content:"\f1d8"}
+.fa-phone:before{content:"\f095"}
+.fa-plus:before{content:"\2b"}
+.fa-scale-balanced:before{content:"\f24e"}
+.fa-screwdriver-wrench:before{content:"\f7d9"}
+.fa-shield-halved:before{content:"\f3ed"}
+.fa-soap:before{content:"\e06e"}
+.fa-star:before{content:"\f005"}
+.fa-store:before{content:"\f54e"}
+.fa-sun:before{content:"\f185"}
+.fa-tag:before{content:"\f02b"}
+.fa-tags:before{content:"\f02c"}
+.fa-times:before{content:"\f00d"}
+.fa-truck-medical:before{content:"\f0f9"}
+.fa-user-doctor:before{content:"\f0f0"}
+.fa-user-graduate:before{content:"\f501"}
+
+.fa-facebook-f:before{content:"\f39e"}
+.fa-instagram:before{content:"\f16d"}
+.fa-whatsapp:before{content:"\f232"}
+
 /* ---- Reset ---- */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -139,10 +205,6 @@ p {
 
 .section--dark {
   background-color: var(--color-bg-dark);
-}
-
-.section--soft {
-  background-color: var(--color-bg-soft);
 }
 
 /* ---- Encabezado de sección ---- */
@@ -230,20 +292,6 @@ p {
   transform: translateY(-2px);
 }
 
-.btn--dark {
-  background-color: var(--color-primary);
-  color: var(--color-text-white);
-  border: 2px solid var(--color-primary);
-}
-
-.btn--dark:hover,
-.btn--dark:focus {
-  background-color: var(--color-gold);
-  border-color: var(--color-gold);
-  color: var(--color-primary);
-  transform: translateY(-2px);
-}
-
 .btn--whatsapp {
   background-color: #25D366;
   color: #fff;
@@ -273,41 +321,6 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-md);
-}
-
-/* ---- Placeholders de imágenes ---- */
-.img-placeholder {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-gold);
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: 0.05em;
-  border-radius: var(--radius);
-}
-
-/* ---- Utilidades ---- */
-.text-center  { text-align: center; }
-.text-gold    { color: var(--color-gold); }
-.text-white   { color: var(--color-text-white); }
-.text-light   { color: var(--color-text-light); }
-.mt-sm { margin-top: var(--space-sm); }
-.mt-md { margin-top: var(--space-md); }
-.mt-lg { margin-top: var(--space-lg); }
-
-/* ---- Grid de productos home ---- */
-.product-grid-home {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-@media (min-width: 1024px) {
-  .product-grid-home {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 /* ---- Tablet (768px+) ---- */

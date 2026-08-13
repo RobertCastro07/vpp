@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Programa Corporativo Visual Point Panamá: convenios de descuento para tu equipo, ferias de salud visual empresarial in-situ y atención en 8 sucursales. Solicita tu cotización empresarial.">
+  <meta name="keywords" content="convenio corporativo óptica panamá, ferias de salud visual empresarial, descuentos empleados lentes, examen visual empresas panamá, visual point panamá corporativo">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Ópticas Visual Point Panamá">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Programa Corporativo | Ópticas Visual Point Panamá">
+  <meta property="og:description" content="Convenios de descuento para tu equipo, ferias de salud visual empresarial en tus instalaciones y atención en 8 sucursales en Panamá.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?w=1200&q=80&auto=format&fit=crop">
+  <meta property="og:url" content="https://www.opticasvisualpointpanama.com/corporativo.html">
+  <meta property="og:locale" content="es_PA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Programa Corporativo | Ópticas Visual Point Panamá">
+  <meta name="twitter:description" content="Convenios de descuento, ferias de salud visual empresarial in-situ y atención en 8 sucursales en Panamá.">
+
+  <!-- Schema markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Programa Corporativo de Salud Visual",
+    "provider": {
+      "@type": "Optician",
+      "name": "Ópticas Visual Point Panamá",
+      "telephone": "+50760482000",
+      "email": "visualpointpanama@gmail.com"
+    },
+    "areaServed": "PA",
+    "description": "Convenios corporativos con descuentos para empleados, ferias de salud visual empresarial en instalaciones de la empresa y cotización empresarial."
+  }
+  </script>
+
+  <!-- Preload de la imagen hero para LCP rápido -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?w=1400&q=80&auto=format&fit=crop" fetchpriority="high">
+
+  <!-- Fuentes y CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <title>Programa Corporativo | Ópticas Visual Point Panamá</title>
+</head>
+<body>
+
+  <!-- ================================================
+       PRELOADER
+  ================================================ -->
+  <div id="page-loader" class="page-loader" role="status" aria-label="Cargando Visual Point Panamá">
+    <div class="loader-inner">
+      <svg class="loader-glasses" viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle class="lens lens-l" cx="62" cy="45" r="30" fill="none" stroke="#F5C800" stroke-width="5" stroke-linecap="round"/>
+        <circle class="lens lens-r" cx="158" cy="45" r="30" fill="none" stroke="#F5C800" stroke-width="5" stroke-linecap="round"/>
+        <path class="bridge" d="M92 43 Q110 36 128 43" fill="none" stroke="#F5C800" stroke-width="4.5" stroke-linecap="round"/>
+        <line class="arm arm-l" x1="32" y1="33" x2="5" y2="22" stroke="#F5C800" stroke-width="4" stroke-linecap="round"/>
+        <line class="arm arm-r" x1="188" y1="33" x2="215" y2="22" stroke="#F5C800" stroke-width="4" stroke-linecap="round"/>
+        <circle class="lens-shine" cx="50" cy="34" r="5" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
+        <circle class="lens-shine" cx="146" cy="34" r="5" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
+      </svg>
+      <p class="loader-brand">Visual Point</p>
+      <p class="loader-sub">Panamá</p>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ================================================
+       BARRA DE PROMOCIÓN
+  ================================================ -->
+  <div class="promo-bar" id="promo-bar" role="banner" aria-label="Promoción vigente">
+    <p class="promo-bar__text">
+      🎁&nbsp; Lleva tus cristales y te regalamos los aros. Así de simple.
+    </p>
+    <a href="contacto.html" class="promo-bar__link">Quiero mis aros &rarr;</a>
+    <button class="promo-bar__close" id="promo-close" aria-label="Cerrar barra de promoción">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- ================================================
+       NAVBAR
+  ================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container">
+      <nav class="navbar__inner" aria-label="Navegación principal">
+        <a href="index.html" class="navbar__logo" aria-label="Visual Point Panamá — Inicio">
+          <img src="images/logo/logo-lb-trp.svg"
+               alt="Logo Ópticas Visual Point Panamá"
+               width="150" height="52"
+               style="object-fit:contain;">
+        </a>
+
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="sucursales.html">Sucursales</a></li>
+          <li><a href="corporativo.html" class="active">Corporativo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <button class="navbar__hamburger"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+
+    <nav id="mobile-menu" class="navbar__mobile-menu" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="sucursales.html">Sucursales</a>
+      <a href="corporativo.html" class="active">Corporativo</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ================================================
+         HERO — foto real, formato compacto
+    ================================================ -->
+    <section class="hero hero--compact" aria-label="Programa Corporativo Visual Point">
+
+      <img class="hero__bg-img"
+           src="https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?w=1400&q=80&auto=format&fit=crop"
+           alt="Equipo empresarial en una reunión — Programa Corporativo Visual Point Panamá"
+           loading="eager"
+           fetchpriority="high">
+
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero__content">
+
+          <p class="hero__eyebrow" data-aos="fade-up">
+            Programa Corporativo
+          </p>
+
+          <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+            <span class="hero__title-line">Salud visual para tu equipo,</span>
+            <span class="hero__title-gold">sin salir de la oficina.</span>
+          </h1>
+
+          <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">
+            Convenios de descuento, ferias de salud visual empresarial en tus instalaciones
+            y atención preferencial en nuestras 8 sucursales de Panamá.
+          </p>
+
+          <div class="hero__actions" data-aos="fade-up" data-aos-delay="300">
+            <a href="#cotizacion" class="btn btn--primary">
+              Solicitar cotización &nbsp;<i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#beneficios-titulo" class="btn btn--secondary">
+              <i class="fas fa-tags"></i>&nbsp; Ver beneficios
+            </a>
+          </div>
+
+          <div class="hero__badges" data-aos="fade-up" data-aos-delay="400">
+            <span class="hero__badge"><i class="fas fa-circle-check"></i> Sin costo de afiliación</span>
+            <span class="hero__badge"><i class="fas fa-map-marker-alt"></i> 8 sucursales en Panamá</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         BENEFICIOS DEL CONVENIO
+    ================================================ -->
+    <section class="section section--dark" aria-labelledby="beneficios-titulo">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 id="beneficios-titulo" class="section-title" style="color:#fff;" data-aos="fade-up">
+            Beneficios del Convenio
+          </h2>
+          <p style="color:rgba(255,255,255,0.55);" data-aos="fade-up" data-aos-delay="100">
+            Un programa pensado para que tu empresa cuide la visión de su gente,
+            con condiciones especiales y cero complicaciones administrativas.
+          </p>
+        </div>
+
+        <div class="grid-3" style="margin-top:2.5rem;gap:1.75rem;">
+
+          <div class="svc-card" data-aos="fade-up" data-aos-delay="100" style="align-items:flex-start;">
+            <div class="svc-card__icon-wrap" aria-hidden="true">
+              <i class="fas fa-tags"></i>
+            </div>
+            <h3>Descuentos para tu Equipo</h3>
+            <p>
+              Precios preferenciales en exámenes visuales, cristales y aros oftálmicos
+              para todos los colaboradores afiliados al convenio, y extensivo a su núcleo familiar.
+            </p>
+          </div>
+
+          <div class="svc-card" data-aos="fade-up" data-aos-delay="175" style="align-items:flex-start;">
+            <div class="svc-card__icon-wrap" aria-hidden="true">
+              <i class="fas fa-truck-medical"></i>
+            </div>
+            <h3>Ferias de Salud Visual</h3>
+            <p>
+              Llevamos optometristas y equipo de diagnóstico a las instalaciones de tu empresa
+              para hacer jornadas de exámenes visuales masivos, sin que tu equipo pierda el día.
+            </p>
+          </div>
+
+          <div class="svc-card" data-aos="fade-up" data-aos-delay="250" style="align-items:flex-start;">
+            <div class="svc-card__icon-wrap" aria-hidden="true">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>8 Sucursales Disponibles</h3>
+            <p>
+              Tus colaboradores pueden atenderse con su beneficio corporativo en cualquiera
+              de nuestras 8 sucursales en Panamá, con solo presentar su código de convenio.
+            </p>
+          </div>
+
+          <div class="svc-card" data-aos="fade-up" data-aos-delay="100" style="align-items:flex-start;">
+            <div class="svc-card__icon-wrap" aria-hidden="true">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <h3>Facturación Simplificada</h3>
+            <p>
+              Coordinamos directamente con RRHH la facturación y el proceso de afiliación,
+              sin trámites adicionales para tus colaboradores.
+            </p>
+          </div>
+
+          <div class="svc-card" data-aos="fade-up" data-aos-delay="175" style="align-items:flex-start;">
+            <div class="svc-card__icon-wrap" aria-hidden="true">
+              <i class="fas fa-id-badge"></i>
+            </div>
+            <h3>Sin Costo de Afiliación</h3>
+            <p>
+              Afiliar a tu empresa al programa corporativo no tiene costo ni compromiso mínimo
+              de colaboradores para comenzar.
+            </p>
+          </div>
+
+          <div class="svc-card" data-aos="fade-up" data-aos-delay="250" style="align-items:flex-start;">
+            <div class="svc-card__icon-wrap" aria-hidden="true">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3>Asesor Dedicado</h3>
+            <p>
+              Un asesor de Visual Point acompaña a tu empresa desde la afiliación hasta el
+              seguimiento de cada feria o jornada de salud visual.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisor ornamental -->
+    <div class="sec-ornament sec-ornament--to-dark" aria-hidden="true">
+      <span class="sec-ornament__line"></span>
+      <svg class="sec-ornament__icon" viewBox="-4 0 68 22" overflow="visible" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-4 10 L0 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <rect x="1" y="2" width="24" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M25 10.5 Q32 6 39 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <rect x="39" y="2" width="24" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M63 9 L68 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="sec-ornament__line"></span>
+    </div>
+
+    <!-- ================================================
+         FERIAS DE SALUD VISUAL EMPRESARIAL — split editorial
+    ================================================ -->
+    <section class="ferias-section" aria-labelledby="ferias-titulo">
+      <div class="container">
+
+        <div class="ferias-grid">
+
+          <div class="ferias-media" data-aos="fade-right">
+            <img src="https://images.unsplash.com/photo-1766310549795-dd0fc75d499f?w=1000&q=80&auto=format&fit=crop"
+                 alt="Optometrista de Visual Point realizando un examen visual"
+                 loading="lazy" width="1000" height="850">
+            <div class="ferias-media__frame" aria-hidden="true"></div>
+            <div class="ferias-media__badge">
+              <i class="fas fa-user-doctor" aria-hidden="true"></i>
+              Optometristas certificados en sitio
+            </div>
+          </div>
+
+          <div data-aos="fade-left" data-aos-delay="100">
+            <p style="font-family:var(--font-heading);font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-gold);margin-bottom:0.75rem;">
+              Llevamos la óptica a tu empresa
+            </p>
+            <h2 id="ferias-titulo" class="section-title section-title--left" style="color:#fff;">
+              Ferias de Salud Visual Empresarial
+            </h2>
+            <p style="color:rgba(255,255,255,0.55);margin-top:1.1rem;max-width:480px;">
+              Organizamos una feria de salud visual dentro de tus instalaciones: exámenes
+              gratuitos para tu equipo, en un solo día, sin que nadie tenga que salir de la oficina.
+            </p>
+
+            <div class="ferias-timeline">
+              <div class="ferias-timeline__item">
+                <span class="ferias-timeline__num">1</span>
+                <h4>Coordinamos contigo</h4>
+                <p>Tu asesor agenda fecha, horario y el espacio necesario junto a RRHH.</p>
+              </div>
+              <div class="ferias-timeline__item">
+                <span class="ferias-timeline__num">2</span>
+                <h4>Llevamos el equipo</h4>
+                <p>Optometristas certificados y equipo de diagnóstico portátil llegan a tu empresa.</p>
+              </div>
+              <div class="ferias-timeline__item">
+                <span class="ferias-timeline__num">3</span>
+                <h4>Examinamos al equipo</h4>
+                <p>Exámenes visuales individuales, rápidos y sin interrumpir la jornada laboral.</p>
+              </div>
+              <div class="ferias-timeline__item">
+                <span class="ferias-timeline__num">4</span>
+                <h4>Seguimiento en sucursal</h4>
+                <p>Quien necesite cristales o aros continúa su compra con descuento corporativo en cualquier sucursal.</p>
+              </div>
+            </div>
+
+            <a href="#cotizacion" class="btn btn--primary" style="margin-top:2rem;">
+              <i class="fas fa-calendar-check"></i> Agendar una feria
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         EMPRESAS ALIADAS
+    ================================================ -->
+    <section class="brands-section" aria-labelledby="aliadas-titulo">
+      <div class="container">
+
+        <p id="aliadas-titulo" class="brands-eyebrow" data-aos="fade-up">Empresas que Confían en Nosotros</p>
+
+        <div class="brands-strip" data-aos="fade-up" data-aos-delay="80">
+          <div class="brand-item" style="opacity:0.6;">
+            <span style="font-family:var(--font-heading);font-weight:700;color:var(--color-text-light);font-size:0.85rem;">
+              <i class="fas fa-building" aria-hidden="true"></i>&nbsp; Tu Empresa Aquí
+            </span>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:0.8rem;color:var(--color-text-light);margin-top:1rem;">
+          ¿Tu empresa ya tiene convenio con Visual Point? Escríbenos para incluir su logo aquí.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Divisor ornamental -->
+    <div class="sec-ornament sec-ornament--to-dark" aria-hidden="true">
+      <span class="sec-ornament__line"></span>
+      <svg class="sec-ornament__icon" viewBox="-4 0 68 22" overflow="visible" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-4 10 L0 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <rect x="1" y="2" width="24" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M25 10.5 Q32 6 39 10.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <rect x="39" y="2" width="24" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M63 9 L68 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="sec-ornament__line"></span>
+    </div>
+
+    <!-- ================================================
+         FORMULARIO DE COTIZACIÓN EMPRESARIAL — foto + card flotante
+    ================================================ -->
+    <section class="cotizacion-photo" id="cotizacion" aria-labelledby="cotizacion-titulo">
+
+      <img class="cotizacion-photo__bg"
+           src="https://images.unsplash.com/photo-1641247565151-fe622e1067d0?w=1400&q=80&auto=format&fit=crop"
+           alt=""
+           loading="lazy" aria-hidden="true">
+      <div class="cotizacion-photo__overlay" aria-hidden="true"></div>
+
+      <div class="container cotizacion-photo__inner">
+        <div class="grid-2" style="gap:3rem;align-items:flex-start;">
+
+          <div data-aos="fade-right">
+            <p style="font-family:var(--font-heading);font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-gold);margin-bottom:0.75rem;">
+              Hablemos de tu Empresa
+            </p>
+            <h2 id="cotizacion-titulo" class="section-title section-title--left" style="color:#fff;">
+              Solicita tu Cotización
+            </h2>
+            <p style="color:rgba(255,255,255,0.6);margin-top:1rem;max-width:420px;">
+              Cuéntanos sobre tu empresa y un asesor de Visual Point se pondrá en contacto
+              para diseñar un convenio a la medida de tu equipo.
+            </p>
+
+            <div style="margin-top:2rem;display:flex;flex-direction:column;gap:1rem;">
+              <div class="footer__contact-item">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:visualpointpanama@gmail.com">visualpointpanama@gmail.com</a>
+              </div>
+              <div class="footer__contact-item">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <a href="tel:+50760482000">+507 6048 2000</a>
+              </div>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20información%20sobre%20el%20Programa%20Corporativo%20de%20Visual%20Point"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn--whatsapp" style="align-self:flex-start;margin-top:0.5rem;">
+                <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form cotizacion-form-card" data-aos="fade-left" data-aos-delay="100">
+
+            <div class="form-group">
+              <label for="corp-nombre">Nombre completo</label>
+              <input type="text" id="corp-nombre" name="nombre" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="corp-empresa">Empresa</label>
+              <input type="text" id="corp-empresa" name="empresa" required autocomplete="organization">
+            </div>
+
+            <div class="form-group">
+              <label for="corp-cargo">Cargo</label>
+              <input type="text" id="corp-cargo" name="cargo" autocomplete="organization-title">
+            </div>
+
+            <div class="form-group">
+              <label for="corp-email">Correo electrónico</label>
+              <input type="email" id="corp-email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="corp-telefono">Teléfono</label>
+              <input type="tel" id="corp-telefono" name="telefono" required autocomplete="tel">
+            </div>
+
+            <div class="form-group">
+              <label for="corp-colaboradores">Cantidad de colaboradores</label>
+              <select id="corp-colaboradores" name="colaboradores" required>
+                <option value="" disabled selected>Selecciona un rango</option>
+                <option value="1-10">1 a 10</option>
+                <option value="11-50">11 a 50</option>
+                <option value="51-150">51 a 150</option>
+                <option value="151-500">151 a 500</option>
+                <option value="500+">Más de 500</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="corp-mensaje">Mensaje (opcional)</label>
+              <textarea id="corp-mensaje" name="mensaje" placeholder="Cuéntanos qué necesita tu empresa: feria de salud visual, convenio de descuentos, ambos..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;">
+              <i class="fas fa-paper-plane"></i> Solicitar Cotización
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         CTA FINAL
+    ================================================ -->
+    <section class="cta-section" aria-labelledby="corp-cta-titulo">
+      <div class="container">
+        <div data-aos="fade-up">
+          <p style="font-family:var(--font-heading);font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-gold);margin-bottom:0.75rem;">
+            Programa Corporativo Visual Point
+          </p>
+          <h2 id="corp-cta-titulo">Dale a tu equipo la visión que se merece.</h2>
+          <p>
+            Afiliar a tu empresa no tiene costo. Escríbenos y diseñamos el convenio
+            que mejor se adapte a tu equipo.
+          </p>
+          <div class="btn-group">
+            <a href="#cotizacion" class="btn btn--primary">
+              <i class="fas fa-file-invoice"></i> Solicitar Cotización
+            </a>
+            <a href="https://wa.me/50760482000?text=Hola,%20quiero%20información%20sobre%20el%20Programa%20Corporativo%20de%20Visual%20Point"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn--whatsapp">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Marca -->
+        <div class="footer__brand">
+          <a href="index.html" aria-label="Visual Point Panamá — Inicio">
+            <img src="images/logo/logo-lb-trp.svg"
+                 alt="Logo Ópticas Visual Point Panamá" width="140" height="49"
+                 style="object-fit:contain;">
+          </a>
+          <p>
+            Expertos en salud visual con 8 sucursales en Panamá.
+            Tu visión es nuestra misión desde hace más de 10 años.
+          </p>
+          <div class="footer__social" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/visualpointpanama" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/VisualPointGroup" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/50760482000?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div>
+          <p class="footer__col-title">Navegación</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="sucursales.html">Sucursales</a></li>
+            <li><a href="corporativo.html">Corporativo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Corporativo -->
+        <div>
+          <p class="footer__col-title">Corporativo</p>
+          <ul class="footer__links" role="list">
+            <li><a href="corporativo.html#beneficios-titulo">Beneficios del Convenio</a></li>
+            <li><a href="corporativo.html#ferias-titulo">Ferias de Salud Visual</a></li>
+            <li><a href="corporativo.html#cotizacion">Solicitar Cotización</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto + Pagos -->
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__contact-item">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:visualpointpanama@gmail.com">visualpointpanama@gmail.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <a href="tel:+50760482000">+507 6048 2000</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <a href="tel:+50760402663">+507 6040 2663</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <a href="https://wa.me/50760482000" target="_blank" rel="noopener noreferrer">WhatsApp General</a>
+          </div>
+
+          <!-- Métodos de pago -->
+          <div class="footer__payments">
+            <p class="footer__payments-title">Métodos de Pago</p>
+            <div class="footer__payments-list" aria-label="Métodos de pago aceptados">
+              <span class="payment-badge">Visa</span>
+              <span class="payment-badge">Mastercard</span>
+              <span class="payment-badge">AmEx</span>
+              <span class="payment-badge">Diners</span>
+              <span class="payment-badge">Discover</span>
+              <span class="payment-badge">UnionPay</span>
+              <span class="payment-badge">JCB</span>
+              <span class="payment-badge">PayPal</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>
+          &copy; 2025 <span>Ópticas Visual Point Panamá</span>. Todos los derechos reservados.
+          &nbsp;|&nbsp; Hecho con <span style="color:#e74c3c;">&#9829;</span> en Panamá.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/50760482000?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios"
+     target="_blank" rel="noopener noreferrer"
+     class="whatsapp-float"
+     aria-label="Contactar a Visual Point Panamá por WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Promo bar: cerrar y ajustar navbar -->
+  <script>
+    (function() {
+      var promoBar = document.getElementById('promo-bar');
+      var promoClose = document.getElementById('promo-close');
+      var navbar = document.getElementById('navbar');
+
+      if (promoClose && promoBar && navbar) {
+        promoClose.addEventListener('click', function() {
+          promoBar.style.display = 'none';
+          navbar.classList.add('promo-hidden');
+          document.documentElement.style.setProperty('--promo-bar-height', '0px');
+        });
+      }
+
+    })();
+  </script>
+
+</body>
+</html>

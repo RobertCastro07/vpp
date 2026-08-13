@@ -26,7 +26,7 @@ const SUCURSALES = [
     nombre: 'Albrook Mall — Pasillo Central',
     descripcion: 'Pasillo central, frente a Zara planta superior.',
     horario: 'Lun–Sáb: 10:00 a.m – 7:00 p.m | Dom y Feriados: 11:00 a.m – 6:00 p.m',
-    whatsapp: '50760912000',
+    whatsapp: '50760482000', // TODO: pendiente número correcto del usuario
     maps: 'https://maps.google.com/?q=Albrook+Mall+Panama',
     badge: 'Albrook #1',
   },
@@ -79,37 +79,36 @@ function renderBranchCards() {
 
   container.innerHTML = SUCURSALES.map(function (s, i) {
     const badgeHtml = s.badge
-      ? `<span style="display:inline-block;background:var(--color-gold);color:var(--color-primary);font-family:var(--font-heading);font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.15rem 0.55rem;border-radius:4px;margin-bottom:0.4rem;">${s.badge}</span>`
+      ? `<span class="branch-card__badge">${s.badge}</span>`
       : '';
+    const num = String(i + 1).padStart(2, '0');
 
     return `
       <article class="branch-card" data-aos="fade-up" data-aos-delay="${(i % 4) * 75}">
-        <div class="branch-card__header">
-          ${badgeHtml}
-          <h3 class="branch-card__name">
-            <i class="fas fa-location-dot" style="color:var(--color-gold);margin-right:0.5rem;font-size:0.85em;"></i>${s.nombre}
-          </h3>
+        <span class="branch-card__num" aria-hidden="true">${num}</span>
+        <div class="branch-card__pin" aria-hidden="true">
+          <i class="fas fa-location-dot"></i>
         </div>
-        <div class="branch-card__body">
-          <div class="branch-card__info">
-            <i class="fas fa-map-pin"></i>
-            <span>${s.descripcion}</span>
-          </div>
-          <div class="branch-card__info">
-            <i class="fas fa-clock"></i>
-            <span>${s.horario}</span>
-          </div>
-          <div class="branch-card__actions">
-            <a href="https://wa.me/${s.whatsapp}?text=Hola,%20me%20interesa%20información%20sobre%20la%20sucursal%20de%20${encodeURIComponent(s.nombre)}"
-               target="_blank" rel="noopener noreferrer"
-               class="btn btn--whatsapp">
-              <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
-            <a href="${s.maps}" target="_blank" rel="noopener noreferrer"
-               class="btn btn--dark">
-              <i class="fas fa-map"></i> Cómo llegar
-            </a>
-          </div>
+        ${badgeHtml}
+        <h3 class="branch-card__name">${s.nombre}</h3>
+        <div class="branch-card__info">
+          <i class="fas fa-map-pin"></i>
+          <span>${s.descripcion}</span>
+        </div>
+        <div class="branch-card__info">
+          <i class="fas fa-clock"></i>
+          <span>${s.horario}</span>
+        </div>
+        <div class="branch-card__actions">
+          <a href="https://wa.me/${s.whatsapp}?text=Hola,%20me%20interesa%20información%20sobre%20la%20sucursal%20de%20${encodeURIComponent(s.nombre)}"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn--whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="${s.maps}" target="_blank" rel="noopener noreferrer"
+             class="btn btn--outline-gold">
+            <i class="fas fa-map"></i> Cómo llegar
+          </a>
         </div>
       </article>
     `;

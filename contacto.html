@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos: escríbenos por WhatsApp, correo o el formulario. Resolvemos tus dudas sobre exámenes visuales, cristales, aros y nuestras 8 sucursales en Panamá.">
+  <meta name="keywords" content="contacto visual point panamá, whatsapp óptica panamá, agendar examen visual panamá, opticas visual point telefono">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Ópticas Visual Point Panamá">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contáctanos | Ópticas Visual Point Panamá">
+  <meta property="og:description" content="Escríbenos por WhatsApp, correo o el formulario. Estamos para ayudarte con tu salud visual en Panamá.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1733417521559-ff4b58413d31?w=1200&q=80&auto=format&fit=crop">
+  <meta property="og:url" content="https://www.opticasvisualpointpanama.com/contacto.html">
+  <meta property="og:locale" content="es_PA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contáctanos | Ópticas Visual Point Panamá">
+  <meta name="twitter:description" content="Escríbenos por WhatsApp, correo o el formulario. Estamos para ayudarte.">
+
+  <!-- Schema markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Optician",
+    "name": "Ópticas Visual Point Panamá",
+    "url": "https://www.opticasvisualpointpanama.com",
+    "telephone": "+50760482000",
+    "email": "visualpointpanama@gmail.com",
+    "numberOfLocations": 8,
+    "address": { "@type": "PostalAddress", "addressCountry": "PA", "addressRegion": "Panamá" },
+    "sameAs": [
+      "https://www.instagram.com/visualpointpanama",
+      "https://www.facebook.com/VisualPointGroup"
+    ],
+    "contactPoint": [
+      { "@type": "ContactPoint", "contactType": "customer service", "telephone": "+507-6048-2000", "areaServed": "PA", "availableLanguage": "es" }
+    ]
+  }
+  </script>
+
+  <!-- Preload de la imagen hero para LCP rápido -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1733417521559-ff4b58413d31?w=1400&q=80&auto=format&fit=crop" fetchpriority="high">
+
+  <!-- Fuentes y CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <title>Contáctanos | Ópticas Visual Point Panamá</title>
+</head>
+<body>
+
+  <!-- ================================================
+       PRELOADER
+  ================================================ -->
+  <div id="page-loader" class="page-loader" role="status" aria-label="Cargando Visual Point Panamá">
+    <div class="loader-inner">
+      <svg class="loader-glasses" viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle class="lens lens-l" cx="62" cy="45" r="30" fill="none" stroke="#F5C800" stroke-width="5" stroke-linecap="round"/>
+        <circle class="lens lens-r" cx="158" cy="45" r="30" fill="none" stroke="#F5C800" stroke-width="5" stroke-linecap="round"/>
+        <path class="bridge" d="M92 43 Q110 36 128 43" fill="none" stroke="#F5C800" stroke-width="4.5" stroke-linecap="round"/>
+        <line class="arm arm-l" x1="32" y1="33" x2="5" y2="22" stroke="#F5C800" stroke-width="4" stroke-linecap="round"/>
+        <line class="arm arm-r" x1="188" y1="33" x2="215" y2="22" stroke="#F5C800" stroke-width="4" stroke-linecap="round"/>
+        <circle class="lens-shine" cx="50" cy="34" r="5" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
+        <circle class="lens-shine" cx="146" cy="34" r="5" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
+      </svg>
+      <p class="loader-brand">Visual Point</p>
+      <p class="loader-sub">Panamá</p>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ================================================
+       BARRA DE PROMOCIÓN
+  ================================================ -->
+  <div class="promo-bar" id="promo-bar" role="banner" aria-label="Promoción vigente">
+    <p class="promo-bar__text">
+      🎁&nbsp; Lleva tus cristales y te regalamos los aros. Así de simple.
+    </p>
+    <a href="contacto.html" class="promo-bar__link">Quiero mis aros &rarr;</a>
+    <button class="promo-bar__close" id="promo-close" aria-label="Cerrar barra de promoción">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- ================================================
+       NAVBAR
+  ================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container">
+      <nav class="navbar__inner" aria-label="Navegación principal">
+        <a href="index.html" class="navbar__logo" aria-label="Visual Point Panamá — Inicio">
+          <img src="images/logo/logo-lb-trp.svg"
+               alt="Logo Ópticas Visual Point Panamá"
+               width="150" height="52"
+               style="object-fit:contain;">
+        </a>
+
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="sucursales.html">Sucursales</a></li>
+          <li><a href="corporativo.html">Corporativo</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+
+        <button class="navbar__hamburger"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+
+    <nav id="mobile-menu" class="navbar__mobile-menu" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="sucursales.html">Sucursales</a>
+      <a href="corporativo.html">Corporativo</a>
+      <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ================================================
+         HERO — foto real
+    ================================================ -->
+    <section class="hero hero--compact" aria-label="Contacto Visual Point Panamá">
+
+      <img class="hero__bg-img"
+           src="https://images.unsplash.com/photo-1733417521559-ff4b58413d31?w=1400&q=80&auto=format&fit=crop"
+           alt="Asesora de Visual Point ayudando a una clienta a elegir sus lentes"
+           loading="eager"
+           fetchpriority="high">
+
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero__content">
+
+          <p class="hero__eyebrow" data-aos="fade-up">
+            Contáctanos
+          </p>
+
+          <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+            <span class="hero__title-line">Estamos aquí para</span>
+            <span class="hero__title-gold">ayudarte a ver mejor.</span>
+          </h1>
+
+          <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">
+            Escríbenos por WhatsApp, correo o el formulario. Te respondemos
+            rápido y te ayudamos a encontrar la sucursal ideal para ti.
+          </p>
+
+          <div class="hero__actions" data-aos="fade-up" data-aos-delay="300">
+            <a href="https://wa.me/50760482000?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios"
+               target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+              <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
+            </a>
+            <a href="#formulario" class="btn btn--secondary">
+              <i class="fas fa-envelope"></i>&nbsp; Enviar mensaje
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         CANALES DE CONTACTO — lista editorial
+    ================================================ -->
+    <section class="contact-rail-section" aria-labelledby="canales-titulo">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 id="canales-titulo" class="section-title" style="color:#fff;" data-aos="fade-up">
+            Elige tu Canal Preferido
+          </h2>
+          <p style="color:rgba(255,255,255,0.55);" data-aos="fade-up" data-aos-delay="100">
+            Contáctanos directo, sin intermediarios, por el medio que prefieras.
+          </p>
+        </div>
+
+        <div class="contact-rail" data-aos="fade-up" data-aos-delay="150">
+
+          <a href="https://wa.me/50760482000?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios"
+             target="_blank" rel="noopener noreferrer" class="contact-row">
+            <div class="contact-row__icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-row__body">
+              <p class="contact-row__label">WhatsApp</p>
+              <p class="contact-row__value">+507 6048 2000 — respuesta inmediata, cualquier sucursal</p>
+            </div>
+            <div class="contact-row__arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="tel:+50760482000" class="contact-row">
+            <div class="contact-row__icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-row__body">
+              <p class="contact-row__label">Llamada telefónica</p>
+              <p class="contact-row__value">+507 6048 2000 &nbsp;/&nbsp; +507 6040 2663</p>
+            </div>
+            <div class="contact-row__arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="mailto:visualpointpanama@gmail.com" class="contact-row">
+            <div class="contact-row__icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-row__body">
+              <p class="contact-row__label">Correo electrónico</p>
+              <p class="contact-row__value">visualpointpanama@gmail.com</p>
+            </div>
+            <div class="contact-row__arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <div class="contact-row">
+            <div class="contact-row__icon"><i class="fas fa-hashtag"></i></div>
+            <div class="contact-row__body">
+              <p class="contact-row__label">Redes sociales</p>
+              <p class="contact-row__value">Novedades, promociones y catálogo</p>
+            </div>
+            <div class="contact-row__social">
+              <a href="https://www.instagram.com/visualpointpanama" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/VisualPointGroup" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         FORMULARIO DE CONTACTO
+    ================================================ -->
+    <section class="section" id="formulario" aria-labelledby="form-titulo">
+      <div class="container">
+        <div class="grid-2" style="gap:3rem;align-items:flex-start;">
+
+          <div data-aos="fade-right">
+            <p style="font-family:var(--font-heading);font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-gold-dark);margin-bottom:0.75rem;">
+              Escríbenos
+            </p>
+            <h2 id="form-titulo" class="section-title section-title--left">
+              Envíanos tu Mensaje
+            </h2>
+            <p style="color:var(--color-text-light);margin-top:1rem;max-width:420px;">
+              Completa el formulario y un asesor de Visual Point se pondrá en
+              contacto contigo lo antes posible.
+            </p>
+
+            <div style="margin-top:2rem;display:flex;flex-direction:column;gap:1rem;">
+              <div class="footer__contact-item" style="color:var(--color-text);">
+                <i class="fas fa-envelope" aria-hidden="true" style="color:var(--color-gold-dark);"></i>
+                <a href="mailto:visualpointpanama@gmail.com" style="color:var(--color-text);">visualpointpanama@gmail.com</a>
+              </div>
+              <div class="footer__contact-item" style="color:var(--color-text);">
+                <i class="fas fa-phone" aria-hidden="true" style="color:var(--color-gold-dark);"></i>
+                <a href="tel:+50760482000" style="color:var(--color-text);">+507 6048 2000</a>
+              </div>
+              <div class="footer__contact-item" style="color:var(--color-text);">
+                <i class="fas fa-phone" aria-hidden="true" style="color:var(--color-gold-dark);"></i>
+                <a href="tel:+50760402663" style="color:var(--color-text);">+507 6040 2663</a>
+              </div>
+              <div class="footer__contact-item" style="color:var(--color-text);">
+                <i class="fas fa-clock" aria-hidden="true" style="color:var(--color-gold-dark);"></i>
+                <span>Lun–Sáb, horarios varían por sucursal</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" data-aos="fade-left" data-aos-delay="100"
+                style="background:var(--color-bg);padding:2rem;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);border-top:3px solid var(--color-gold);">
+
+            <div class="form-group">
+              <label for="ct-nombre">Nombre completo</label>
+              <input type="text" id="ct-nombre" name="nombre" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="ct-email">Correo electrónico</label>
+              <input type="email" id="ct-email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="ct-telefono">Teléfono</label>
+              <input type="tel" id="ct-telefono" name="telefono" required autocomplete="tel">
+            </div>
+
+            <div class="form-group">
+              <label for="ct-sucursal">Sucursal de tu interés</label>
+              <select id="ct-sucursal" name="sucursal">
+                <option value="" selected>No estoy seguro / cualquiera</option>
+                <option value="El Dorado">Súpercentro El Dorado</option>
+                <option value="Altaplaza">Altaplaza Mall</option>
+                <option value="Albrook Central">Albrook Mall — Pasillo Central</option>
+                <option value="Albrook Dinosaurio">Albrook Mall — Pasillo Dinosaurio</option>
+                <option value="Los Pueblos">Los Pueblos</option>
+                <option value="Costa Verde">Costa Verde</option>
+                <option value="Los Andes">Los Andes</option>
+                <option value="David">David, Chiriquí</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="ct-asunto">Asunto</label>
+              <select id="ct-asunto" name="asunto" required>
+                <option value="" disabled selected>Selecciona un motivo</option>
+                <option value="Examen visual">Agendar examen visual</option>
+                <option value="Productos">Consulta sobre productos</option>
+                <option value="Promocion">Promoción vigente</option>
+                <option value="Corporativo">Programa corporativo</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="ct-mensaje">Mensaje</label>
+              <textarea id="ct-mensaje" name="mensaje" required placeholder="Cuéntanos en qué te podemos ayudar..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;">
+              <i class="fas fa-paper-plane"></i> Enviar Mensaje
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         MAPA DE SUCURSALES
+    ================================================ -->
+    <section class="section map-preview-section" aria-labelledby="mapa-titulo">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="mapa-titulo" class="section-title" data-aos="fade-up">¿Prefieres visitarnos?</h2>
+          <p data-aos="fade-up" data-aos-delay="100">
+            Ubica la sucursal Visual Point más cercana a ti.
+          </p>
+        </div>
+
+        <div class="map-embed-col" style="max-width:960px;margin:2.5rem auto 0;" data-aos="fade-up" data-aos-delay="150">
+          <div class="map-embed-frame" style="height:420px;">
+            <div class="map-frame-corner map-frame-corner--tl"></div>
+            <div class="map-frame-corner map-frame-corner--br"></div>
+            <div id="vp-map" style="width:100%;height:100%;border-radius:var(--radius-lg);"
+                 aria-label="Mapa interactivo con las 8 sucursales de Visual Point Panamá">
+              <div class="map-loading-placeholder">
+                <i class="fas fa-map-location-dot"></i>
+                <span>Cargando mapa…</span>
+              </div>
+            </div>
+          </div>
+          <div class="map-badge">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>8 Sucursales</span>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:3rem;" data-aos="fade-up">
+          <a href="sucursales.html" class="btn btn--primary">
+            <i class="fas fa-map-marker-alt"></i> Ver todas las sucursales
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Marca -->
+        <div class="footer__brand">
+          <a href="index.html" aria-label="Visual Point Panamá — Inicio">
+            <img src="images/logo/logo-lb-trp.svg"
+                 alt="Logo Ópticas Visual Point Panamá" width="140" height="49"
+                 style="object-fit:contain;">
+          </a>
+          <p>
+            Expertos en salud visual con 8 sucursales en Panamá.
+            Tu visión es nuestra misión desde hace más de 10 años.
+          </p>
+          <div class="footer__social" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/visualpointpanama" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/VisualPointGroup" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/50760482000?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div>
+          <p class="footer__col-title">Navegación</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="sucursales.html">Sucursales</a></li>
+            <li><a href="corporativo.html">Corporativo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Servicios -->
+        <div>
+          <p class="footer__col-title">Servicios</p>
+          <ul class="footer__links" role="list">
+            <li><a href="servicios.html#examenes">Exámenes Visuales</a></li>
+            <li><a href="servicios.html#transitions">Cristales Transitions</a></li>
+            <li><a href="servicios.html#tecnologias">Antirreflejo</a></li>
+            <li><a href="servicios.html#tecnologias">Blue Cut</a></li>
+            <li><a href="servicios.html#tecnologias">Progresivos</a></li>
+            <li><a href="servicios.html#montaje">Montaje y Reparación</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto + Pagos -->
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__contact-item">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:visualpointpanama@gmail.com">visualpointpanama@gmail.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <a href="tel:+50760482000">+507 6048 2000</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <a href="tel:+50760402663">+507 6040 2663</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <a href="https://wa.me/50760482000" target="_blank" rel="noopener noreferrer">WhatsApp General</a>
+          </div>
+
+          <!-- Métodos de pago -->
+          <div class="footer__payments">
+            <p class="footer__payments-title">Métodos de Pago</p>
+            <div class="footer__payments-list" aria-label="Métodos de pago aceptados">
+              <span class="payment-badge">Visa</span>
+              <span class="payment-badge">Mastercard</span>
+              <span class="payment-badge">AmEx</span>
+              <span class="payment-badge">Diners</span>
+              <span class="payment-badge">Discover</span>
+              <span class="payment-badge">UnionPay</span>
+              <span class="payment-badge">JCB</span>
+              <span class="payment-badge">PayPal</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>
+          &copy; 2025 <span>Ópticas Visual Point Panamá</span>. Todos los derechos reservados.
+          &nbsp;|&nbsp; Hecho con <span style="color:#e74c3c;">&#9829;</span> en Panamá.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/50760482000?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios"
+     target="_blank" rel="noopener noreferrer"
+     class="whatsapp-float"
+     aria-label="Contactar a Visual Point Panamá por WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Promo bar: cerrar y ajustar navbar -->
+  <script>
+    (function() {
+      var promoBar = document.getElementById('promo-bar');
+      var promoClose = document.getElementById('promo-close');
+      var navbar = document.getElementById('navbar');
+
+      if (promoClose && promoBar && navbar) {
+        promoClose.addEventListener('click', function() {
+          promoBar.style.display = 'none';
+          navbar.classList.add('promo-hidden');
+          document.documentElement.style.setProperty('--promo-bar-height', '0px');
+        });
+      }
+
+    })();
+  </script>
+
+</body>
+</html>

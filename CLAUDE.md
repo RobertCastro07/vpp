@@ -214,6 +214,8 @@ y exámenes visuales profesionales. 8 sucursales en Panamá.
 - Cards con foto, nombre, botón "Consultar"
 - Placeholders hasta tener fotos reales
 
+**⚠️ Estado: construida pero despublicada temporalmente (2026-08-13).** El archivo existe y funciona (filtros probados), pero se quitó a propósito del navbar, del menú móvil y del footer de todas las páginas, y la tarjeta "Aros y Lentes para Ti" del home ahora enlaza a WhatsApp en vez de a esta página. Es intencional: el usuario aún no tiene suficiente material real de producto para publicarla. No reagregar los enlaces hasta que el usuario lo pida explícitamente.
+
 ### 4. `nosotros.html` — Sobre Nosotros
 - Historia de Visual Point Panamá
 - Misión, visión y valores
@@ -263,7 +265,7 @@ const sucursales = [
       lunesASabado: "10:00 a.m - 7:00 p.m",
       domingosFeriados: "11:00 a.m - 6:00 p.m"
     },
-    whatsapp: "50760912000"  // WhatsApp específico: 6091-1977
+    whatsapp: "50760482000"  // Número central único (pendiente: usuario confirmará número definitivo)
   },
   {
     nombre: "Los Pueblos",
@@ -440,8 +442,7 @@ vpp/
 Email:            visualpointpanama@gmail.com
 Teléfono 1:       +507 6048 2000
 Teléfono 2:       +507 6040 2663
-WhatsApp general: +507 6048 2000
-WhatsApp Albrook: +507 6091 1977
+WhatsApp:         +507 6048 2000 (número central único para todas las sucursales, incluido Albrook — pendiente confirmar número definitivo)
 Instagram:        @visualpointpanama
 Facebook:         VisualPointGroup
 ```

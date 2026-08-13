@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo Visual Point Panamá: aros oftálmicos, aros de sol, lentes de contacto y accesorios. Lleva tus cristales y te regalamos los aros.">
+  <meta name="keywords" content="aros oftalmicos panama, lentes de sol panama, lentes de contacto panama, accesorios opticos, catalogo visual point panama">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Ópticas Visual Point Panamá">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Catálogo de Productos | Ópticas Visual Point Panamá">
+  <meta property="og:description" content="Aros oftálmicos, aros de sol, lentes de contacto y accesorios. Lleva tus cristales y te regalamos los aros.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1682664175938-5545ce6605bc?w=1200&q=80&auto=format&fit=crop">
+  <meta property="og:url" content="https://www.opticasvisualpointpanama.com/productos.html">
+  <meta property="og:locale" content="es_PA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Catálogo de Productos | Ópticas Visual Point Panamá">
+  <meta name="twitter:description" content="Aros oftálmicos, aros de sol, lentes de contacto y accesorios en Panamá.">
+
+  <!-- Schema markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Optician",
+    "name": "Ópticas Visual Point Panamá",
+    "url": "https://www.opticasvisualpointpanama.com",
+    "telephone": "+50760482000",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Catálogo Visual Point",
+      "itemListElement": [
+        { "@type": "OfferCatalog", "name": "Aros Oftálmicos" },
+        { "@type": "OfferCatalog", "name": "Aros de Sol" },
+        { "@type": "OfferCatalog", "name": "Lentes de Contacto" },
+        { "@type": "OfferCatalog", "name": "Accesorios" }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Preload de la imagen hero para LCP rápido -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1682664175938-5545ce6605bc?w=1400&q=80&auto=format&fit=crop" fetchpriority="high">
+
+  <!-- Fuentes y CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <title>Catálogo de Productos | Ópticas Visual Point Panamá</title>
+</head>
+<body>
+
+  <!-- ================================================
+       PRELOADER
+  ================================================ -->
+  <div id="page-loader" class="page-loader" role="status" aria-label="Cargando Visual Point Panamá">
+    <div class="loader-inner">
+      <svg class="loader-glasses" viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle class="lens lens-l" cx="62" cy="45" r="30" fill="none" stroke="#F5C800" stroke-width="5" stroke-linecap="round"/>
+        <circle class="lens lens-r" cx="158" cy="45" r="30" fill="none" stroke="#F5C800" stroke-width="5" stroke-linecap="round"/>
+        <path class="bridge" d="M92 43 Q110 36 128 43" fill="none" stroke="#F5C800" stroke-width="4.5" stroke-linecap="round"/>
+        <line class="arm arm-l" x1="32" y1="33" x2="5" y2="22" stroke="#F5C800" stroke-width="4" stroke-linecap="round"/>
+        <line class="arm arm-r" x1="188" y1="33" x2="215" y2="22" stroke="#F5C800" stroke-width="4" stroke-linecap="round"/>
+        <circle class="lens-shine" cx="50" cy="34" r="5" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
+        <circle class="lens-shine" cx="146" cy="34" r="5" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
+      </svg>
+      <p class="loader-brand">Visual Point</p>
+      <p class="loader-sub">Panamá</p>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ================================================
+       BARRA DE PROMOCIÓN
+  ================================================ -->
+  <div class="promo-bar" id="promo-bar" role="banner" aria-label="Promoción vigente">
+    <p class="promo-bar__text">
+      🎁&nbsp; Lleva tus cristales y te regalamos los aros. Así de simple.
+    </p>
+    <a href="contacto.html" class="promo-bar__link">Quiero mis aros &rarr;</a>
+    <button class="promo-bar__close" id="promo-close" aria-label="Cerrar barra de promoción">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- ================================================
+       NAVBAR
+  ================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container">
+      <nav class="navbar__inner" aria-label="Navegación principal">
+        <a href="index.html" class="navbar__logo" aria-label="Visual Point Panamá — Inicio">
+          <img src="images/logo/logo-lb-trp.svg"
+               alt="Logo Ópticas Visual Point Panamá"
+               width="150" height="52"
+               style="object-fit:contain;">
+        </a>
+
+        <ul class="navbar__links" role="list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="productos.html" class="active">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="sucursales.html">Sucursales</a></li>
+          <li><a href="corporativo.html">Corporativo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <button class="navbar__hamburger"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+
+    <nav id="mobile-menu" class="navbar__mobile-menu" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="productos.html" class="active">Productos</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="sucursales.html">Sucursales</a>
+      <a href="corporativo.html">Corporativo</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ================================================
+         HERO — foto real + banner de promoción
+    ================================================ -->
+    <section class="hero hero--compact" aria-label="Catálogo Visual Point Panamá">
+
+      <img class="hero__bg-img"
+           src="https://images.unsplash.com/photo-1682664175938-5545ce6605bc?w=1400&q=80&auto=format&fit=crop"
+           alt="Exhibidor de aros en una sucursal Visual Point"
+           loading="eager"
+           fetchpriority="high">
+
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero__content">
+
+          <p class="hero__eyebrow" data-aos="fade-up">
+            Catálogo
+          </p>
+
+          <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+            <span class="hero__title-line">Un estilo para</span>
+            <span class="hero__title-gold">cada persona.</span>
+          </h1>
+
+          <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">
+            Aros oftálmicos, aros de sol, lentes de contacto y accesorios
+            de las mejores marcas, disponibles en nuestras 8 sucursales.
+          </p>
+
+          <div class="hero__actions" data-aos="fade-up" data-aos-delay="300">
+            <a href="#catalogo" class="btn btn--primary">
+              Ver catálogo &nbsp;<i class="fas fa-arrow-down"></i>
+            </a>
+          </div>
+
+          <div class="hero__badges" data-aos="fade-up" data-aos-delay="400">
+            <span class="hero__badge"><i class="fas fa-gift"></i> Lleva tus cristales y te regalamos los aros</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         CATEGORÍAS DE PRODUCTOS
+    ================================================ -->
+    <section class="section" aria-labelledby="cat-titulo">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 id="cat-titulo" class="section-title" data-aos="fade-up">Explora por Categoría</h2>
+          <p data-aos="fade-up" data-aos-delay="100">
+            Encuentra exactamente lo que buscas en un clic.
+          </p>
+        </div>
+
+        <div class="grid-4" style="margin-top:2.5rem;gap:1.25rem;">
+
+          <a href="#catalogo" class="product-category-card" data-aos="fade-up" data-aos-delay="100"
+             onclick="document.getElementById('filter-oftalmicos').click();">
+            <div class="product-category-card__bg" style="background-image:url('https://images.unsplash.com/photo-1486250944723-86bca2b15b06?w=700&q=80&auto=format&fit=crop');"></div>
+            <div class="product-category-card__overlay"></div>
+            <div class="product-category-card__arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+            <div class="product-category-card__content">
+              <div class="product-category-card__icon" aria-hidden="true"><i class="fas fa-glasses"></i></div>
+              <h3 class="product-category-card__title">Aros Oftálmicos</h3>
+              <p class="product-category-card__sub">Para todos los estilos</p>
+            </div>
+          </a>
+
+          <a href="#catalogo" class="product-category-card" data-aos="fade-up" data-aos-delay="175"
+             onclick="document.getElementById('filter-sol').click();">
+            <div class="product-category-card__bg" style="background-image:url('https://images.unsplash.com/photo-1633351813330-f4ba356bcb2c?w=700&q=80&auto=format&fit=crop');"></div>
+            <div class="product-category-card__overlay"></div>
+            <div class="product-category-card__arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+            <div class="product-category-card__content">
+              <div class="product-category-card__icon" aria-hidden="true"><i class="fas fa-sun"></i></div>
+              <h3 class="product-category-card__title">Aros de Sol</h3>
+              <p class="product-category-card__sub">Protección con estilo</p>
+            </div>
+          </a>
+
+          <a href="#catalogo" class="product-category-card" data-aos="fade-up" data-aos-delay="250"
+             onclick="document.getElementById('filter-contacto').click();">
+            <div class="product-category-card__bg" style="background-image:url('https://images.unsplash.com/photo-1534627425233-f7d6335ca734?w=700&q=80&auto=format&fit=crop');"></div>
+            <div class="product-category-card__overlay"></div>
+            <div class="product-category-card__arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+            <div class="product-category-card__content">
+              <div class="product-category-card__icon" aria-hidden="true"><i class="fas fa-eye"></i></div>
+              <h3 class="product-category-card__title">Lentes de Contacto</h3>
+              <p class="product-category-card__sub">Diarios, mensuales y tóricos</p>
+            </div>
+          </a>
+
+          <a href="#catalogo" class="product-category-card" data-aos="fade-up" data-aos-delay="325"
+             onclick="document.getElementById('filter-accesorios').click();">
+            <div class="product-category-card__bg" style="background-image:url('https://images.unsplash.com/photo-1632986636968-04958bfbbf3f?w=700&q=80&auto=format&fit=crop');"></div>
+            <div class="product-category-card__overlay"></div>
+            <div class="product-category-card__arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+            <div class="product-category-card__content">
+              <div class="product-category-card__icon" aria-hidden="true"><i class="fas fa-box"></i></div>
+              <h3 class="product-category-card__title">Accesorios</h3>
+              <p class="product-category-card__sub">Estuches, paños y más</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         CATÁLOGO CON FILTROS
+    ================================================ -->
+    <section class="section section--dark" id="catalogo" aria-labelledby="catalogo-titulo">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 id="catalogo-titulo" class="section-title" style="color:#fff;" data-aos="fade-up">
+            Nuestro Catálogo
+          </h2>
+          <p style="color:rgba(255,255,255,0.55);" data-aos="fade-up" data-aos-delay="100">
+            Fotos reales próximamente. Mientras tanto, consulta disponibilidad y precios por WhatsApp.
+          </p>
+        </div>
+
+        <div class="filter-bar" style="margin:2.5rem 0 2.5rem;" data-aos="fade-up" data-aos-delay="150">
+          <button class="filter-btn active" id="filter-all" data-filter="all">Todos</button>
+          <button class="filter-btn" id="filter-oftalmicos" data-filter="oftalmicos">Aros Oftálmicos</button>
+          <button class="filter-btn" id="filter-sol" data-filter="sol">Aros de Sol</button>
+          <button class="filter-btn" id="filter-contacto" data-filter="contacto">Lentes de Contacto</button>
+          <button class="filter-btn" id="filter-accesorios" data-filter="accesorios">Accesorios</button>
+        </div>
+
+        <div class="catalog-grid">
+
+          <!-- Aros Oftálmicos -->
+          <article class="product-card" data-category="oftalmicos" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card__img"><i class="fas fa-glasses"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Aros Oftálmicos</p>
+              <h3 class="product-card__name">Armazón Clásico Redondo</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20el%20Armazón%20Clásico%20Redondo" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="oftalmicos" data-aos="fade-up" data-aos-delay="150">
+            <div class="product-card__img"><i class="fas fa-glasses"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Aros Oftálmicos</p>
+              <h3 class="product-card__name">Armazón Rectangular Moderno</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20el%20Armazón%20Rectangular%20Moderno" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="oftalmicos" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card__img"><i class="fas fa-glasses"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Aros Oftálmicos</p>
+              <h3 class="product-card__name">Armazón Cat-Eye</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20el%20Armazón%20Cat-Eye" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="oftalmicos" data-aos="fade-up" data-aos-delay="250">
+            <div class="product-card__img"><i class="fas fa-glasses"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Aros Oftálmicos</p>
+              <h3 class="product-card__name">Armazón Ligero en Titanio</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20el%20Armazón%20Ligero%20en%20Titanio" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <!-- Aros de Sol -->
+          <article class="product-card" data-category="sol" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card__img"><i class="fas fa-sun"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Aros de Sol</p>
+              <h3 class="product-card__name">Aviador Clásico</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20el%20Aviador%20Clásico" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="sol" data-aos="fade-up" data-aos-delay="150">
+            <div class="product-card__img"><i class="fas fa-sun"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Aros de Sol</p>
+              <h3 class="product-card__name">Wayfarer Deportivo</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20el%20Wayfarer%20Deportivo" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="sol" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card__img"><i class="fas fa-sun"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Aros de Sol</p>
+              <h3 class="product-card__name">Sol Polarizado Redondo</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20el%20Sol%20Polarizado%20Redondo" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="sol" data-aos="fade-up" data-aos-delay="250">
+            <div class="product-card__img"><i class="fas fa-sun"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Aros de Sol</p>
+              <h3 class="product-card__name">Sol Oversized</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20el%20Sol%20Oversized" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <!-- Lentes de Contacto -->
+          <article class="product-card" data-category="contacto" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card__img"><i class="fas fa-eye"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Lentes de Contacto</p>
+              <h3 class="product-card__name">Lentes de Contacto Diarios</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20los%20Lentes%20de%20Contacto%20Diarios" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="contacto" data-aos="fade-up" data-aos-delay="150">
+            <div class="product-card__img"><i class="fas fa-eye"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Lentes de Contacto</p>
+              <h3 class="product-card__name">Lentes de Contacto Mensuales</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20los%20Lentes%20de%20Contacto%20Mensuales" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="contacto" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card__img"><i class="fas fa-eye"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Lentes de Contacto</p>
+              <h3 class="product-card__name">Lentes Tóricos (Astigmatismo)</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20los%20Lentes%20Tóricos" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <!-- Accesorios -->
+          <article class="product-card" data-category="accesorios" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card__img"><i class="fas fa-box"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Accesorios</p>
+              <h3 class="product-card__name">Estuche Rígido</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20el%20Estuche%20Rígido" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accesorios" data-aos="fade-up" data-aos-delay="150">
+            <div class="product-card__img"><i class="fas fa-box"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Accesorios</p>
+              <h3 class="product-card__name">Paño de Microfibra</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20el%20Paño%20de%20Microfibra" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accesorios" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card__img"><i class="fas fa-box"></i><span>Foto próximamente</span></div>
+            <div class="product-card__body">
+              <p class="product-card__category">Accesorios</p>
+              <h3 class="product-card__name">Kit de Limpieza</h3>
+              <a href="https://wa.me/50760482000?text=Hola,%20quiero%20consultar%20por%20el%20Kit%20de%20Limpieza" target="_blank" rel="noopener noreferrer" class="btn btn--outline-gold">Consultar</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         PROMOCIÓN
+    ================================================ -->
+    <section class="cta-section" aria-labelledby="prod-cta-titulo">
+      <div class="container">
+        <div data-aos="fade-up">
+          <p style="font-family:var(--font-heading);font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-gold);margin-bottom:0.75rem;">
+            Promoción Vigente
+          </p>
+          <h2 id="prod-cta-titulo">Lleva tus cristales y te regalamos los aros.</h2>
+          <p>
+            Así de simple. Visítanos en cualquiera de nuestras 8 sucursales en Panamá.
+          </p>
+          <div class="btn-group">
+            <a href="https://wa.me/50760482000?text=Hola,%20quiero%20información%20sobre%20la%20promoción%20de%20aros%20gratis"
+               target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+              <i class="fas fa-gift"></i> Quiero mis aros gratis
+            </a>
+            <a href="sucursales.html" class="btn btn--secondary">
+              <i class="fas fa-map-marker-alt"></i> Ver sucursales
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Marca -->
+        <div class="footer__brand">
+          <a href="index.html" aria-label="Visual Point Panamá — Inicio">
+            <img src="images/logo/logo-lb-trp.svg"
+                 alt="Logo Ópticas Visual Point Panamá" width="140" height="49"
+                 style="object-fit:contain;">
+          </a>
+          <p>
+            Expertos en salud visual con 8 sucursales en Panamá.
+            Tu visión es nuestra misión desde hace más de 10 años.
+          </p>
+          <div class="footer__social" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/visualpointpanama" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/VisualPointGroup" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/50760482000?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div>
+          <p class="footer__col-title">Navegación</p>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="sucursales.html">Sucursales</a></li>
+            <li><a href="corporativo.html">Corporativo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Categorías -->
+        <div>
+          <p class="footer__col-title">Categorías</p>
+          <ul class="footer__links" role="list">
+            <li><a href="productos.html#catalogo">Aros Oftálmicos</a></li>
+            <li><a href="productos.html#catalogo">Aros de Sol</a></li>
+            <li><a href="productos.html#catalogo">Lentes de Contacto</a></li>
+            <li><a href="productos.html#catalogo">Accesorios</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto + Pagos -->
+        <div>
+          <p class="footer__col-title">Contacto</p>
+          <div class="footer__contact-item">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:visualpointpanama@gmail.com">visualpointpanama@gmail.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <a href="tel:+50760482000">+507 6048 2000</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <a href="tel:+50760402663">+507 6040 2663</a>
+          </div>
+          <div class="footer__contact-item">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <a href="https://wa.me/50760482000" target="_blank" rel="noopener noreferrer">WhatsApp General</a>
+          </div>
+
+          <!-- Métodos de pago -->
+          <div class="footer__payments">
+            <p class="footer__payments-title">Métodos de Pago</p>
+            <div class="footer__payments-list" aria-label="Métodos de pago aceptados">
+              <span class="payment-badge">Visa</span>
+              <span class="payment-badge">Mastercard</span>
+              <span class="payment-badge">AmEx</span>
+              <span class="payment-badge">Diners</span>
+              <span class="payment-badge">Discover</span>
+              <span class="payment-badge">UnionPay</span>
+              <span class="payment-badge">JCB</span>
+              <span class="payment-badge">PayPal</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>
+          &copy; 2025 <span>Ópticas Visual Point Panamá</span>. Todos los derechos reservados.
+          &nbsp;|&nbsp; Hecho con <span style="color:#e74c3c;">&#9829;</span> en Panamá.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/50760482000?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios"
+     target="_blank" rel="noopener noreferrer"
+     class="whatsapp-float"
+     aria-label="Contactar a Visual Point Panamá por WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Promo bar: cerrar y ajustar navbar -->
+  <script>
+    (function() {
+      var promoBar = document.getElementById('promo-bar');
+      var promoClose = document.getElementById('promo-close');
+      var navbar = document.getElementById('navbar');
+
+      if (promoClose && promoBar && navbar) {
+        promoClose.addEventListener('click', function() {
+          promoBar.style.display = 'none';
+          navbar.classList.add('promo-hidden');
+          document.documentElement.style.setProperty('--promo-bar-height', '0px');
+        });
+      }
+
+    })();
+  </script>
+
+</body>
+</html>

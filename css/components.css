@@ -2138,30 +2138,6 @@
 }
 
 /* ================================================
-   HERO PÁGINAS INTERNAS
-================================================ */
-.page-hero {
-  background: linear-gradient(135deg, var(--color-bg-dark) 0%, #1a1a1a 100%);
-  padding: calc(var(--top-offset) + 2.5rem) 0 3rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.page-hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
-}
-
-.page-hero h1 { color: var(--color-text-white); margin-bottom: 0.75rem; }
-.page-hero p { color: rgba(255,255,255,0.55); max-width: 540px; margin: 0 auto; font-size: 1.05rem; }
-
-/* ================================================
    FORMULARIO DE CONTACTO
 ================================================ */
 .form-group { margin-bottom: 1.25rem; }
@@ -2202,43 +2178,111 @@
 .form-group textarea { resize: vertical; min-height: 140px; }
 
 /* ================================================
-   CARDS DE SUCURSALES
+   CARDS DE SUCURSALES — bento oscuro, en línea con
+   el resto del sistema (svc-card, ferias-media)
 ================================================ */
 .branch-card {
-  background-color: var(--color-bg);
-  border-radius: var(--radius);
+  position: relative;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
   overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition), background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.branch-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-gold-dark), var(--color-gold), var(--color-gold-light));
+  opacity: 0;
+  transition: opacity var(--transition);
 }
 
 .branch-card:hover {
+  border-color: rgba(245,200,0,0.3);
+  background: rgba(245,200,0,0.045);
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
 
-.branch-card__header {
-  background: linear-gradient(135deg, var(--color-bg-dark), #2a2a2a);
-  padding: 1.25rem 1.5rem;
-  border-bottom: 2px solid var(--color-gold);
+.branch-card:hover::before { opacity: 1; }
+
+.branch-card__num {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: rgba(245,200,0,0.07);
+  line-height: 1;
+  position: absolute;
+  top: 0.85rem;
+  right: 1.15rem;
+  letter-spacing: -0.04em;
+  pointer-events: none;
+  user-select: none;
+}
+
+.branch-card__pin {
+  width: 46px;
+  height: 46px;
+  background: rgba(245,200,0,0.1);
+  border: 1px solid rgba(245,200,0,0.22);
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--color-gold);
+  margin-bottom: 1.1rem;
+  flex-shrink: 0;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.branch-card:hover .branch-card__pin {
+  background: rgba(245,200,0,0.18);
+  border-color: rgba(245,200,0,0.4);
+}
+
+.branch-card__badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--color-gold);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+  position: relative;
+  z-index: 1;
 }
 
 .branch-card__name {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-text-white);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
 }
-
-.branch-card__body { padding: 1.25rem 1.5rem; }
 
 .branch-card__info {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
-  margin-bottom: 0.6rem;
-  color: var(--color-text-light);
-  font-size: 0.875rem;
+  margin-bottom: 0.65rem;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 .branch-card__info i {
@@ -2250,17 +2294,18 @@
 
 .branch-card__actions {
   display: flex;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
   flex-wrap: wrap;
 }
 
 .branch-card__actions .btn {
   flex: 1;
   min-width: 120px;
-  font-size: 0.78rem;
-  padding: 0.65rem 0.75rem;
-  min-height: 44px;
+  font-size: 0.74rem;
+  padding: 0.65rem 0.6rem;
+  min-height: 42px;
+  border-radius: 999px;
 }
 
 /* ================================================
@@ -2500,5 +2545,480 @@
   .cta-section .btn-group .btn {
     width: auto;
     max-width: none;
+  }
+}
+
+/* ================================================
+   HERO COMPACTO — páginas internas con foto
+================================================ */
+.hero.hero--compact {
+  min-height: 82vh;
+  padding-bottom: 3rem;
+}
+
+.hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero__badges .hero__badge { margin-top: 0; }
+
+@media (min-width: 768px) {
+  .hero.hero--compact { min-height: 66vh; }
+}
+
+/* ================================================
+   FERIAS DE SALUD VISUAL — split editorial
+================================================ */
+.ferias-section {
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-bg-dark);
+}
+
+.ferias-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.ferias-media {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3.4;
+  box-shadow: var(--shadow-lg);
+}
+
+.ferias-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ferias-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(245,200,0,0.18) 0%, rgba(10,10,10,0.15) 45%, rgba(10,10,10,0.65) 100%);
+}
+
+.ferias-media__frame {
+  position: absolute;
+  inset: 14px;
+  border: 1.5px solid rgba(245,200,0,0.45);
+  border-radius: calc(var(--radius-lg) - 6px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ferias-media__badge {
+  position: absolute;
+  z-index: 2;
+  bottom: 1.1rem;
+  left: 1.1rem;
+  right: 1.1rem;
+  background: rgba(17,17,17,0.82);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(245,200,0,0.3);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-gold);
+}
+
+.ferias-timeline {
+  position: relative;
+  margin-top: 2rem;
+  padding-left: 2.75rem;
+}
+
+.ferias-timeline::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(245,200,0,0.55), rgba(245,200,0,0.05));
+}
+
+.ferias-timeline__item {
+  position: relative;
+  padding-bottom: 1.85rem;
+}
+
+.ferias-timeline__item:last-child { padding-bottom: 0; }
+
+.ferias-timeline__num {
+  position: absolute;
+  left: -2.75rem;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--color-bg-dark);
+  border: 1.5px solid var(--color-gold);
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ferias-timeline__item h4 {
+  color: #fff;
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.ferias-timeline__item p {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+@media (min-width: 1024px) {
+  .ferias-grid {
+    grid-template-columns: 1fr 1.05fr;
+    gap: 4rem;
+  }
+}
+
+/* ================================================
+   COTIZACIÓN — sección fotográfica con card flotante
+================================================ */
+.cotizacion-photo {
+  position: relative;
+  padding: var(--space-2xl) 0;
+  overflow: hidden;
+  background-color: #0d0d0d;
+}
+
+.cotizacion-photo__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.cotizacion-photo__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(8,8,8,0.95) 0%, rgba(15,15,15,0.9) 40%, rgba(20,18,10,0.75) 100%);
+  z-index: 1;
+}
+
+.cotizacion-photo__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.cotizacion-form-card {
+  background: var(--color-bg);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border-top: 3px solid var(--color-gold);
+}
+
+/* ================================================
+   CONTACT RAIL — lista de canales de contacto
+================================================ */
+.contact-rail-section {
+  position: relative;
+  background: var(--color-bg-dark);
+  padding: var(--space-2xl) 0;
+  overflow: hidden;
+}
+
+.contact-rail-section::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -15%;
+  width: 65%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(245,200,0,0.10) 0%, transparent 68%);
+  pointer-events: none;
+}
+
+.contact-rail-section::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -15%;
+  width: 55%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(245,200,0,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contact-rail {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 2.5rem auto 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.4rem 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-decoration: none;
+  transition: background var(--transition), padding-left var(--transition);
+}
+
+a.contact-row:hover {
+  background: rgba(245,200,0,0.05);
+  padding-left: 1.25rem;
+}
+
+.contact-row__icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(245,200,0,0.1);
+  border: 1px solid rgba(245,200,0,0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  font-size: 1.15rem;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+a.contact-row:hover .contact-row__icon {
+  background: var(--color-gold);
+  color: var(--color-primary);
+  transform: scale(1.06);
+}
+
+.contact-row__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-row__label {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.contact-row__value {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.contact-row__arrow {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.8rem;
+  transition: transform var(--transition), border-color var(--transition), color var(--transition);
+}
+
+a.contact-row:hover .contact-row__arrow {
+  transform: translateX(4px);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.contact-row__social {
+  display: flex;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.contact-row__social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(245,200,0,0.3);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.contact-row__social a:hover {
+  background: var(--color-gold);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .contact-row__label { font-size: 0.92rem; }
+  .contact-row__value { font-size: 0.8rem; }
+  .contact-row__icon { width: 44px; height: 44px; font-size: 1rem; }
+}
+
+/* ================================================
+   CATÁLOGO — filtros y tarjetas de producto
+================================================ */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.filter-btn {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.4rem;
+  min-height: 44px;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-primary);
+}
+
+.filter-btn.active {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-primary);
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .catalog-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.product-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(245,200,0,0.4);
+}
+
+.product-card__img {
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, #f4f4f4 0%, #e9e9e9 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.product-card__img i {
+  font-size: 2.25rem;
+  color: var(--color-gold-dark);
+  opacity: 0.55;
+}
+
+.product-card__img span {
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
+.product-card__body {
+  padding: 1.1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-card__category {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-bottom: 0.4rem;
+}
+
+.product-card__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  line-height: 1.35;
+  margin-bottom: 1rem;
+}
+
+.product-card__body .btn {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+}
+
+/* ================================================
+   ENCUADRE DE HEROES — en móvil, la ventana de recorte
+   es muy angosta (~44% del ancho de la foto), así que
+   el sujeto principal debe reposicionarse por foto.
+================================================ */
+.hero__bg-img.hero__bg-img--skyline {
+  object-position: 88% 58%;
+}
+
+@media (min-width: 1024px) {
+  .hero__bg-img.hero__bg-img--skyline {
+    object-position: center 45%;
   }
 }
