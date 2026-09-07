@@ -3022,3 +3022,121 @@ a.contact-row:hover .contact-row__arrow {
     object-position: center 45%;
   }
 }
+
+/* ================================================
+   BOTÓN COMPACTO
+================================================ */
+.btn--sm {
+  padding: 0.5rem 1rem;
+  min-height: 44px;
+  font-size: 0.72rem;
+}
+
+/* ================================================
+   PÁGINA CORPORATIVA — chrome mínimo, sin navegación
+   Se envía directo a contactos de empresas: no debe
+   permitir salir a otras páginas del sitio.
+================================================ */
+body.corp-standalone {
+  --top-offset: 0px;
+}
+
+.corp-topbar {
+  background-color: var(--color-bg-dark);
+  border-bottom: 2px solid var(--color-gold);
+}
+
+.corp-topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: var(--navbar-height);
+}
+
+.corp-topbar__logo img {
+  height: 40px;
+  width: auto;
+}
+
+.corp-topbar__contact {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.corp-topbar__phone {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-white);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.corp-topbar__phone i { color: var(--color-gold); }
+
+@media (min-width: 640px) {
+  .corp-topbar__logo img { height: 46px; }
+  .corp-topbar__phone { display: flex; }
+}
+
+@media (min-width: 768px) {
+  .corp-topbar__logo img { height: 52px; }
+}
+
+.corp-footer {
+  background-color: var(--color-bg-dark);
+  padding: 3rem 0 2rem;
+  border-top: 3px solid var(--color-gold);
+}
+
+.corp-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.1rem;
+}
+
+.corp-footer__tagline {
+  color: rgba(255,255,255,0.55);
+  max-width: 420px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.corp-footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+@media (min-width: 640px) {
+  .corp-footer__contact {
+    flex-direction: row;
+    gap: 1.75rem;
+  }
+}
+
+.corp-footer__contact a {
+  color: var(--color-text-white);
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color var(--transition);
+}
+
+.corp-footer__contact a:hover { color: var(--color-gold); }
+.corp-footer__contact i { color: var(--color-gold); }
+
+.corp-footer__copy {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.corp-footer__copy span { color: rgba(255,255,255,0.65); }

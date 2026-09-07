@@ -18,7 +18,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Programa Corporativo | Ópticas Visual Point Panamá">
   <meta property="og:description" content="Convenios de descuento para tu equipo, ferias de salud visual empresarial en tus instalaciones y atención en 8 sucursales en Panamá.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?w=1200&q=80&auto=format&fit=crop">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1758518731468-98e90ffd7430?w=1200&q=80&auto=format&fit=crop">
   <meta property="og:url" content="https://visualpointopticas.com/corporativo.html">
   <meta property="og:locale" content="es_PA">
 
@@ -45,7 +45,7 @@
   </script>
 
   <!-- Preload de la imagen hero para LCP rápido -->
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?w=1400&q=80&auto=format&fit=crop" fetchpriority="high">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1758518731468-98e90ffd7430?w=1400&q=80&auto=format&fit=crop" fetchpriority="high">
 
   <!-- Fuentes y CDNs -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,7 +60,7 @@
 
   <title>Programa Corporativo | Ópticas Visual Point Panamá</title>
 </head>
-<body>
+<body class="corp-standalone">
 
   <!-- ================================================
        PRELOADER
@@ -83,57 +83,30 @@
   </div>
 
   <!-- ================================================
-       BARRA DE PROMOCIÓN
+       TOPBAR MÍNIMO — página independiente, sin navegación
+       (esta página se envía directo a contactos empresariales;
+       no debe permitir salir a otras secciones del sitio)
   ================================================ -->
-  <div class="promo-bar" id="promo-bar" role="banner" aria-label="Promoción vigente">
-    <p class="promo-bar__text">
-      🎁&nbsp; Lleva tus cristales y te regalamos los aros. Así de simple.
-    </p>
-    <a href="contacto.html" class="promo-bar__link">Quiero mis aros &rarr;</a>
-    <button class="promo-bar__close" id="promo-close" aria-label="Cerrar barra de promoción">
-      <i class="fas fa-times"></i>
-    </button>
-  </div>
+  <header class="corp-topbar" role="banner">
+    <div class="container corp-topbar__inner">
+      <span class="corp-topbar__logo" aria-label="Visual Point Panamá">
+        <img src="images/logo/logo-lb-trp.svg"
+             alt="Logo Ópticas Visual Point Panamá"
+             width="150" height="52"
+             style="object-fit:contain;">
+      </span>
 
-  <!-- ================================================
-       NAVBAR
-  ================================================ -->
-  <header class="navbar" id="navbar" role="banner">
-    <div class="container">
-      <nav class="navbar__inner" aria-label="Navegación principal">
-        <a href="index.html" class="navbar__logo" aria-label="Visual Point Panamá — Inicio">
-          <img src="images/logo/logo-lb-trp.svg"
-               alt="Logo Ópticas Visual Point Panamá"
-               width="150" height="52"
-               style="object-fit:contain;">
+      <div class="corp-topbar__contact">
+        <a href="tel:+50760482000" class="corp-topbar__phone">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          <span>+507 6048-2000</span>
         </a>
-
-        <ul class="navbar__links" role="list">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="sucursales.html">Sucursales</a></li>
-          <li><a href="corporativo.html" class="active">Corporativo</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-
-        <button class="navbar__hamburger"
-                aria-label="Abrir menú"
-                aria-expanded="false"
-                aria-controls="mobile-menu">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
+        <a href="https://wa.me/50760482000?text=Hola,%20quiero%20información%20sobre%20el%20Programa%20Corporativo%20de%20Visual%20Point"
+           target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--sm">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+        </a>
+      </div>
     </div>
-
-    <nav id="mobile-menu" class="navbar__mobile-menu" aria-label="Menú móvil">
-      <a href="index.html">Inicio</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="nosotros.html">Nosotros</a>
-      <a href="sucursales.html">Sucursales</a>
-      <a href="corporativo.html" class="active">Corporativo</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
   </header>
 
   <main id="main-content">
@@ -144,8 +117,8 @@
     <section class="hero hero--compact" aria-label="Programa Corporativo Visual Point">
 
       <img class="hero__bg-img"
-           src="https://images.unsplash.com/photo-1758518731706-be5d5230e5a5?w=1400&q=80&auto=format&fit=crop"
-           alt="Equipo empresarial en una reunión — Programa Corporativo Visual Point Panamá"
+           src="https://images.unsplash.com/photo-1758518731468-98e90ffd7430?w=1400&q=80&auto=format&fit=crop"
+           alt="Equipo de profesionales de una empresa aliada — Programa Corporativo Visual Point Panamá"
            loading="eager"
            fetchpriority="high">
 
@@ -296,8 +269,8 @@
         <div class="ferias-grid">
 
           <div class="ferias-media" data-aos="fade-right">
-            <img src="https://images.unsplash.com/photo-1766310549795-dd0fc75d499f?w=1000&q=80&auto=format&fit=crop"
-                 alt="Optometrista de Visual Point realizando un examen visual"
+            <img src="https://images.unsplash.com/photo-1749183778702-bdf9e92253e6?w=1000&q=80&auto=format&fit=crop"
+                 alt="Cliente probándose aros en una óptica Visual Point"
                  loading="lazy" width="1000" height="850">
             <div class="ferias-media__frame" aria-hidden="true"></div>
             <div class="ferias-media__badge">
@@ -391,7 +364,7 @@
     <section class="cotizacion-photo" id="cotizacion" aria-labelledby="cotizacion-titulo">
 
       <img class="cotizacion-photo__bg"
-           src="https://images.unsplash.com/photo-1641247565151-fe622e1067d0?w=1400&q=80&auto=format&fit=crop"
+           src="https://images.unsplash.com/photo-1758599543129-5269a8f29e68?w=1400&q=80&auto=format&fit=crop"
            alt=""
            loading="lazy" aria-hidden="true">
       <div class="cotizacion-photo__overlay" aria-hidden="true"></div>
@@ -512,106 +485,42 @@
   </main>
 
   <!-- ================================================
-       FOOTER
+       FOOTER MÍNIMO — sin navegación, solo marca y contacto
   ================================================ -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
+  <footer class="corp-footer" role="contentinfo">
+    <div class="container corp-footer__inner">
 
-        <!-- Marca -->
-        <div class="footer__brand">
-          <a href="index.html" aria-label="Visual Point Panamá — Inicio">
-            <img src="images/logo/logo-lb-trp.svg"
-                 alt="Logo Ópticas Visual Point Panamá" width="140" height="49"
-                 style="object-fit:contain;">
-          </a>
-          <p>
-            Expertos en salud visual con 8 sucursales en Panamá.
-            Tu visión es nuestra misión desde hace más de 10 años.
-          </p>
-          <div class="footer__social" aria-label="Redes sociales">
-            <a href="https://www.instagram.com/visualpointpanama" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/VisualPointGroup" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://wa.me/50760482000?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
+      <span aria-label="Visual Point Panamá">
+        <img src="images/logo/logo-lb-trp.svg"
+             alt="Logo Ópticas Visual Point Panamá" width="140" height="49"
+             style="object-fit:contain;">
+      </span>
 
-        </div>
+      <p class="corp-footer__tagline">
+        Expertos en salud visual con 8 sucursales en Panamá.
+        Tu visión es nuestra misión desde hace más de 10 años.
+      </p>
 
-        <!-- Navegación -->
-        <div>
-          <p class="footer__col-title">Navegación</p>
-          <ul class="footer__links" role="list">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="sucursales.html">Sucursales</a></li>
-            <li><a href="corporativo.html">Corporativo</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
-
-        <!-- Corporativo -->
-        <div>
-          <p class="footer__col-title">Corporativo</p>
-          <ul class="footer__links" role="list">
-            <li><a href="corporativo.html#beneficios-titulo">Beneficios del Convenio</a></li>
-            <li><a href="corporativo.html#ferias-titulo">Ferias de Salud Visual</a></li>
-            <li><a href="corporativo.html#cotizacion">Solicitar Cotización</a></li>
-          </ul>
-        </div>
-
-        <!-- Contacto + Pagos -->
-        <div>
-          <p class="footer__col-title">Contacto</p>
-          <div class="footer__contact-item">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-            <a href="mailto:visualpointpanama@gmail.com">visualpointpanama@gmail.com</a>
-          </div>
-          <div class="footer__contact-item">
-            <i class="fas fa-phone" aria-hidden="true"></i>
-            <a href="tel:+50760482000">+507 6048 2000</a>
-          </div>
-          <div class="footer__contact-item">
-            <i class="fas fa-phone" aria-hidden="true"></i>
-            <a href="tel:+50760402663">+507 6040 2663</a>
-          </div>
-          <div class="footer__contact-item">
-            <i class="fab fa-whatsapp" aria-hidden="true"></i>
-            <a href="https://wa.me/50760482000" target="_blank" rel="noopener noreferrer">WhatsApp General</a>
-          </div>
-
-          <!-- Métodos de pago -->
-          <div class="footer__payments">
-            <p class="footer__payments-title">Métodos de Pago</p>
-            <div class="footer__payments-list" aria-label="Métodos de pago aceptados">
-              <span class="payment-badge">Visa</span>
-              <span class="payment-badge">Mastercard</span>
-              <span class="payment-badge">AmEx</span>
-              <span class="payment-badge">Diners</span>
-              <span class="payment-badge">Discover</span>
-              <span class="payment-badge">UnionPay</span>
-              <span class="payment-badge">JCB</span>
-              <span class="payment-badge">PayPal</span>
-            </div>
-          </div>
-        </div>
-
+      <div class="corp-footer__contact">
+        <a href="mailto:visualpointpanama@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> visualpointpanama@gmail.com</a>
+        <a href="tel:+50760482000"><i class="fas fa-phone" aria-hidden="true"></i> +507 6048 2000</a>
+        <a href="https://wa.me/50760482000?text=Hola,%20quiero%20información%20sobre%20el%20Programa%20Corporativo%20de%20Visual%20Point" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
       </div>
-    </div>
 
-    <div class="footer__bottom">
-      <div class="container">
-        <p>
-          &copy; 2025 <span>Ópticas Visual Point Panamá</span>. Todos los derechos reservados.
-          &nbsp;|&nbsp; Hecho con <span style="color:#e74c3c;">&#9829;</span> en Panamá.
-        </p>
+      <div class="footer__payments-list" aria-label="Métodos de pago aceptados" style="justify-content:center;margin-top:0.5rem;">
+        <span class="payment-badge">Visa</span>
+        <span class="payment-badge">Mastercard</span>
+        <span class="payment-badge">AmEx</span>
+        <span class="payment-badge">Diners</span>
+        <span class="payment-badge">Discover</span>
+        <span class="payment-badge">UnionPay</span>
+        <span class="payment-badge">JCB</span>
+        <span class="payment-badge">PayPal</span>
       </div>
+
+      <p class="corp-footer__copy">
+        &copy; 2025 <span>Ópticas Visual Point Panamá</span>. Todos los derechos reservados.
+      </p>
     </div>
   </footer>
 
@@ -625,26 +534,7 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="js/menu.js"></script>
   <script src="js/main.js"></script>
-
-  <!-- Promo bar: cerrar y ajustar navbar -->
-  <script>
-    (function() {
-      var promoBar = document.getElementById('promo-bar');
-      var promoClose = document.getElementById('promo-close');
-      var navbar = document.getElementById('navbar');
-
-      if (promoClose && promoBar && navbar) {
-        promoClose.addEventListener('click', function() {
-          promoBar.style.display = 'none';
-          navbar.classList.add('promo-hidden');
-          document.documentElement.style.setProperty('--promo-bar-height', '0px');
-        });
-      }
-
-    })();
-  </script>
 
 </body>
 </html>
