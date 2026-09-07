@@ -5,13 +5,14 @@
 
 ## 🏢 ¿Qué es este proyecto?
 
-Rediseño completo del sitio web de **Ópticas Visual Point Panamá**, una cadena de ópticas con **8 sucursales** en Panamá. La página actual (opticasvisualpointpanama.com) está desactualizada y no refleja la calidad ni los servicios reales de la empresa.
+Rediseño completo del sitio web de **Ópticas Visual Point Panamá**, una cadena de ópticas con **8 sucursales** en Panamá. La página anterior estaba desactualizada y no reflejaba la calidad ni los servicios reales de la empresa.
 
 **Objetivo:** Crear una página web moderna, profesional y optimizada para SEO que muestre todos los servicios, tecnologías, promociones y sucursales de Visual Point, y que posicione bien en Google y en las respuestas de IAs.
 
 **Repositorio GitHub:** `vpp`
-**Dominio final:** opticasvisualpointpanama.com
-**Estado actual:** En desarrollo — se publicará al hosting cuando esté completo.
+**Dominio final:** visualpointopticas.com (comprado en GoDaddy)
+**Hosting:** Vercel (deploy conectado al repo `vpp`)
+**Estado actual:** Publicado en GitHub Pages; migrando hosting a Vercel con dominio propio.
 
 ---
 
@@ -412,7 +413,7 @@ vpp/
 <meta property="og:title" content="TÍTULO | Ópticas Visual Point Panamá">
 <meta property="og:description" content="DESCRIPCIÓN">
 <meta property="og:image" content="images/hero/og-image.jpg">
-<meta property="og:url" content="https://www.opticasvisualpointpanama.com">
+<meta property="og:url" content="https://visualpointopticas.com">
 
 <script type="application/ld+json">
 {
@@ -420,7 +421,7 @@ vpp/
   "@type": "LocalBusiness",
   "name": "Ópticas Visual Point Panamá",
   "description": "Cadena de ópticas en Panamá con 8 sucursales. Exámenes visuales, tecnología en cristales, aros oftálmicos y de sol, lentes de contacto.",
-  "url": "https://www.opticasvisualpointpanama.com",
+  "url": "https://visualpointopticas.com",
   "telephone": "+50760482000",
   "email": "visualpointpanama@gmail.com",
   "numberOfLocations": 8,
