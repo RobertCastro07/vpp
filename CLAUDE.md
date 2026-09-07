@@ -91,6 +91,8 @@ El logo de Visual Point tiene:
 
 El hero es lo primero que ve el visitante. Tiene que impactar en los primeros 3 segundos.
 
+**Estado (2026-09-07):** todas las fotos del sitio (heroes, categorías de productos, feria de salud visual, cotización corporativa) ya NO son de Unsplash — se generaron con Higgsfield (nano_banana_pro, look editorial premium consistente con negro/dorado) y se auto-hospedan en `images/` como `.webp` optimizado (todas por debajo de 80KB). La única excepción real es `images/sucursales/panama-skyline.webp` (horizonte de Ciudad de Panamá), que se mantuvo como foto real self-hosted porque es un lugar real reconocible. Si se necesita una foto nueva más adelante, seguir el mismo patrón (generar con Higgsfield, exportar a WebP, optimizar antes de subir) en vez de volver a Unsplash, para mantener la coherencia de marca lograda. La sección de abajo queda como referencia histórica de qué transmitir en la imagen, no como instrucción de dónde sacarla.
+
 ### Imagen de fondo
 Usar una imagen de Unsplash (gratuita, sin derechos) de alta calidad que transmita:
 - Elegancia y modernidad
