@@ -130,34 +130,47 @@
     });
   }
 
-  // ---- Formulario de contacto ----
+  // ---- Formularios (contacto / cotización corporativa) → WhatsApp ----
+  const WHATSAPP_CENTRAL = '50760482000'; // TODO: pendiente número correcto del usuario
+
   function initContactForm() {
-    const form = document.querySelector('.contact-form');
-    if (!form) return;
+    const forms = document.querySelectorAll('.contact-form');
+    if (!forms.length) return;
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+    forms.forEach(function (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-      const submitBtn = form.querySelector('[type="submit"]');
-      const originalText = submitBtn.textContent;
+        const submitBtn = form.querySelector('[type="submit"]');
+        const originalText = submitBtn.textContent;
 
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Enviando...';
+        const lines = [];
+        form.querySelectorAll('input[name], select[name], textarea[name]').forEach(function (field) {
+          const value = field.value.trim();
+          if (!value) return;
+          const label = form.querySelector('label[for="' + field.id + '"]');
+          const fieldLabel = label ? label.textContent.trim() : field.name;
+          lines.push(fieldLabel + ': ' + value);
+        });
 
-      // Simular envío (reemplazar con lógica real)
-      setTimeout(function () {
-        submitBtn.textContent = '¡Mensaje enviado!';
-        submitBtn.style.backgroundColor = 'var(--color-success)';
-        submitBtn.style.borderColor = 'var(--color-success)';
+        const heading = form.classList.contains('cotizacion-form-card')
+          ? 'Solicitud de cotización empresarial — Visual Point'
+          : 'Nuevo mensaje desde visualpointopticas.com';
+
+        const message = heading + '\n\n' + lines.join('\n');
+        const url = 'https://wa.me/' + WHATSAPP_CENTRAL + '?text=' + encodeURIComponent(message);
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Abriendo WhatsApp...';
+
+        window.open(url, '_blank');
         form.reset();
 
         setTimeout(function () {
           submitBtn.disabled = false;
           submitBtn.textContent = originalText;
-          submitBtn.style.backgroundColor = '';
-          submitBtn.style.borderColor = '';
-        }, 3000);
-      }, 1200);
+        }, 1500);
+      });
     });
   }
 
