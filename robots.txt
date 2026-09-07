@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /productos.html
+Disallow: /presentacion-vpp.html
+
+Sitemap: https://visualpointopticas.com/sitemap.xml

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Encuentra tu sucursal Visual Point más cercana en Panamá. 8 ubicaciones: El Dorado, Altaplaza, Albrook (2 locales), Los Pueblos, Costa Verde, Los Andes y David, Chiriquí.">
+  <meta name="description" content="Encuentra tu sucursal Visual Point más cercana: El Dorado, Altaplaza, Albrook (2 locales), Los Pueblos, Costa Verde, Los Andes y David, Chiriquí.">
   <meta name="keywords" content="sucursales visual point panamá, óptica cerca de mí, albrook mall óptica, altaplaza óptica, el dorado óptica, óptica david chiriquí">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Ópticas Visual Point Panamá">
@@ -21,23 +21,122 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1773424216455-a936cba886c3?w=1200&q=80&auto=format&fit=crop">
   <meta property="og:url" content="https://visualpointopticas.com/sucursales.html">
   <meta property="og:locale" content="es_PA">
+  <link rel="canonical" href="https://visualpointopticas.com/sucursales.html">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nuestras Sucursales | Ópticas Visual Point Panamá">
   <meta name="twitter:description" content="8 sucursales en Panamá. Encuentra la más cercana y contáctanos por WhatsApp.">
 
-  <!-- Schema markup -->
+  <!-- Schema markup: cadena + las 8 sucursales individuales -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Optician",
-    "name": "Ópticas Visual Point Panamá",
-    "url": "https://visualpointopticas.com",
-    "telephone": "+50760482000",
-    "email": "visualpointpanama@gmail.com",
-    "numberOfLocations": 8,
-    "address": { "@type": "PostalAddress", "addressCountry": "PA", "addressRegion": "Panamá" }
+    "@graph": [
+      {
+        "@type": "Optician",
+        "@id": "https://visualpointopticas.com/#organization",
+        "name": "Ópticas Visual Point Panamá",
+        "url": "https://visualpointopticas.com",
+        "telephone": "+50760482000",
+        "email": "visualpointpanama@gmail.com",
+        "numberOfLocations": 8,
+        "address": { "@type": "PostalAddress", "addressCountry": "PA", "addressRegion": "Panamá" }
+      },
+      {
+        "@type": "Optician",
+        "branchOf": { "@id": "https://visualpointopticas.com/#organization" },
+        "name": "Visual Point — Súpercentro El Dorado",
+        "description": "Piso 1, frente a las escaleras mecánicas del cine, Súpercentro El Dorado.",
+        "telephone": "+50760482000",
+        "address": { "@type": "PostalAddress", "addressLocality": "El Dorado, Ciudad de Panamá", "addressCountry": "PA" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "19:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "11:00", "closes": "18:00" }
+        ]
+      },
+      {
+        "@type": "Optician",
+        "branchOf": { "@id": "https://visualpointopticas.com/#organization" },
+        "name": "Visual Point — Altaplaza Mall",
+        "description": "Planta baja de Altaplaza Mall, entre Swarovski y Félix.",
+        "telephone": "+50760482000",
+        "address": { "@type": "PostalAddress", "addressLocality": "Altaplaza Mall, Ciudad de Panamá", "addressCountry": "PA" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "20:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "11:00", "closes": "19:00" }
+        ]
+      },
+      {
+        "@type": "Optician",
+        "branchOf": { "@id": "https://visualpointopticas.com/#organization" },
+        "name": "Visual Point — Albrook Mall (Pasillo Central)",
+        "description": "Pasillo central de Albrook Mall, frente a Zara planta superior.",
+        "telephone": "+50760482000",
+        "address": { "@type": "PostalAddress", "addressLocality": "Albrook Mall, Ciudad de Panamá", "addressCountry": "PA" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "19:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "11:00", "closes": "18:00" }
+        ]
+      },
+      {
+        "@type": "Optician",
+        "branchOf": { "@id": "https://visualpointopticas.com/#organization" },
+        "name": "Visual Point — Albrook Mall (Pasillo del Dinosaurio)",
+        "description": "Pasillo del Dinosaurio, Albrook Mall.",
+        "telephone": "+50760482000",
+        "address": { "@type": "PostalAddress", "addressLocality": "Albrook Mall, Ciudad de Panamá", "addressCountry": "PA" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "19:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday"], "opens": "11:00", "closes": "18:00" }
+        ]
+      },
+      {
+        "@type": "Optician",
+        "branchOf": { "@id": "https://visualpointopticas.com/#organization" },
+        "name": "Visual Point — Los Pueblos",
+        "description": "Entre el Súper 99 y Credichips, Los Pueblos.",
+        "telephone": "+50760482000",
+        "address": { "@type": "PostalAddress", "addressLocality": "Los Pueblos, Ciudad de Panamá", "addressCountry": "PA" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "18:00" }
+        ]
+      },
+      {
+        "@type": "Optician",
+        "branchOf": { "@id": "https://visualpointopticas.com/#organization" },
+        "name": "Visual Point — Costa Verde",
+        "description": "Entre Do It y Banco General, Costa Verde.",
+        "telephone": "+50760482000",
+        "address": { "@type": "PostalAddress", "addressLocality": "Costa Verde, Ciudad de Panamá", "addressCountry": "PA" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:30", "closes": "19:00" }
+        ]
+      },
+      {
+        "@type": "Optician",
+        "branchOf": { "@id": "https://visualpointopticas.com/#organization" },
+        "name": "Visual Point — Los Andes",
+        "description": "Frente a la salida de la estación del metro, Los Andes.",
+        "telephone": "+50760482000",
+        "address": { "@type": "PostalAddress", "addressLocality": "Los Andes, Ciudad de Panamá", "addressCountry": "PA" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:30", "closes": "18:00" }
+        ]
+      },
+      {
+        "@type": "Optician",
+        "branchOf": { "@id": "https://visualpointopticas.com/#organization" },
+        "name": "Visual Point — David, Chiriquí",
+        "description": "Calle José Linton Navarro, al lado del Hotel Ciudad de David, frente a plaza Oteima.",
+        "telephone": "+50760482000",
+        "address": { "@type": "PostalAddress", "addressLocality": "David", "addressRegion": "Chiriquí", "addressCountry": "PA" },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "15:00" }
+        ]
+      }
+    ]
   }
   </script>
 

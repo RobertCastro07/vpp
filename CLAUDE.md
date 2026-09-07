@@ -403,6 +403,10 @@ vpp/
 
 ## 🔍 SEO
 
+**Estado (2026-09-07):** `robots.txt` y `sitemap.xml` en la raíz. Todas las páginas públicas tienen `<link rel="canonical">` apuntando a `https://visualpointopticas.com/...`. `productos.html` (despublicada) y `presentacion-vpp.html` (deck de ventas interno) están en `noindex` y excluidas del sitemap y de `robots.txt`. `sucursales.html` tiene un `@graph` de JSON-LD con las 8 sucursales individuales (horarios estructurados) además del `Optician` general — clave para búsquedas locales tipo "óptica cerca de mí" en Panamá. Meta descriptions ajustadas a ~150-156 caracteres.
+
+**Pendiente fuera del código (decisivo para el posicionamiento local):** crear/reclamar un Perfil de Negocio de Google (Google Business Profile) por cada una de las 8 sucursales, con dirección exacta, categoría, fotos y reseñas — esto pesa más que el schema on-page para aparecer en el "local pack" de Google en Panamá.
+
 ```html
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
