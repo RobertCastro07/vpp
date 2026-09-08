@@ -411,6 +411,7 @@ p {
   font-family: var(--font-heading);
   font-size: 0.7rem;
   font-weight: 700;
+  color: var(--color-primary);
   letter-spacing: 0.01em;
   line-height: 1;
   white-space: nowrap;
@@ -2435,7 +2436,7 @@ p {
   font-family: var(--font-heading);
   font-size: 0.72rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.6);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 0.65rem;
@@ -2458,7 +2459,7 @@ p {
   font-family: var(--font-heading);
   font-size: 0.65rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.6);
   letter-spacing: 0.04em;
   white-space: nowrap;
 }
@@ -2471,7 +2472,7 @@ p {
 
 .footer__bottom p {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.6);
 }
 
 .footer__bottom span {
@@ -2823,7 +2824,7 @@ p {
     font-size: 0.95rem !important;
     flex-shrink: 0;
   }
-  .benefits-grid h4 { font-size: 0.85rem !important; margin-bottom: 0.2rem !important; }
+  .benefits-grid h3 { font-size: 0.85rem !important; margin-bottom: 0.2rem !important; }
   .benefits-grid p  { font-size: 0.78rem !important; line-height: 1.4 !important; }
 
   /* Tech section: ocultar visual decorativo en móvil */
@@ -2891,7 +2892,7 @@ p {
     height: 44px !important;
     min-width: 44px !important;
   }
-  .benefits-grid h4 { font-size: 0.9rem !important; }
+  .benefits-grid h3 { font-size: 0.9rem !important; }
   .benefits-grid p  { font-size: 0.82rem !important; }
 }
 
@@ -3972,7 +3973,7 @@ main {
   transform: rotate(-45deg) scale(1.15);
 }
 
-.map-location-info h4 {
+.map-location-info h3 {
   font-family: var(--font-heading);
   font-size: 0.88rem;
   font-weight: 700;
