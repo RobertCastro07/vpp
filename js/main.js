@@ -131,7 +131,7 @@
   }
 
   // ---- Formularios (contacto / cotización corporativa) → WhatsApp ----
-  const WHATSAPP_CENTRAL = '50760482000'; // TODO: pendiente número correcto del usuario
+  const WHATSAPP_CENTRAL = '50760964657';
 
   function initContactForm() {
     const forms = document.querySelectorAll('.contact-form');

@@ -250,7 +250,7 @@ const sucursales = [
       lunesASabado: "10:00 a.m - 7:00 p.m",
       domingos: "11:00 a.m - 6:00 p.m"
     },
-    whatsapp: "50760482000"
+    whatsapp: "50768031895"
   },
   {
     nombre: "Altaplaza Mall",
@@ -259,7 +259,7 @@ const sucursales = [
       lunesASabado: "11:00 a.m - 8:00 p.m",
       domingosFeriados: "11:00 a.m - 7:00 p.m"
     },
-    whatsapp: "50760482000"
+    whatsapp: "50761078544"
   },
   {
     nombre: "Albrook Mall — Pasillo Central",
@@ -268,7 +268,7 @@ const sucursales = [
       lunesASabado: "10:00 a.m - 7:00 p.m",
       domingosFeriados: "11:00 a.m - 6:00 p.m"
     },
-    whatsapp: "50760482000"  // Número central único (pendiente: usuario confirmará número definitivo)
+    whatsapp: "50760911977"  // Albrook #1
   },
   {
     nombre: "Los Pueblos",
@@ -277,7 +277,7 @@ const sucursales = [
       lunesASabado: "9:00 a.m - 6:00 p.m",
       domingos: "Cerrado"
     },
-    whatsapp: "50760482000"
+    whatsapp: "50761119098"
   },
   {
     nombre: "Costa Verde",
@@ -286,7 +286,7 @@ const sucursales = [
       lunesASabado: "9:30 a.m - 7:00 p.m",
       domingosFeriados: "Cerrado"
     },
-    whatsapp: "50760482000"
+    whatsapp: "50761495296"
   },
   {
     nombre: "Los Andes",
@@ -295,7 +295,7 @@ const sucursales = [
       lunesASabado: "9:30 a.m - 6:00 p.m",
       domingos: "Cerrado"
     },
-    whatsapp: "50760482000"
+    whatsapp: "50761346538"
   },
   {
     nombre: "David, Chiriquí",
@@ -305,7 +305,7 @@ const sucursales = [
       sabado: "9:00 a.m - 3:00 p.m",
       domingo: "Cerrado"
     },
-    whatsapp: "50760482000"
+    whatsapp: "50760735877"
   },
   {
     nombre: "Albrook Mall — Pasillo del Dinosaurio",
@@ -314,7 +314,7 @@ const sucursales = [
       lunesASabado: "10:00 a.m - 7:00 p.m",
       domingosFeriados: "11:00 a.m - 6:00 p.m"
     },
-    whatsapp: "50760482000"
+    whatsapp: "50764254433"  // Albrook #2
   }
 ];
 ```
@@ -336,7 +336,7 @@ const sucursales = [
 
 ### Botón WhatsApp flotante (en todas las páginas)
 ```html
-<a href="https://wa.me/50760482000?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios"
+<a href="https://wa.me/50760964657?text=Hola,%20me%20interesa%20información%20sobre%20sus%20servicios"
    target="_blank" class="whatsapp-float">
   <i class="fab fa-whatsapp"></i>
 </a>
@@ -428,7 +428,7 @@ vpp/
   "name": "Ópticas Visual Point Panamá",
   "description": "Cadena de ópticas en Panamá con 8 sucursales. Exámenes visuales, tecnología en cristales, aros oftálmicos y de sol, lentes de contacto.",
   "url": "https://visualpointopticas.com",
-  "telephone": "+50760482000",
+  "telephone": "+50760964657",
   "email": "visualpointpanama@gmail.com",
   "numberOfLocations": 8,
   "address": { "@type": "PostalAddress", "addressCountry": "PA" },
@@ -446,13 +446,25 @@ vpp/
 ## 📞 CONTACTO
 
 ```
-Email:            visualpointpanama@gmail.com
-Teléfono 1:       +507 6048 2000
-Teléfono 2:       +507 6040 2663
-WhatsApp:         +507 6048 2000 (número central único para todas las sucursales, incluido Albrook — pendiente confirmar número definitivo)
-Instagram:        @visualpointpanama
-Facebook:         VisualPointGroup
+Email:                        visualpointpanama@gmail.com
+WhatsApp central:             +507 6096-4657 (usado en CTAs genéricos, formularios y el botón flotante)
+Instagram:                    @visualpointpanama
+Facebook:                     VisualPointGroup
 ```
+
+**Sin llamadas telefónicas:** a pedido del usuario (2026-09-08), se retiraron todos los números de llamada (`tel:`) del sitio. El único canal de contacto directo por teléfono es WhatsApp, con un número específico por sucursal:
+
+| Sucursal | WhatsApp |
+|---|---|
+| Súpercentro El Dorado | +507 6803-1895 |
+| Altaplaza Mall | +507 6107-8544 |
+| Albrook Mall — Pasillo Central (Albrook #1) | +507 6091-1977 |
+| Albrook Mall — Pasillo del Dinosaurio (Albrook #2) | +507 6425-4433 |
+| Los Pueblos | +507 6111-9098 |
+| Costa Verde | +507 6149-5296 |
+| Los Andes | +507 6134-6538 |
+| David, Chiriquí | +507 6073-5877 |
+| Central (contacto general, index, footer, flotante) | +507 6096-4657 |
 
 ---
 

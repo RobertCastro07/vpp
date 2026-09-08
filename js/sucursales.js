@@ -10,7 +10,7 @@ const SUCURSALES = [
     nombre: 'Súpercentro El Dorado',
     descripcion: 'Piso 1, frente a las escaleras mecánicas del cine. Sector nuevo.',
     horario: 'Lun–Sáb: 10:00 a.m – 7:00 p.m | Dom: 11:00 a.m – 6:00 p.m',
-    whatsapp: '50760482000',
+    whatsapp: '50768031895',
     maps: 'https://maps.google.com/?q=Supercentro+El+Dorado+Panama',
   },
   {
@@ -18,7 +18,7 @@ const SUCURSALES = [
     nombre: 'Altaplaza Mall',
     descripcion: 'Planta baja, entre Swarovski y Félix.',
     horario: 'Lun–Sáb: 11:00 a.m – 8:00 p.m | Dom y Feriados: 11:00 a.m – 7:00 p.m',
-    whatsapp: '50760482000',
+    whatsapp: '50761078544',
     maps: 'https://maps.google.com/?q=Altaplaza+Mall+Panama',
   },
   {
@@ -26,7 +26,7 @@ const SUCURSALES = [
     nombre: 'Albrook Mall — Pasillo Central',
     descripcion: 'Pasillo central, frente a Zara planta superior.',
     horario: 'Lun–Sáb: 10:00 a.m – 7:00 p.m | Dom y Feriados: 11:00 a.m – 6:00 p.m',
-    whatsapp: '50760482000', // TODO: pendiente número correcto del usuario
+    whatsapp: '50760911977',
     maps: 'https://maps.google.com/?q=Albrook+Mall+Panama',
     badge: 'Albrook #1',
   },
@@ -35,7 +35,7 @@ const SUCURSALES = [
     nombre: 'Los Pueblos',
     descripcion: 'Entre el Súper 99 y Credichips.',
     horario: 'Lun–Sáb: 9:00 a.m – 6:00 p.m | Dom: Cerrado',
-    whatsapp: '50760482000',
+    whatsapp: '50761119098',
     maps: 'https://maps.google.com/?q=Los+Pueblos+Panama',
   },
   {
@@ -43,7 +43,7 @@ const SUCURSALES = [
     nombre: 'Costa Verde',
     descripcion: 'Entre Do It y Banco General.',
     horario: 'Lun–Sáb: 9:30 a.m – 7:00 p.m | Dom y Feriados: Cerrado',
-    whatsapp: '50760482000',
+    whatsapp: '50761495296',
     maps: 'https://maps.google.com/?q=Costa+Verde+Panama',
   },
   {
@@ -51,7 +51,7 @@ const SUCURSALES = [
     nombre: 'Los Andes',
     descripcion: 'Frente a la salida de la estación del metro.',
     horario: 'Lun–Sáb: 9:30 a.m – 6:00 p.m | Dom: Cerrado',
-    whatsapp: '50760482000',
+    whatsapp: '50761346538',
     maps: 'https://maps.google.com/?q=Los+Andes+Panama',
   },
   {
@@ -59,7 +59,7 @@ const SUCURSALES = [
     nombre: 'David, Chiriquí',
     descripcion: 'Calle José Linton Navarro, al lado del Hotel Ciudad de David, frente a plaza Oteima.',
     horario: 'Lun–Vie: 9:00 a.m – 6:00 p.m | Sáb: 9:00 a.m – 3:00 p.m | Dom: Cerrado',
-    whatsapp: '50760482000',
+    whatsapp: '50760735877',
     maps: 'https://maps.google.com/?q=David+Chiriqui+Panama',
   },
   {
@@ -67,7 +67,7 @@ const SUCURSALES = [
     nombre: 'Albrook Mall — Pasillo del Dinosaurio',
     descripcion: 'Por el pasillo Dinosaurio.',
     horario: 'Lun–Sáb: 10:00 a.m – 7:00 p.m | Dom y Feriados: 11:00 a.m – 6:00 p.m',
-    whatsapp: '50760482000',
+    whatsapp: '50764254433',
     maps: 'https://maps.google.com/?q=Albrook+Mall+Panama',
     badge: 'Albrook #2',
   },
