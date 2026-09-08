@@ -71,16 +71,13 @@
 
   // ---- Marcar link activo según página actual ----
   (function markActive() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPage = window.location.pathname.split('/').filter(Boolean).pop() || 'index';
     const allLinks = document.querySelectorAll('.navbar__links a, .navbar__mobile-menu a');
 
     allLinks.forEach(function (link) {
-      const href = link.getAttribute('href');
-      if (
-        href === currentPage ||
-        (currentPage === '' && href === 'index.html') ||
-        (currentPage === 'index.html' && href === 'index.html')
-      ) {
+      const href = link.getAttribute('href') || '';
+      const hrefPage = href === '/' ? 'index' : href.replace(/^\//, '').split('#')[0] || 'index';
+      if (hrefPage === currentPage) {
         link.classList.add('active');
       }
     });
