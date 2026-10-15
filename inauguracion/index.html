@@ -152,8 +152,8 @@
   @media (min-width:900px){.night{grid-template-columns:repeat(2,1fr)}.map{min-height:360px;padding:34px 34px 30px}}
 
   /* pase */
-  .pase{position:relative;z-index:1;min-height:100vh;padding:19vh 24px 8vh;display:flex;flex-direction:column;align-items:center;text-align:center}
-  .scene{perspective:1100px;margin-top:56px}
+  .pase{position:relative;z-index:1;min-height:100vh;padding:11vh 24px 8vh;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .scene{perspective:1100px;margin-top:28px}
   .passwrap{filter:drop-shadow(0 36px 40px rgba(0,0,0,.65)) drop-shadow(0 0 46px rgba(234,182,73,.22))}
   .pass{--cut:calc(100% - 138px);position:relative;width:min(340px,86vw);border-radius:24px;text-align:left;color:#1a1306;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .18s ease-out;
     -webkit-mask:radial-gradient(circle 13px at 0 var(--cut),#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 13px at 100% var(--cut),#0000 97%,#000) right/51% 100% no-repeat;
@@ -181,7 +181,7 @@
   .p-row small{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(26,19,6,.65);margin-bottom:5px;font-weight:500}
   .p-row b{font-size:14.5px;font-weight:500}
   .stub{position:relative;height:138px;border-top:2px dashed rgba(60,40,0,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px}
-  #bars svg{display:block;width:190px;height:40px}
+  .stub svg{display:block;width:190px;height:40px}
   .p-code{font-size:12.5px;letter-spacing:.28em;font-weight:500}
   .p-cap{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(26,19,6,.65)}
   @keyframes floaty{0%,100%{transform:rotateX(4deg) rotateY(-7deg)}50%{transform:rotateX(-4deg) rotateY(7deg)}}
@@ -194,6 +194,18 @@
   .btn.primary:hover{box-shadow:0 0 40px rgba(234,182,73,.45)}
   .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
   .btn:focus-visible,.chip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  .pass{cursor:pointer}
+  .passwrap{transform-origin:top center}
+  .fsrow{margin-top:30px}
+  .fsrow .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;font-size:15px}
+  .fsrow .btn svg{width:18px;height:18px}
+  .note{font-size:13px;color:var(--mute);margin-top:16px;line-height:1.5}
+  .fs{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;background:radial-gradient(60vmax 60vmax at 50% 38%,rgba(234,182,73,.16),transparent 62%),#050403;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;touch-action:none;overscroll-behavior:contain}
+  .fs.open{opacity:1;visibility:visible}
+  .fs-stage{display:flex;transform-origin:center}
+  .fs-x{position:absolute;top:calc(14px + env(safe-area-inset-top));right:14px;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.07);color:var(--ink);font-size:30px;line-height:1;cursor:pointer;z-index:2}
+  .fs-cap{position:absolute;left:0;right:0;bottom:calc(20px + env(safe-area-inset-bottom));text-align:center;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);padding:0 24px}
+  html.fs-lock{overflow:hidden}
   .links{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;margin-top:30px}
   .links .tl{margin-top:0}
   .tl{color:var(--gold);font-size:14px;letter-spacing:.06em;text-decoration:none;margin-top:30px;display:inline-block;border-bottom:1px solid rgba(234,182,73,.4);padding-bottom:3px}
@@ -315,7 +327,6 @@
   <section class="pase" id="pase">
     <div class="kicker rv">Tu pase personal</div>
     <h2 class="rv d1">Este es <em>tu&nbsp;pase.</em></h2>
-    <p class="para rv d2" style="margin-top:22px">Haz una captura de pantalla y preséntalo en la entrada esa noche.</p>
     <div class="scene rv d2"><div class="passwrap">
       <div class="pass idle" id="pass">
         <div class="foil"></div>
@@ -346,7 +357,9 @@
         </div>
       </div>
     </div></div>
-    <div class="links rv"><a class="tl" id="cal" href="#">Agregar a mi calendario</a><a class="tl" href="#noche">Cómo llegar</a></div>
+    <div class="fsrow rv"><button class="btn primary" id="fsOpen" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>Ver en pantalla completa</button></div>
+    <p class="note rv">Haz una captura o muéstralo así en la entrada.</p>
+    <div class="links rv"><a class="tl" href="#noche">Cómo llegar</a></div>
   </section>
 
   <section class="details" id="noche">
@@ -388,6 +401,12 @@
       <div class="ncard rv d2"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><small>Hora</small><b>7:00 pm</b></div>
     </div>
   </section>
+
+  <div class="fs" id="fs" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Tu pase en pantalla completa">
+    <button class="fs-x" id="fsClose" type="button" aria-label="Cerrar">&times;</button>
+    <div class="fs-stage" id="fsStage"></div>
+    <div class="fs-cap">Muestra este pase en la entrada · Toca para cerrar</div>
+  </div>
 
   <footer><img src="/inauguracion/logo/logo-gold.svg" alt="Visual Point" style="display:block;width:150px;margin:0 auto 12px"><span style="letter-spacing:.24em">Costa del Este · Panamá</span></footer>
 </div>
@@ -642,11 +661,56 @@
   });
   pass.addEventListener("pointerleave",function(){pass.style.setProperty("--rx","0deg");pass.style.setProperty("--ry","0deg");});
 
-  /* ---------- calendario ---------- */
-  var ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Visual Point//ES","BEGIN:VEVENT","UID:vpp-cde-"+code+"@visualpoint","DTSTAMP:20261015T120000Z",
-    "DTSTART;TZID=America/Panama:20261019T190000","DTEND;TZID=America/Panama:20261019T220000",
-    "SUMMARY:Inauguración Visual Point Costa del Este","LOCATION:Costa del Este\\, Panamá","END:VEVENT","END:VCALENDAR"].join("\r\n");
-  var a=$("cal");a.href="data:text/calendar;charset=utf-8,"+encodeURIComponent(ics);a.download="inauguracion-visual-point.ics";
+
+  /* ---------- pase: ajuste a la pantalla y modo pantalla completa ---------- */
+  var passWrap=pass.parentNode;
+  function fitPass(){
+    passWrap.style.zoom="";
+    var h0=pass.offsetHeight||510,avail=innerHeight-(innerHeight*.11+150)-20;
+    var z=Math.max(.8,Math.min(1,avail/h0));
+    if(z<1)passWrap.style.zoom=z.toFixed(3);
+  }
+  fitPass();addEventListener("resize",fitPass);
+
+  var fsEl=$("fs"),fsStage=$("fsStage"),fsIsOpen=false,wake=null;
+  function fsScale(){
+    var pp=fsStage.querySelector(".pass");if(!pp)return;
+    fsStage.style.transform="none";
+    var w=pp.offsetWidth,h=pp.offsetHeight;
+    fsStage.style.transform="scale("+Math.min(innerWidth*.94/w,innerHeight*.84/h).toFixed(3)+")";
+  }
+  function fsUiClose(){
+    if(!fsIsOpen)return;
+    fsIsOpen=false;
+    fsEl.classList.remove("open");fsEl.setAttribute("aria-hidden","true");
+    document.documentElement.classList.remove("fs-lock");
+    try{if(wake){wake.release();wake=null;}}catch(e){}
+  }
+  function fsOpen(){
+    if(fsIsOpen)return;
+    var c=passWrap.cloneNode(true);
+    c.style.zoom="";
+    [].forEach.call(c.querySelectorAll("[id]"),function(n){n.removeAttribute("id");});
+    fsStage.innerHTML="";fsStage.appendChild(c);
+    fsIsOpen=true;
+    fsEl.classList.add("open");fsEl.setAttribute("aria-hidden","false");
+    document.documentElement.classList.add("fs-lock");
+    fsScale();
+    try{history.pushState({fs:1},"");}catch(e){}
+    try{if(navigator.wakeLock)navigator.wakeLock.request("screen").then(function(l){wake=l;}).catch(function(){});}catch(e){}
+  }
+  function fsClose(){
+    if(!fsIsOpen)return;
+    if(history.state&&history.state.fs){history.back();}else fsUiClose();
+  }
+  $("fsOpen").addEventListener("click",fsOpen);
+  pass.addEventListener("click",fsOpen);
+  fsEl.addEventListener("click",fsClose);
+  $("fsClose").addEventListener("click",function(e){e.stopPropagation();fsClose();});
+  addEventListener("popstate",fsUiClose);
+  addEventListener("keydown",function(e){if(e.key==="Escape")fsClose();});
+  addEventListener("resize",function(){if(fsIsOpen)fsScale();});
+
 })();
 </script>
 </body>
