@@ -39,7 +39,6 @@
   .foryou{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(22px,3.2vw,34px);color:var(--ink);letter-spacing:.01em}
   .top .lg,.top a,.chap{transition:opacity .6s}
   body.nolg .top .lg{opacity:0;pointer-events:none}
-  body.noconf .top a{opacity:0;pointer-events:none}
   body.nochap .chap{opacity:0;pointer-events:none}
   @media (max-width:760px){.halo{display:none}}
 
@@ -148,9 +147,7 @@
   .foil::before{content:"";position:absolute;inset:0;border-radius:inherit;background:repeating-radial-gradient(circle at 18% 22%,transparent 0 5px,rgba(80,52,0,.11) 5px 5.7px),repeating-radial-gradient(circle at 84% 70%,transparent 0 5px,rgba(80,52,0,.11) 5px 5.7px);mix-blend-mode:multiply}
   .foil::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(360px circle at var(--mx,30%) var(--my,10%),rgba(255,255,255,.5),transparent 55%);mix-blend-mode:soft-light}
   .pass.idle .foil{animation:foil 9s ease-in-out infinite alternate}
-  .pass.ok .foil{animation:okflash 1.6s ease-out 1}
   @keyframes foil{from{background-position:0% 0%}to{background-position:100% 100%}}
-  @keyframes okflash{0%{filter:brightness(1.55)}100%{filter:brightness(1)}}
   .frame{position:absolute;inset:16px;border:1px solid rgba(70,45,0,.5);border-radius:16px;pointer-events:none}
   .frame::before{content:"";position:absolute;inset:4px;border:1px solid rgba(70,45,0,.22);border-radius:12px}
   .face{position:relative;padding:34px 32px 18px}
@@ -164,21 +161,16 @@
   .p-for{text-align:center;font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;margin-top:12px;font-weight:500;color:rgba(26,19,6,.7)}
   .p-name{text-align:center;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(38px,12.5vw,52px);line-height:1;margin:8px 0 6px;color:#1a1306;text-shadow:0 1px 0 rgba(255,240,190,.7),0 -1px 0 rgba(60,40,0,.25);word-break:break-word}
   .p-sub{text-align:center;font-size:12px;letter-spacing:.06em;color:rgba(26,19,6,.72)}
-  .p-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:20px;border-top:1px solid rgba(40,25,0,.35);padding-top:14px;text-align:center}
+  .p-row{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:20px;border-top:1px solid rgba(40,25,0,.35);padding-top:14px;text-align:center}
   .p-row small{display:block;font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(26,19,6,.65);margin-bottom:5px;font-weight:500}
   .p-row b{font-size:13px;font-weight:500}
   .stub{position:relative;height:138px;border-top:2px dashed rgba(60,40,0,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px}
   #bars svg{display:block;width:190px;height:40px}
   .p-code{font-size:11px;letter-spacing:.32em;font-weight:500}
   .p-cap{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(26,19,6,.65)}
-  .stamp{position:absolute;left:50%;bottom:196px;border:2px solid #1a1306;color:#1a1306;padding:6px 16px;border-radius:6px;font-size:13px;letter-spacing:.3em;font-weight:600;white-space:nowrap;background:rgba(244,210,110,.78);transform:translateX(-50%) rotate(-8deg) scale(2.4);opacity:0;transition:transform .55s cubic-bezier(.2,1.4,.3,1),opacity .4s}
-  .pass.ok .stamp{transform:translateX(-50%) rotate(-8deg) scale(1);opacity:1}
   @keyframes floaty{0%,100%{transform:rotateX(4deg) rotateY(-7deg)}50%{transform:rotateX(-4deg) rotateY(7deg)}}
   @media (hover:none){.pass.idle{animation:floaty 7s ease-in-out infinite}}
 
-  .chips{display:flex;gap:10px;margin-top:44px;flex-wrap:wrap;justify-content:center}
-  .chip{appearance:none;font:inherit;font-size:14px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:12px 22px;cursor:pointer;transition:all .3s}
-  .chip[aria-pressed="true"]{border-color:var(--gold);color:var(--gold);background:rgba(234,182,73,.08)}
   .row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:28px}
   .btn{appearance:none;font:inherit;cursor:pointer;border-radius:999px;padding:16px 34px;font-size:15px;letter-spacing:.06em;font-weight:400;transition:transform .25s,box-shadow .3s,background .3s;border:1px solid var(--gold)}
   .btn:active{transform:scale(.95)}
@@ -189,7 +181,6 @@
   .links{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;margin-top:30px}
   .links .tl{margin-top:0}
   .tl{color:var(--gold);font-size:14px;letter-spacing:.06em;text-decoration:none;margin-top:30px;display:inline-block;border-bottom:1px solid rgba(234,182,73,.4);padding-bottom:3px}
-  .msg{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:clamp(24px,3vw,34px);color:var(--ink);min-height:1.3em}
 
   footer{position:relative;z-index:1;text-align:center;padding:60px 24px calc(70px + env(safe-area-inset-bottom));font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
   footer b{display:block;color:var(--ink);font-weight:400;margin-bottom:10px}
@@ -215,12 +206,12 @@
   .rm .crack,.rm .chap{display:none}
 </style>
 </head>
-<body class="nolg noconf nochap">
+<body class="nolg nochap">
 <div class="denied" id="denied">Esta invitación no es válida. Escríbenos y la revisamos.</div>
 <canvas id="bokeh"></canvas><div id="spot"></div><div id="bar"></div>
 
 <div id="main">
-  <header class="top"><span class="lg"><img class="gold" src="/inauguracion/logo/logo-gold.svg" alt="Visual Point"><img class="ink" src="/inauguracion/logo/logo-ink.svg" alt="" aria-hidden="true"></span><a href="#pase">Confirmar</a></header>
+  <header class="top"><span class="lg"><img class="gold" src="/inauguracion/logo/logo-gold.svg" alt="Visual Point"><img class="ink" src="/inauguracion/logo/logo-ink.svg" alt="" aria-hidden="true"></span></header>
 
   <!-- I · del desenfoque al foco -->
   <section class="stage" data-h="380" id="s1">
@@ -308,7 +299,7 @@
   <section class="pase" id="pase">
     <div class="kicker rv">Tu pase personal</div>
     <h2 class="rv d1">Este es <em>tu&nbsp;pase.</em></h2>
-    <p class="para rv d2" style="margin-top:22px">Confirma tu asistencia para reservar tu lugar y preséntalo en la entrada esa noche.</p>
+    <p class="para rv d2" style="margin-top:22px">Haz una captura de pantalla y preséntalo en la entrada esa noche.</p>
     <div class="scene rv d2"><div class="passwrap">
       <div class="pass idle" id="pass">
         <div class="foil"></div>
@@ -330,7 +321,6 @@
           <div class="p-row">
             <div><small>Fecha</small><b>Lun 19 Oct</b></div>
             <div><small>Hora</small><b>7:00 pm</b></div>
-            <div><small>Acceso</small><b id="pseats">1 persona</b></div>
           </div>
         </div>
         <div class="stub">
@@ -338,18 +328,8 @@
           <div class="p-code" id="pcode">—</div>
           <div class="p-cap">Preséntalo en la entrada</div>
         </div>
-        <div class="stamp">CONFIRMADO</div>
       </div>
     </div></div>
-    <div class="chips rv d3" id="chips" hidden>
-      <button class="chip" data-n="1" aria-pressed="true">Asistiré solo</button>
-      <button class="chip" data-n="2" aria-pressed="false">Con un acompañante</button>
-    </div>
-    <div class="row rv d3">
-      <button class="btn primary" id="yes">Confirmo mi asistencia</button>
-      <button class="btn ghost" id="no">No podré asistir</button>
-    </div>
-    <div class="msg" id="msg" aria-live="polite"></div>
     <div class="links rv"><a class="tl" id="cal" href="#">Agregar a mi calendario</a><a class="tl" href="#noche">Cómo llegar</a></div>
   </section>
 
@@ -535,9 +515,8 @@
     var m=document.documentElement.scrollHeight-innerHeight;
     $("bar").style.width=(m>0?scrollY/m*100:0)+"%";
 
-    // arranque limpio: sin logo de esquina, sin "Confirmar" y sin puntos hasta que corresponde
+    // arranque limpio: sin logo de esquina y sin puntos hasta que corresponde
     document.body.classList.toggle("nolg",P.s1<.14);
-    document.body.classList.toggle("noconf",act<4);
     document.body.classList.toggle("nochap",act===0&&P.s1<.5);
   }
 
@@ -646,23 +625,6 @@
     pass.style.setProperty("--mx",px*100+"%");pass.style.setProperty("--my",py*100+"%");
   });
   pass.addEventListener("pointerleave",function(){pass.style.setProperty("--rx","0deg");pass.style.setProperty("--ry","0deg");});
-
-  /* ---------- confirmación ---------- */
-  var n=1,chips=$("chips"),msg=$("msg"),key="vpp-rsvp-"+code;
-  function seats(){$("pseats").textContent=n>1?"2 personas":"1 persona";}
-  if(g.plus)chips.hidden=false;
-  chips.addEventListener("click",function(e){
-    var b=e.target.closest(".chip");if(!b)return;
-    n=+b.dataset.n;
-    [].forEach.call(chips.children,function(c){c.setAttribute("aria-pressed",c===b);});
-    seats();
-    if(pass.classList.contains("ok"))yesMsg();
-  });
-  function yesMsg(){msg.textContent=n>1?"Reservamos tu lugar y el de tu acompañante. Nos vemos el lunes.":"Tu lugar está reservado, "+first+". Nos vemos el lunes.";}
-  function setYes(){pass.classList.add("ok");yesMsg();}
-  try{var prev=localStorage.getItem(key);if(prev==="yes")setYes();if(prev==="no")msg.textContent="Gracias por avisarnos. Te vamos a extrañar.";}catch(e){}
-  $("yes").onclick=function(){setYes();try{localStorage.setItem(key,"yes");}catch(e){}};
-  $("no").onclick=function(){pass.classList.remove("ok");msg.textContent="Gracias por avisarnos. Te vamos a extrañar.";try{localStorage.setItem(key,"no");}catch(e){}};
 
   /* ---------- calendario ---------- */
   var ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Visual Point//ES","BEGIN:VEVENT","UID:vpp-cde-"+code+"@visualpoint","DTSTAMP:20261015T120000Z",
