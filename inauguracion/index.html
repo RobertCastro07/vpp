@@ -115,7 +115,7 @@
   .count small{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
 
   /* la noche */
-  .details{position:relative;z-index:1;padding:16vh 20px 14vh;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .details{position:relative;z-index:1;padding:8vh 20px 12vh;display:flex;flex-direction:column;align-items:center;text-align:center}
   .night{width:min(960px,100%);margin-top:46px;display:grid;gap:14px;grid-template-columns:repeat(2,1fr);text-align:left}
   .map{grid-column:1/-1;position:relative;overflow:hidden;border-radius:24px;border:1px solid rgba(234,182,73,.3);background:#0b0907;min-height:310px;display:flex;flex-direction:column;justify-content:flex-end;padding:26px 22px 24px}
   .map .bg{position:absolute;inset:0;width:100%;height:100%}
@@ -134,10 +134,10 @@
   .ncard svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
   .ncard small{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);font-weight:400}
   .ncard b{font-family:var(--serif);font-weight:400;font-size:clamp(21px,5.2vw,28px);line-height:1.15}
-  @media (min-width:900px){.night{grid-template-columns:repeat(4,1fr)}.map{min-height:360px;padding:34px 34px 30px}}
+  @media (min-width:900px){.night{grid-template-columns:repeat(2,1fr)}.map{min-height:360px;padding:34px 34px 30px}}
 
   /* pase */
-  .pase{position:relative;z-index:1;min-height:100vh;padding:19vh 24px 12vh;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .pase{position:relative;z-index:1;min-height:100vh;padding:19vh 24px 8vh;display:flex;flex-direction:column;align-items:center;text-align:center}
   .scene{perspective:1100px;margin-top:56px}
   .passwrap{filter:drop-shadow(0 36px 40px rgba(0,0,0,.65)) drop-shadow(0 0 46px rgba(234,182,73,.22))}
   .pass{--cut:calc(100% - 138px);position:relative;width:min(340px,86vw);border-radius:24px;text-align:left;color:#1a1306;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .18s ease-out;
@@ -186,6 +186,8 @@
   .btn.primary:hover{box-shadow:0 0 40px rgba(234,182,73,.45)}
   .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
   .btn:focus-visible,.chip:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  .links{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+  .links .tl{margin-top:0}
   .tl{color:var(--gold);font-size:14px;letter-spacing:.06em;text-decoration:none;margin-top:30px;display:inline-block;border-bottom:1px solid rgba(234,182,73,.4);padding-bottom:3px}
   .msg{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:clamp(24px,3vw,34px);color:var(--ink);min-height:1.3em}
 
@@ -302,48 +304,6 @@
     </div>
   </section>
 
-  <section class="details">
-    <div class="kicker rv">La noche</div>
-    <h2 class="rv d1">Una noche <em>solo&nbsp;para&nbsp;invitados.</em></h2>
-    <div class="night">
-      <div class="map rv d1">
-        <svg class="bg" viewBox="0 0 480 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <defs>
-            <radialGradient id="mg" cx="50%" cy="18%" r="55%"><stop offset="0" stop-color="#eab649" stop-opacity=".24"/><stop offset="1" stop-color="#eab649" stop-opacity="0"/></radialGradient>
-            <pattern id="mgrid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#eab649" stroke-opacity=".07"/></pattern>
-          </defs>
-          <rect width="480" height="320" fill="url(#mgrid)"/>
-          <rect width="480" height="320" fill="url(#mg)"/>
-          <g fill="none" stroke="#eab649" stroke-linecap="round" transform="translate(0 -70)">
-            <path d="M-10 210 C90 190 150 120 250 125 S400 60 500 40" stroke-opacity=".4" stroke-width="2.2"/>
-            <path d="M60 330 C100 250 170 200 240 130 S330 20 360 -10" stroke-opacity=".3" stroke-width="1.6"/>
-            <path d="M-10 90 C70 110 160 105 240 128 S420 190 500 170" stroke-opacity=".24" stroke-width="1.4"/>
-            <path d="M300 330 C310 260 360 200 420 170" stroke-opacity=".2" stroke-width="1.2"/>
-            <path d="M120 -10 C140 60 175 100 240 128" stroke-opacity=".18" stroke-width="1.2"/>
-          </g>
-          <path d="M330 335 C360 290 430 280 500 250 L500 335Z" fill="#eab649" fill-opacity=".05" stroke="#eab649" stroke-opacity=".2"/>
-          <g transform="translate(240 58)">
-            <circle class="pulse" r="10" fill="none" stroke="#eab649" stroke-width="1.5"/>
-            <circle class="pulse p2" r="10" fill="none" stroke="#eab649" stroke-width="1.5"/>
-            <circle r="12" fill="none" stroke="#eab649" stroke-opacity=".5"/>
-            <circle r="5" fill="#eab649"/>
-          </g>
-        </svg>
-        <span class="cap">Ubicación</span>
-        <h3>Costa del Este, Panamá</h3>
-        <p>Abre la ruta directo en tu aplicación de mapas.</p>
-        <div class="acts">
-          <a class="btn primary" href="https://maps.app.goo.gl/pAk8LXnZUUqg3zVq5?g_st=ic" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>Cómo llegar</a>
-          <a class="btn ghost" href="https://waze.com/ul?ll=9.015088,-79.476425&amp;navigate=yes" target="_blank" rel="noopener">Abrir en Waze</a>
-        </div>
-      </div>
-      <div class="ncard rv d1"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><small>Fecha</small><b>Lunes 19<br>de octubre</b></div>
-      <div class="ncard rv d2"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><small>Hora</small><b>7:00 pm</b></div>
-      <div class="ncard rv d2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2z"/></svg><small>Ambiente</small><b>Casual elegante</b></div>
-      <div class="ncard rv d3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg><small>Acceso</small><b>Solo con tu invitación personal</b></div>
-    </div>
-  </section>
-
   <!-- V · pase -->
   <section class="pase" id="pase">
     <div class="kicker rv">Tu pase personal</div>
@@ -390,7 +350,47 @@
       <button class="btn ghost" id="no">No podré asistir</button>
     </div>
     <div class="msg" id="msg" aria-live="polite"></div>
-    <a class="tl rv" id="cal" href="#">Agregar a mi calendario</a>
+    <div class="links rv"><a class="tl" id="cal" href="#">Agregar a mi calendario</a><a class="tl" href="#noche">Cómo llegar</a></div>
+  </section>
+
+  <section class="details" id="noche">
+    <div class="kicker rv">La noche</div>
+    <h2 class="rv d1">Una noche <em>solo&nbsp;para&nbsp;invitados.</em></h2>
+    <div class="night">
+      <div class="map rv d1">
+        <svg class="bg" viewBox="0 0 480 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <radialGradient id="mg" cx="50%" cy="18%" r="55%"><stop offset="0" stop-color="#eab649" stop-opacity=".24"/><stop offset="1" stop-color="#eab649" stop-opacity="0"/></radialGradient>
+            <pattern id="mgrid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#eab649" stroke-opacity=".07"/></pattern>
+          </defs>
+          <rect width="480" height="320" fill="url(#mgrid)"/>
+          <rect width="480" height="320" fill="url(#mg)"/>
+          <g fill="none" stroke="#eab649" stroke-linecap="round" transform="translate(0 -70)">
+            <path d="M-10 210 C90 190 150 120 250 125 S400 60 500 40" stroke-opacity=".4" stroke-width="2.2"/>
+            <path d="M60 330 C100 250 170 200 240 130 S330 20 360 -10" stroke-opacity=".3" stroke-width="1.6"/>
+            <path d="M-10 90 C70 110 160 105 240 128 S420 190 500 170" stroke-opacity=".24" stroke-width="1.4"/>
+            <path d="M300 330 C310 260 360 200 420 170" stroke-opacity=".2" stroke-width="1.2"/>
+            <path d="M120 -10 C140 60 175 100 240 128" stroke-opacity=".18" stroke-width="1.2"/>
+          </g>
+          <path d="M330 335 C360 290 430 280 500 250 L500 335Z" fill="#eab649" fill-opacity=".05" stroke="#eab649" stroke-opacity=".2"/>
+          <g transform="translate(240 58)">
+            <circle class="pulse" r="10" fill="none" stroke="#eab649" stroke-width="1.5"/>
+            <circle class="pulse p2" r="10" fill="none" stroke="#eab649" stroke-width="1.5"/>
+            <circle r="12" fill="none" stroke="#eab649" stroke-opacity=".5"/>
+            <circle r="5" fill="#eab649"/>
+          </g>
+        </svg>
+        <span class="cap">Ubicación</span>
+        <h3>Costa del Este, Panamá</h3>
+        <p>Abre la ruta directo en tu aplicación de mapas.</p>
+        <div class="acts">
+          <a class="btn primary" href="https://maps.app.goo.gl/pAk8LXnZUUqg3zVq5?g_st=ic" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>Cómo llegar</a>
+          <a class="btn ghost" href="https://waze.com/ul?ll=9.015088,-79.476425&amp;navigate=yes" target="_blank" rel="noopener">Abrir en Waze</a>
+        </div>
+      </div>
+      <div class="ncard rv d1"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><small>Fecha</small><b>Lunes 19<br>de octubre</b></div>
+      <div class="ncard rv d2"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><small>Hora</small><b>7:00 pm</b></div>
+    </div>
   </section>
 
   <footer><img src="/inauguracion/logo/logo-gold.svg" alt="Visual Point" style="display:block;width:150px;margin:0 auto 12px"><span style="letter-spacing:.24em">Costa del Este · Panamá</span></footer>
