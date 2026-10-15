@@ -52,6 +52,10 @@
   body.light .chap button:not(.on){background:rgba(20,17,13,.3)}
   @media (hover:hover){.chap button::after{content:attr(data-l);position:absolute;right:18px;top:50%;transform:translateY(-50%);white-space:nowrap;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);opacity:0;transition:opacity .3s;pointer-events:none}.chap button:hover::after{opacity:1}body.light .chap button::after{color:var(--paper-ink)}}
   @media (max-width:760px){.chap{right:8px;gap:12px}.chap button{width:5px;height:5px}.chap button.on{height:20px}}
+  .snapm{position:absolute;left:0;width:1px;height:1px;opacity:0;pointer-events:none;scroll-snap-align:start;scroll-snap-stop:always}
+  html.snap{scroll-snap-type:y mandatory}
+  html.snap .details,html.snap .pase{scroll-snap-align:start}
+  html.snap footer{scroll-snap-align:end}
   .hush{text-wrap:balance;text-shadow:0 2px 18px rgba(0,0,0,.9);font-size:clamp(13px,1.6vw,18px);letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin-top:34px;font-weight:400}
   #bar{position:fixed;top:0;left:0;height:1px;width:0;background:var(--gold);z-index:31}
 
@@ -209,44 +213,44 @@
         <img class="logo-hero" src="/inauguracion/logo/logo-gold.svg" alt="Visual Point Óptica Panamá">
         <p class="foryou" id="foryou">Esto es para ti</p>
       </div>
-      <div class="layer" data-in=".12,.32" data-out=".34,.44" data-blur="26">
+      <div class="layer" data-in=".10,.30" data-out=".40,.50" data-blur="26">
         <h2 data-split>Hay cosas que solo se aprecian <em>cuando&nbsp;las&nbsp;enfocas.</em></h2>
       </div>
-      <div class="layer" data-in=".4,.6" data-out="" data-blur="16">
+      <div class="layer" data-in=".44,.62" data-out="" data-blur="16">
         <div class="kicker">Una invitación personal</div>
         <div class="name" id="name">—</div>
-        <div class="sub" data-in=".52,.72" style="opacity:0">serás de las primeras personas en vivir lo que viene.</div>
+        <div class="sub" data-in=".54,.72" style="opacity:0">serás de las primeras personas en vivir lo que viene.</div>
       </div>
       <div class="hint" id="hint">Desliza</div>
     </div>
   </section>
 
   <!-- II · el lente se abre -->
-  <section class="stage" data-h="330" id="s2">
+  <section class="stage" data-h="290" id="s2">
     <div class="pin">
-      <div class="layer" data-in="-.1,.06" data-out=".08,.16" data-blur="14"><div class="serifline">Ahora, mira de nuevo.</div></div>
+      <div class="layer" data-in="-.5,0" data-out=".10,.20" data-blur="14"><div class="serifline">Ahora, mira de nuevo.</div></div>
       <div class="rim" id="rim"></div>
       <div class="reveal" id="reveal">
         <div class="layer" data-in=".4,.62" data-blur="22">
           <div class="kicker">Costa del Este · Panamá</div>
           <h2 data-split>Una nueva forma <em>de&nbsp;ver.</em></h2>
-          <p class="para" data-in=".62,.8" style="opacity:0">Visual Point inaugura una nueva sucursal: una óptica distinta, creada desde cero y con nueva tecnología, donde cuidar tu visión se vuelve una experiencia.</p>
+          <p class="para" data-in=".62,.78" style="opacity:0">Visual Point inaugura una nueva sucursal: una óptica distinta, creada desde cero y con nueva tecnología, donde cuidar tu visión se vuelve una experiencia.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- III · tecnología -->
-  <section class="stage" data-h="420" id="s3">
+  <section class="stage" data-h="340" id="s3">
     <div class="pin">
-      <div class="layer" data-in="-.12,.08" data-out=".3,.38" data-blur="22">
+      <div class="layer" data-in="0,.14" data-out=".3,.38" data-blur="22">
         <div class="tech"><div><div class="idx">I · Diagnóstico</div><h3 data-split>Precisión <em>milimétrica.</em></h3><p>Una nueva generación de tecnología para conocer tu visión con un nivel de detalle que lo cambia todo.</p></div><div class="vis v1"></div></div>
       </div>
-      <div class="layer" data-in=".36,.46" data-out=".64,.72" data-blur="22">
+      <div class="layer" data-in=".38,.5" data-out=".62,.7" data-blur="22">
         <div class="tech"><div><div class="idx">II · Diseño</div><h3 data-split>Lentes hechos <em>a&nbsp;tu&nbsp;medida.</em></h3><p>Cada lente se piensa para ti: tu rostro, tu estilo y tu forma de ver el mundo.</p></div>
           <div class="vis v2"><svg viewBox="0 0 300 160"><ellipse cx="82" cy="84" rx="64" ry="50"/><ellipse cx="218" cy="84" rx="64" ry="50"/><path d="M146 76c6-8 8-8 8 0"/><path d="M18 70 L4 52"/><path d="M282 70 L296 52"/></svg></div></div>
       </div>
-      <div class="layer" data-in=".68,.78" data-blur="22">
+      <div class="layer" data-in=".7,.82" data-blur="22">
         <div class="tech"><div><div class="idx">III · Experiencia</div><h3 data-split>Una experiencia <em>sin&nbsp;igual.</em></h3><p>Un espacio donde cada detalle está pensado para cuidarte, desde el momento en que entras.</p></div><div class="vis v3"></div></div>
       </div>
       <div class="dots" id="dots"><i></i><i></i><i></i></div>
@@ -257,7 +261,7 @@
   <section class="stage" data-h="230" id="sg">
     <div class="pin">
       <div class="crack" id="crack"></div>
-      <div class="layer" data-in="-.1,.2" data-out=".44,.54" data-blur="22">
+      <div class="layer" data-in="0,.2" data-out=".44,.54" data-blur="22">
         <h2 data-split>Hay cosas que no se cuentan. <em>Se&nbsp;ven.</em></h2>
       </div>
       <div class="layer" data-in=".5,.7" data-blur="22">
@@ -274,11 +278,11 @@
         <div class="kicker" style="margin-bottom:10px">Reserva la noche</div>
         <div class="day">Lunes</div>
         <div class="big19" id="b19">19</div>
-        <div class="when" data-in=".4,.55" style="opacity:0">Octubre · 7:00 pm</div>
-        <div class="count" id="count" data-in=".58,.72" style="opacity:0">
+        <div class="when" data-in=".36,.46" style="opacity:0">Octubre · 7:00 pm</div>
+        <div class="count" id="count" data-in=".5,.62" style="opacity:0">
           <div><b id="cd">0</b><small>Días</small></div><div><b id="ch">00</b><small>Horas</small></div><div><b id="cm">00</b><small>Min</small></div><div><b id="cs">00</b><small>Seg</small></div>
         </div>
-        <p class="cap" data-in=".74,.9" style="opacity:0">…para la primera noche.</p>
+        <p class="cap" data-in=".66,.78" style="opacity:0">…para la primera noche.</p>
       </div>
     </div>
   </section>
@@ -476,7 +480,7 @@
     [].forEach.call($("dots").children,function(d,k){d.classList.toggle("on",k===idx);});
 
     // fecha: el 19 se llena con el scroll
-    $("b19").style.setProperty("--f",seg(P.s4,.12,.5).toFixed(3));
+    $("b19").style.setProperty("--f",seg(P.s4,.06,.34).toFixed(3));
 
     // capítulos
     var mid=innerHeight*.5,act=0;
@@ -503,13 +507,21 @@
   document.body.appendChild(nav);
 
   /* ---------- scroll suavizado (inercia) ---------- */
-  var started=false,running=false;
-  function frame(){
+  var started=false,running=false,last=0,VMAX=.36;   // VMAX: avance máximo de una escena por segundo (solo táctil)
+  function frame(now){
+    var dt=Math.min(.05,Math.max(.001,((now||0)-last)/1000));last=now||0;
     var moving=false;
     stages.forEach(function(s){
       var t=progress(s.el);
       if(!started||rm){P[s.id]=t;}
-      else{var d=t-P[s.id];if(Math.abs(d)>.0003){P[s.id]+=d*.16;moving=true;}else P[s.id]=t;}
+      else{
+        var d=t-P[s.id];
+        if(Math.abs(d)>.0003){
+          var step=d*.16;
+          if(touch){var lim=VMAX*dt;step=Math.max(-lim,Math.min(lim,step));}
+          P[s.id]+=step;moving=true;
+        }else P[s.id]=t;
+      }
     });
     started=true;
     if(!rm)render();
@@ -519,6 +531,20 @@
   addEventListener("scroll",kick,{passive:true});
   addEventListener("resize",kick);
   if(rm){$("b19").style.setProperty("--f",1);}
+
+  /* ---------- modo celular: un deslizamiento = un momento ---------- */
+  var SNAPS={s1:[0,.35,.78],s2:[0,.8],s3:[.24,.56,.92],sg:[.3,.92],s4:[.35,.8]};
+  stages.forEach(function(st){
+    (SNAPS[st.id]||[]).forEach(function(pp){
+      var m=document.createElement("i");m.className="snapm";
+      m.style.top=((+st.el.dataset.h-100)*pp).toFixed(2)+"vh";
+      st.el.appendChild(m);
+    });
+  });
+  var mq=matchMedia("(max-width:760px), (pointer:coarse)"),touch=false;
+  function setMode(){touch=mq.matches&&!rm;document.documentElement.classList.toggle("snap",touch);}
+  if(mq.addEventListener)mq.addEventListener("change",setMode);else mq.addListener(setMode);
+  setMode();
   kick();
 
   /* ---------- aparición de bloques normales ---------- */
