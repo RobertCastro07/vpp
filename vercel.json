@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/i/:slug",
-      "destination": "/inauguracion/index.html"
+      "destination": "/inauguracion"
     }
   ],
   "headers": [
