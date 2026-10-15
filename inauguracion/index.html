@@ -21,6 +21,7 @@
 <meta name="twitter:title" content="Tienes una invitación personal · Visual Point">
 <meta name="twitter:description" content="Una noche solo para invitados. Ábrela para descubrirla.">
 <meta name="twitter:image" content="https://vpp-rose.vercel.app/inauguracion/og.png">
+<noscript><style>.nojs{display:flex!important}#main,#bokeh,#bar{display:none!important}</style></noscript>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070605'/%3E%3Cpath d='M12 40Q32 14 52 40' fill='none' stroke='%23eab649' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='47' r='4' fill='%23eab649'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +60,8 @@
   @media (max-width:760px){.halo{display:none}}
 
   /* misterio: luz que se filtra por una puerta entreabierta */
-  .crack{position:absolute;left:50%;top:50%;width:2px;height:74vh;transform:translate(-50%,-50%) scaleY(0);opacity:0;background:linear-gradient(transparent,#f7d98b 18%,#eab649 50%,#f7d98b 82%,transparent);box-shadow:0 0 50px 12px rgba(234,182,73,.35);border-radius:2px;pointer-events:none}
+  .crack{position:absolute;left:50%;top:50%;width:2px;height:74vh;transform:translate(-50%,-50%) scaleY(0);opacity:0;background:linear-gradient(transparent,#f7d98b 18%,#eab649 50%,#f7d98b 82%,transparent);box-shadow:0 0 50px 12px rgba(234,182,73,.35);border-radius:2px;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 20%,transparent 30%,transparent 70%,#000 80%,#000 100%);mask-image:linear-gradient(to bottom,#000 0,#000 20%,transparent 30%,transparent 70%,#000 80%,#000 100%)}
+  .serifline2{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(26px,5.4vw,54px);line-height:1.15;margin-top:26px;max-width:16em;text-wrap:balance}
   .cap{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,28px);color:var(--mute);margin-top:30px;text-wrap:balance}
   .chap{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:25;display:flex;flex-direction:column;gap:14px}
   .chap button{appearance:none;border:0;padding:0;cursor:pointer;position:relative;width:6px;height:6px;border-radius:6px;background:rgba(243,239,231,.3);transition:height .4s,background .4s}
@@ -217,12 +219,37 @@
   .rv.in{opacity:1;transform:none;filter:none}
   .d1{transition-delay:.15s}.d2{transition-delay:.3s}.d3{transition-delay:.45s}
 
+  .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   .denied{min-height:100vh;display:none;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--mute);font-family:var(--serif);font-style:italic;font-size:28px}
 
   @media (max-width:760px){
     .tech{grid-template-columns:1fr;text-align:center;gap:28px}
     .tech .vis{order:-1;width:min(190px,44vw)}
     .tech p{margin-left:auto;margin-right:auto}
+  }
+  /* celular en horizontal: escenas más compactas */
+  @media (max-height:520px) and (orientation:landscape){
+    .logo-hero{width:min(210px,34vh);margin-bottom:12px}
+    .foryou{font-size:clamp(18px,5.5vh,26px)}
+    h2{font-size:clamp(24px,8.5vh,52px);max-width:18em}
+    .name{font-size:clamp(56px,32vh,150px)}
+    .kicker{margin-bottom:12px}
+    .sub,.para{margin-top:10px;font-size:clamp(13px,3.6vh,17px);max-width:34em}
+    .tech{grid-template-columns:1fr 1fr;gap:4vw;text-align:left}
+    .tech .vis{order:0;width:min(150px,38vh)}
+    .tech h3{font-size:clamp(24px,8vh,44px)}
+    .tech p{font-size:14px;margin-top:10px;margin-left:0}
+    .idx{margin-bottom:8px}
+    .big19{font-size:clamp(100px,46vh,260px)}
+    .day{font-size:clamp(22px,6vh,36px)}
+    .when{font-size:clamp(13px,3.6vh,20px);margin-top:8px}
+    .count{margin-top:14px}.count b{font-size:clamp(22px,6.5vh,36px)}
+    .cap{margin-top:12px;font-size:16px}
+    .serifline2{font-size:clamp(20px,6vh,34px);margin-top:12px}
+    .hush{margin-top:14px}
+    .dots{bottom:3vh}.hint{display:none}
+    .pase{padding-top:16vh}
+    .map{min-height:260px}
   }
   /* movimiento reducido: todo en flujo normal */
   .rm .stage{height:auto!important}
@@ -231,46 +258,49 @@
   .rm .reveal{position:relative;clip-path:none!important}
   .rm .rim,.rm .hint,.rm .dots,.rm .halo{display:none}
   .rm .rv{opacity:1;transform:none;filter:none}
+  .rm [data-in]{opacity:1!important;filter:none!important;transform:none!important}
+  .rm .w{opacity:1!important;filter:none!important;transform:none!important}
   .rm .crack,.rm .chap{display:none}
 </style>
 </head>
 <body class="nolg nochap">
-<div class="denied" id="denied">Esta invitación no es válida. Escríbenos y la revisamos.</div>
+<div class="denied" id="denied">Este link no es válido. Revisa que sea el que te enviamos por WhatsApp.</div>
+<div class="denied nojs">Tienes una invitación personal de Visual Point. Para verla, activa JavaScript o ábrela en otro navegador.</div>
 <canvas id="bokeh"></canvas><div id="spot"></div><div id="bar"></div>
 
-<div id="main">
+<div id="main" role="main">
+  <h1 class="sr-only">Visual Point · Tienes una invitación personal</h1>
   <header class="top"><span class="lg"><img class="gold" src="/inauguracion/logo/logo-gold.svg" alt="Visual Point"><img class="ink" src="/inauguracion/logo/logo-ink.svg" alt="" aria-hidden="true"></span></header>
 
   <!-- I · del desenfoque al foco -->
-  <section class="stage" data-h="380" id="s1">
+  <section class="stage" data-h="300" id="s1">
     <div class="pin">
       <div class="halo" data-ring="1"></div><div class="halo b" data-ring="-1"></div>
       <div class="layer" data-in="-.5,0" data-out=".06,.16" data-blur="18">
         <img class="logo-hero" src="/inauguracion/logo/logo-gold.svg" alt="Visual Point Óptica Panamá">
         <p class="foryou" id="foryou">Esto es para ti</p>
       </div>
-      <div class="layer" data-in=".10,.30" data-out=".40,.50" data-blur="26">
+      <div class="layer" data-in=".10,.30" data-out=".42,.52" data-blur="26">
         <h2 data-split>Hay cosas que solo se aprecian <em>cuando&nbsp;las&nbsp;enfocas.</em></h2>
       </div>
-      <div class="layer" data-in=".44,.62" data-out="" data-blur="16">
+      <div class="layer" data-in=".5,.68" data-out="" data-blur="16">
         <div class="kicker">Una invitación personal</div>
         <div class="name" id="name">—</div>
-        <div class="sub" data-in=".54,.72" style="opacity:0">serás de las primeras personas en vivir lo que viene.</div>
+        <div class="sub" id="sub1" data-in=".6,.78" style="opacity:0">serás de las primeras personas en vivir lo que viene.</div>
       </div>
       <div class="hint" id="hint">Desliza</div>
     </div>
   </section>
 
   <!-- II · el lente se abre -->
-  <section class="stage" data-h="290" id="s2">
+  <section class="stage" data-h="170" id="s2">
     <div class="pin">
-      <div class="layer" data-in="-.5,0" data-out=".10,.20" data-blur="14"><div class="serifline">Ahora, mira de nuevo.</div></div>
       <div class="rim" id="rim"></div>
       <div class="reveal" id="reveal">
-        <div class="layer" data-in=".4,.62" data-blur="22">
+        <div class="layer" data-in=".34,.54" data-blur="22">
           <div class="kicker">Costa del Este · Panamá</div>
           <h2 data-split>Una nueva forma <em>de&nbsp;ver.</em></h2>
-          <p class="para" data-in=".62,.78" style="opacity:0">Visual Point inaugura una nueva sucursal: una óptica distinta, creada desde cero y con nueva tecnología, donde cuidar tu visión se vuelve una experiencia.</p>
+          <p class="para" id="mpara" data-in=".54,.7" style="opacity:0">Visual Point inaugura una nueva sucursal: una óptica distinta, creada desde cero y con nueva tecnología, donde cuidar tu visión se vuelve una experiencia.</p>
         </div>
       </div>
     </div>
@@ -287,22 +317,20 @@
           <div class="vis v2"><svg viewBox="0 0 300 160"><ellipse cx="82" cy="84" rx="64" ry="50"/><ellipse cx="218" cy="84" rx="64" ry="50"/><path d="M146 76c6-8 8-8 8 0"/><path d="M18 70 L4 52"/><path d="M282 70 L296 52"/></svg></div></div>
       </div>
       <div class="layer" data-in=".7,.82" data-blur="22">
-        <div class="tech"><div><div class="idx">III · Experiencia</div><h3 data-split>Una experiencia <em>sin&nbsp;igual.</em></h3><p>Un espacio donde cada detalle está pensado para cuidarte, desde el momento en que entras.</p></div><div class="vis v3"></div></div>
+        <div class="tech"><div><div class="idx">III · Experiencia</div><h3 data-split>Una experiencia <em>pensada&nbsp;para&nbsp;ti.</em></h3><p>Un espacio donde cada detalle está pensado para cuidarte, desde el momento en que entras.</p></div><div class="vis v3"></div></div>
       </div>
       <div class="dots" id="dots"><i></i><i></i><i></i></div>
     </div>
   </section>
 
   <!-- III·b · lo que no se cuenta (cierre antes de la fecha) -->
-  <section class="stage" data-h="230" id="sg">
+  <section class="stage" data-h="150" id="sg">
     <div class="pin">
       <div class="crack" id="crack"></div>
-      <div class="layer" data-in="0,.2" data-out=".44,.54" data-blur="22">
+      <div class="layer" data-in="0,.22" data-blur="22">
         <h2 data-split>Hay cosas que no se cuentan. <em>Se&nbsp;ven.</em></h2>
-      </div>
-      <div class="layer" data-in=".5,.7" data-blur="22">
-        <h2 data-split>Y esa noche, <em>las&nbsp;ves&nbsp;tú&nbsp;primero.</em></h2>
-        <p class="hush" id="hush" data-in=".72,.88" style="opacity:0">Tú estás en la lista</p>
+        <p class="serifline2" id="sg2" data-in=".3,.52" style="opacity:0">Y esa noche, <em>las&nbsp;ves&nbsp;tú&nbsp;primero.</em></p>
+        <p class="hush" id="hush" data-in=".6,.8" style="opacity:0">Tú estás en la lista</p>
       </div>
     </div>
   </section>
@@ -311,14 +339,14 @@
   <section class="stage" data-h="280" id="s4">
     <div class="pin">
       <div class="layer" data-in="-.1,.12" data-blur="26">
-        <div class="kicker" style="margin-bottom:10px">Reserva la noche</div>
+        <div class="kicker" id="dkick" style="margin-bottom:10px">Reserva la noche</div>
         <div class="day">Lunes</div>
         <div class="big19" id="b19">19</div>
         <div class="when" data-in=".36,.46" style="opacity:0">Octubre · 7:00 pm</div>
         <div class="count" id="count" data-in=".5,.62" style="opacity:0">
           <div><b id="cd">0</b><small>Días</small></div><div><b id="ch">00</b><small>Horas</small></div><div><b id="cm">00</b><small>Min</small></div><div><b id="cs">00</b><small>Seg</small></div>
         </div>
-        <p class="cap" data-in=".66,.78" style="opacity:0">…para la primera noche.</p>
+        <p class="cap" id="dcap" data-in=".66,.78" style="opacity:0">…para la primera noche.</p>
       </div>
     </div>
   </section>
@@ -445,6 +473,26 @@
   document.getElementById("foryou").textContent=first+", esto es para ti";
   document.title=first+", tienes una invitación · Visual Point";
 
+  /* ---------- antes / durante / después de la noche ---------- */
+  // (para probar: agrega ?now=2026-10-19T20:00:00-05:00 al link)
+  var T0=new Date("2026-10-19T19:00:00-05:00").getTime();
+  var nowQ=new URLSearchParams(location.search).get("now"),nowFix=nowQ?Date.parse(nowQ):NaN;
+  function nowMs(){return isNaN(nowFix)?Date.now():nowFix;}
+  var phase=nowMs()<T0?0:(nowMs()<T0+5*3600*1000?1:2);   // 0 antes · 1 durante · 2 después
+  if(phase>0){
+    document.getElementById("count").style.display="none";
+    if(phase===1){
+      document.getElementById("dkick").textContent="Es esta noche";
+      document.getElementById("dcap").textContent="La noche ya comenzó.";
+    }else{
+      document.getElementById("dkick").textContent="La primera noche";
+      document.getElementById("dcap").textContent="Gracias por ser parte de esta lista.";
+      document.getElementById("sub1").textContent="fuiste de las primeras personas en vivir lo que vino.";
+      document.getElementById("sg2").innerHTML='Y esa noche, <em>las&nbsp;viste&nbsp;tú&nbsp;primero.</em>';
+      document.getElementById("mpara").textContent=document.getElementById("mpara").textContent.replace("inaugura","inauguró");
+    }
+  }
+
   var $=function(id){return document.getElementById(id)};
   var clamp=function(v){return Math.min(1,Math.max(0,v))};
   var seg=function(p,a,b){return clamp((p-a)/(b-a))};
@@ -519,11 +567,11 @@
 
     // lente
     var p2=P.s2, maxR=Math.hypot(innerWidth,innerHeight)/2*1.08;
-    var r=seg(p2,.14,.62)*maxR;
+    var r=seg(p2,.06,.5)*maxR;
     $("reveal").style.clipPath="circle("+r.toFixed(1)+"px at 50% 50%)";
     var rim=$("rim");
     rim.style.width=rim.style.height=(r*2)+"px";
-    rim.style.opacity=r>2?(1-seg(p2,.5,.66)):0;
+    rim.style.opacity=r>2?(1-seg(p2,.4,.54)):0;
 
     // puerta entreabierta
     var pg=P.sg,cr=$("crack"),cin=seg(pg,.08,.4),cw=seg(pg,.45,.9);
@@ -534,7 +582,7 @@
 
     // logo del header: versión oscura sobre la escena clara
     var b2=document.getElementById("s2").getBoundingClientRect().bottom;
-    document.body.classList.toggle("light",P.s2>.5&&b2>46);
+    document.body.classList.toggle("light",P.s2>.4&&b2>46);
 
     // tecnología
     var p3=P.s3, idx=p3<.34?0:p3<.67?1:2;
@@ -567,7 +615,7 @@
   document.body.appendChild(nav);
 
   /* ---------- scroll suavizado (inercia) ---------- */
-  var started=false,running=false,last=0,VMAX=.36;   // VMAX: avance máximo de una escena por segundo (solo táctil)
+  var started=false,running=false,last=0,VMAX=.45;   // VMAX: avance máximo de una escena por segundo (solo táctil)
   function frame(now){
     var dt=Math.min(.05,Math.max(.001,((now||0)-last)/1000));last=now||0;
     var moving=false;
@@ -593,7 +641,7 @@
   if(rm){$("b19").style.setProperty("--f",1);}
 
   /* ---------- modo celular: un deslizamiento = un momento ---------- */
-  var SNAPS={s1:[0,.35,.78],s2:[0,.8],s3:[.24,.56,.92],sg:[.3,.92],s4:[.35,.8]};
+  var SNAPS={s1:[0,.36,.86],s2:[.8],s3:[.24,.56,.92],sg:[.9],s4:[.35,.8]};
   stages.forEach(function(st){
     (SNAPS[st.id]||[]).forEach(function(pp){
       var m=document.createElement("i");m.className="snapm";
@@ -612,22 +660,24 @@
   document.querySelectorAll(".rv").forEach(function(el){io.observe(el);});
 
   /* ---------- cuenta regresiva ---------- */
-  var target=new Date("2026-10-19T19:00:00-05:00").getTime();
   function cd(){
-    var d=Math.max(0,target-Date.now()), s=Math.floor(d/1000);
+    var d=Math.max(0,T0-nowMs()), s=Math.floor(d/1000);
     $("cd").textContent=Math.floor(s/86400);
     $("ch").textContent=String(Math.floor(s%86400/3600)).padStart(2,"0");
     $("cm").textContent=String(Math.floor(s%3600/60)).padStart(2,"0");
     $("cs").textContent=String(s%60).padStart(2,"0");
   }
-  cd(); setInterval(cd,1000);
+  cd(); if(phase===0&&isNaN(nowFix))setInterval(cd,1000);
 
   /* ---------- bokeh de fondo ---------- */
   (function(){
     var c=$("bokeh"),x=c.getContext("2d"),W,H,orbs=[];
-    function size(){var dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+"px";c.style.height=H+"px";x.setTransform(dpr,0,0,dpr,0,0);}
-    function init(){orbs=[];var n=W<700?14:28;for(var i=0;i<n;i++)orbs.push({x:Math.random()*W,y:Math.random()*H*1.6,r:36+Math.random()*120,d:.2+Math.random()*.8,a:.04+Math.random()*.08,h:Math.random()<.72?"234,182,73":"255,214,150",vx:(Math.random()-.5)*.14,ph:Math.random()*6.28});}
+    var lite=matchMedia("(max-width:760px),(pointer:coarse)").matches,lastT=0;
+    function size(){var dpr=lite?1:Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+"px";c.style.height=H+"px";x.setTransform(dpr,0,0,dpr,0,0);}
+    function init(){orbs=[];var n=lite?10:(W<700?14:28);for(var i=0;i<n;i++)orbs.push({x:Math.random()*W,y:Math.random()*H*1.6,r:36+Math.random()*120,d:.2+Math.random()*.8,a:.04+Math.random()*.08,h:Math.random()<.72?"234,182,73":"255,214,150",vx:(Math.random()-.5)*.14,ph:Math.random()*6.28});}
     function draw(t){
+      if(!rm&&lite&&t-lastT<32){requestAnimationFrame(draw);return;}   // en celular: ~30 cuadros por segundo
+      lastT=t;
       x.clearRect(0,0,W,H);var span=H*1.6;
       orbs.forEach(function(o){
         if(!rm){o.x+=o.vx*o.d;if(o.x<-160)o.x=W+160;if(o.x>W+160)o.x=-160;}
