@@ -60,7 +60,8 @@
   @media (max-width:760px){.halo{display:none}}
 
   /* misterio: luz que se filtra por una puerta entreabierta */
-  .crack{position:absolute;left:50%;top:50%;width:2px;height:74vh;transform:translate(-50%,-50%) scaleY(0);opacity:0;background:linear-gradient(transparent,#f7d98b 18%,#eab649 50%,#f7d98b 82%,transparent);box-shadow:0 0 50px 12px rgba(234,182,73,.35);border-radius:2px;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 20%,transparent 30%,transparent 70%,#000 80%,#000 100%);mask-image:linear-gradient(to bottom,#000 0,#000 20%,transparent 30%,transparent 70%,#000 80%,#000 100%)}
+  .door{--dw:min(80vw,360px);position:absolute;left:50%;top:50%;width:var(--dw);height:min(74vh,620px);transform:translate(-50%,-50%);border:1px solid rgba(234,182,73,.5);border-radius:calc(var(--dw)/2) calc(var(--dw)/2) 6px 6px;overflow:hidden;opacity:0;pointer-events:none;box-shadow:0 0 calc(var(--g,0)*90px) calc(var(--g,0)*8px) rgba(234,182,73,.22)}
+  .doorlight{position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 62%,rgba(247,217,139,.5),rgba(234,182,73,.16) 55%,transparent 82%);transform:scaleX(var(--o,.03));transform-origin:center}
   .serifline2{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(26px,5.4vw,54px);line-height:1.15;margin-top:26px;max-width:16em;text-wrap:balance}
   .cap{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,28px);color:var(--mute);margin-top:30px;text-wrap:balance}
   .chap{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:25;display:flex;flex-direction:column;gap:14px}
@@ -94,6 +95,14 @@
 
   /* lente */
   .reveal{position:absolute;inset:0;background:var(--paper);color:var(--paper-ink);clip-path:circle(0px at 50% 50%)}
+  .lensfx{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .lensfx .lrot{transform-origin:200px 200px;animation:spin 140s linear infinite}
+  .focusbr{position:absolute;inset:15% 9%;pointer-events:none}
+  .focusbr i{position:absolute;width:26px;height:26px;border:1.5px solid rgba(154,106,18,.42)}
+  .focusbr i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}
+  .focusbr i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+  .focusbr i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0}
+  .focusbr i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0}
   .reveal .kicker{color:rgba(22,19,14,.55)}
   .reveal .para{color:rgba(22,19,14,.62)}
   .reveal em{color:var(--gold-deep)}
@@ -105,16 +114,19 @@
   .idx{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.4vw,28px);color:var(--gold);margin-bottom:18px}
   .tech h3{text-wrap:balance;font-weight:200;font-size:clamp(34px,5.6vw,72px);line-height:1.04;letter-spacing:-.04em}
   .tech p{margin-top:24px;color:var(--mute);font-size:clamp(16px,1.7vw,20px);line-height:1.6;max-width:26em}
-  .vis{justify-self:center;width:min(380px,62vw);aspect-ratio:1;position:relative}
-  .v1{border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 22px,rgba(234,182,73,.28) 22px 23px)}
-  .v1::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(234,182,73,.55),transparent 28%);animation:spin 5s linear infinite;-webkit-mask:radial-gradient(circle,transparent 0 2%,#000 3%);mask:radial-gradient(circle,transparent 0 2%,#000 3%)}
-  .v1::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;background:var(--gold);box-shadow:0 0 30px 6px rgba(234,182,73,.6)}
-  .v2 svg{width:100%;height:100%;overflow:visible}
-  .v2 path,.v2 ellipse{fill:none;stroke:var(--gold);stroke-width:1.2;stroke-dasharray:600;stroke-dashoffset:600;animation:draw 4.5s ease-in-out infinite alternate}
-  .v2 ellipse:nth-child(2){animation-delay:.4s}
-  .v3{border-radius:50%;border:1px solid var(--line);display:grid;place-items:center}
-  .v3::before{content:"";position:absolute;inset:8%;border-radius:50%;background:conic-gradient(from 0deg,var(--gold),#fff,transparent,var(--gold),transparent,#fff,var(--gold));animation:spin 9s linear infinite;-webkit-mask:radial-gradient(circle,transparent 62%,#000 63%);mask:radial-gradient(circle,transparent 62%,#000 63%);opacity:.8}
-  .v3::after{content:"";width:34%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,var(--gold) 45%,#3a2509);box-shadow:0 0 80px rgba(234,182,73,.5);animation:pulse 3.4s ease-in-out infinite}
+  .vis{justify-self:center;width:min(300px,62vw);aspect-ratio:1;position:relative}
+  .vis svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 0 14px rgba(234,182,73,.18))}
+  .vis .ln{fill:none;stroke:var(--gold);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+  .vis .faint{stroke-opacity:.3;stroke-width:1}
+  .vis .gold{fill:var(--gold)}
+  .vis .gold.dim{fill-opacity:.7}
+  .vis .dr{stroke-dasharray:var(--len,400);stroke-dashoffset:var(--len,400);animation:draw 4.2s ease-in-out infinite alternate}
+  .vis .spin,.vis .orbit{transform-origin:100px 100px;animation:spin 40s linear infinite}
+  .vis .orbit{animation-duration:14s}
+  .vis .orbit.o2{animation-duration:22s;animation-direction:reverse}
+  .vis .glowp{transform-origin:100px 100px;filter:drop-shadow(0 0 10px rgba(234,182,73,.75));animation:pulse 3.4s ease-in-out infinite}
+  .vis .scan{fill:var(--gold);filter:drop-shadow(0 0 5px rgba(234,182,73,.9));opacity:0;animation:scan 3.4s ease-in-out infinite}
+  @keyframes scan{0%{transform:translateY(0);opacity:0}15%{opacity:.9}85%{opacity:.9}100%{transform:translateY(80px);opacity:0}}
   @keyframes spin{to{transform:rotate(360deg)}}
   @keyframes draw{to{stroke-dashoffset:0}}
   @keyframes pulse{50%{transform:scale(1.18)}}
@@ -138,6 +150,7 @@
   .map .bg{position:absolute;inset:0;width:100%;height:100%}
   .map::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 28%,rgba(7,6,5,.94));pointer-events:none}
   .map>*:not(.bg){position:relative;z-index:1}
+  .map .coord{position:absolute!important;top:20px;left:22px;font-size:12px;letter-spacing:.2em;color:rgba(234,182,73,.8)}
   .map .cap{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500}
   .map h3{font-family:var(--serif);font-weight:300;font-size:clamp(30px,7vw,44px);line-height:1.08;margin-top:8px}
   .map p{color:var(--mute);font-size:14px;margin-top:8px;line-height:1.5}
@@ -224,7 +237,7 @@
 
   @media (max-width:760px){
     .tech{grid-template-columns:1fr;text-align:center;gap:28px}
-    .tech .vis{order:-1;width:min(190px,44vw)}
+    .tech .vis{order:-1;width:min(230px,58vw)}
     .tech p{margin-left:auto;margin-right:auto}
   }
   /* celular en horizontal: escenas más compactas */
@@ -260,7 +273,7 @@
   .rm .rv{opacity:1;transform:none;filter:none}
   .rm [data-in]{opacity:1!important;filter:none!important;transform:none!important}
   .rm .w{opacity:1!important;filter:none!important;transform:none!important}
-  .rm .crack,.rm .chap{display:none}
+  .rm .door,.rm .chap{display:none}
 </style>
 </head>
 <body class="nolg nochap">
@@ -297,6 +310,14 @@
     <div class="pin">
       <div class="rim" id="rim"></div>
       <div class="reveal" id="reveal">
+        <svg class="lensfx" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="none" stroke="#9a6a12">
+            <circle cx="200" cy="200" r="118" stroke-opacity=".13"/>
+            <circle cx="200" cy="200" r="150" stroke-opacity=".16"/>
+            <circle class="lrot" cx="200" cy="200" r="184" stroke-opacity=".3" stroke-dasharray="1.6 9"/>
+          </g>
+        </svg>
+        <div class="focusbr" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         <div class="layer" data-in=".34,.54" data-blur="22">
           <div class="kicker">Costa del Este · Panamá</div>
           <h2 data-split>Una nueva forma <em>de&nbsp;ver.</em></h2>
@@ -310,14 +331,39 @@
   <section class="stage" data-h="340" id="s3">
     <div class="pin">
       <div class="layer" data-in="0,.14" data-out=".3,.38" data-blur="22">
-        <div class="tech"><div><div class="idx">I · Diagnóstico</div><h3 data-split>Precisión <em>milimétrica.</em></h3><p>Una nueva generación de tecnología para conocer tu visión con un nivel de detalle que lo cambia todo.</p></div><div class="vis v1"></div></div>
+        <div class="tech"><div><div class="idx">I · Diagnóstico</div><h3 data-split>Precisión <em>milimétrica.</em></h3><p>Una nueva generación de tecnología para conocer tu visión con un nivel de detalle que lo cambia todo.</p></div><div class="vis"><svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="ln faint" cx="100" cy="100" r="94"/>
+            <circle class="ln faint spin" cx="100" cy="100" r="80" stroke-dasharray="1.5 7"/>
+            <path class="ln dr" style="--len:360" d="M22 100C50 60 150 60 178 100C150 140 50 140 22 100Z"/>
+            <circle class="ln dr" style="--len:170" cx="100" cy="100" r="27"/>
+            <path class="ln faint" d="M100 24V52M100 148V176M24 100H52M148 100H176"/>
+            <circle class="gold" cx="100" cy="100" r="9"/>
+            <rect class="scan" x="34" y="60" width="132" height="1.5" rx=".75"/>
+          </svg></div></div>
       </div>
       <div class="layer" data-in=".38,.5" data-out=".62,.7" data-blur="22">
         <div class="tech"><div><div class="idx">II · Diseño</div><h3 data-split>Lentes hechos <em>a&nbsp;tu&nbsp;medida.</em></h3><p>Cada lente se piensa para ti: tu rostro, tu estilo y tu forma de ver el mundo.</p></div>
-          <div class="vis v2"><svg viewBox="0 0 300 160"><ellipse cx="82" cy="84" rx="64" ry="50"/><ellipse cx="218" cy="84" rx="64" ry="50"/><path d="M146 76c6-8 8-8 8 0"/><path d="M18 70 L4 52"/><path d="M282 70 L296 52"/></svg></div></div>
+          <div class="vis"><svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="ln faint" cx="100" cy="100" r="94"/>
+            <rect class="ln dr" style="--len:270" x="24" y="72" width="66" height="54" rx="22"/>
+            <rect class="ln dr" style="--len:270" x="110" y="72" width="66" height="54" rx="22"/>
+            <rect class="ln faint" x="30" y="78" width="54" height="42" rx="17"/>
+            <rect class="ln faint" x="116" y="78" width="54" height="42" rx="17"/>
+            <path class="ln dr" style="--len:60" d="M90 90C96 83 104 83 110 90"/>
+            <path class="ln dr" style="--len:50" d="M24 86L8 78M176 86L192 78"/>
+            <circle class="gold" cx="100" cy="87" r="2.6"/>
+            <path class="ln faint" d="M24 142V152M90 142V152M110 142V152M176 142V152M24 147H90M110 147H176"/>
+          </svg></div></div>
       </div>
       <div class="layer" data-in=".7,.82" data-blur="22">
-        <div class="tech"><div><div class="idx">III · Experiencia</div><h3 data-split>Una experiencia <em>pensada&nbsp;para&nbsp;ti.</em></h3><p>Un espacio donde cada detalle está pensado para cuidarte, desde el momento en que entras.</p></div><div class="vis v3"></div></div>
+        <div class="tech"><div><div class="idx">III · Experiencia</div><h3 data-split>Una experiencia <em>pensada&nbsp;para&nbsp;ti.</em></h3><p>Un espacio donde cada detalle está pensado para cuidarte, desde el momento en que entras.</p></div><div class="vis"><svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="ln faint" cx="100" cy="100" r="94"/>
+            <circle class="ln dr" style="--len:420" cx="100" cy="100" r="66"/>
+            <circle class="ln dr" style="--len:300" cx="100" cy="100" r="46"/>
+            <g class="orbit"><circle class="gold" cx="100" cy="34" r="3.2"/></g>
+            <g class="orbit o2"><circle class="gold dim" cx="146" cy="100" r="2.4"/></g>
+            <path class="gold glowp" d="M100 66C103 92 108 97 134 100C108 103 103 108 100 134C97 108 92 103 66 100C92 97 97 92 100 66Z"/>
+          </svg></div></div>
       </div>
       <div class="dots" id="dots"><i></i><i></i><i></i></div>
     </div>
@@ -326,7 +372,7 @@
   <!-- III·b · lo que no se cuenta (cierre antes de la fecha) -->
   <section class="stage" data-h="150" id="sg">
     <div class="pin">
-      <div class="crack" id="crack"></div>
+      <div class="door" id="door"><i class="doorlight"></i></div>
       <div class="layer" data-in="0,.22" data-blur="22">
         <h2 data-split>Hay cosas que no se cuentan. <em>Se&nbsp;ven.</em></h2>
         <p class="serifline2" id="sg2" data-in=".3,.52" style="opacity:0">Y esa noche, <em>las&nbsp;ves&nbsp;tú&nbsp;primero.</em></p>
@@ -402,14 +448,12 @@
           </defs>
           <rect width="480" height="320" fill="url(#mgrid)"/>
           <rect width="480" height="320" fill="url(#mg)"/>
-          <g fill="none" stroke="#eab649" stroke-linecap="round" transform="translate(0 -70)">
-            <path d="M-10 210 C90 190 150 120 250 125 S400 60 500 40" stroke-opacity=".4" stroke-width="2.2"/>
-            <path d="M60 330 C100 250 170 200 240 130 S330 20 360 -10" stroke-opacity=".3" stroke-width="1.6"/>
-            <path d="M-10 90 C70 110 160 105 240 128 S420 190 500 170" stroke-opacity=".24" stroke-width="1.4"/>
-            <path d="M300 330 C310 260 360 200 420 170" stroke-opacity=".2" stroke-width="1.2"/>
-            <path d="M120 -10 C140 60 175 100 240 128" stroke-opacity=".18" stroke-width="1.2"/>
+          <g fill="none" stroke="#eab649">
+            <circle cx="240" cy="58" r="52" stroke-opacity=".28"/>
+            <circle cx="240" cy="58" r="98" stroke-opacity=".18"/>
+            <circle cx="240" cy="58" r="150" stroke-opacity=".12"/>
+            <path d="M240 -200V300M-200 58H700" stroke-opacity=".12"/>
           </g>
-          <path d="M330 335 C360 290 430 280 500 250 L500 335Z" fill="#eab649" fill-opacity=".05" stroke="#eab649" stroke-opacity=".2"/>
           <g transform="translate(240 58)">
             <circle class="pulse" r="10" fill="none" stroke="#eab649" stroke-width="1.5"/>
             <circle class="pulse p2" r="10" fill="none" stroke="#eab649" stroke-width="1.5"/>
@@ -417,6 +461,7 @@
             <circle r="5" fill="#eab649"/>
           </g>
         </svg>
+        <span class="coord" aria-hidden="true">9.0151° N · 79.4764° O</span>
         <span class="cap">Ubicación</span>
         <h3>Costa del Este, Panamá</h3>
         <p>Abre la ruta directo en tu aplicación de mapas.</p>
@@ -573,12 +618,11 @@
     rim.style.width=rim.style.height=(r*2)+"px";
     rim.style.opacity=r>2?(1-seg(p2,.4,.54)):0;
 
-    // puerta entreabierta
-    var pg=P.sg,cr=$("crack"),cin=seg(pg,.08,.4),cw=seg(pg,.45,.9);
-    cr.style.opacity=(cin*(1-.6*cw)*(1-seg(pg,.97,1))).toFixed(3);
-    cr.style.transform="translate(-50%,-50%) scaleY("+(.15+.85*cin).toFixed(3)+")";
-    cr.style.width=(2+cw*7).toFixed(1)+"px";
-    cr.style.boxShadow="0 0 "+(50+cw*90).toFixed(0)+"px "+(12+cw*40).toFixed(0)+"px rgba(234,182,73,"+(.3+cw*.15).toFixed(2)+")";
+    // puerta de luz: se abre desde el centro
+    var pg=P.sg,dr=$("door"),dOp=seg(pg,.3,.8);
+    dr.style.opacity=seg(pg,0,.3).toFixed(3);
+    dr.style.setProperty("--o",(.03+.97*dOp).toFixed(3));
+    dr.style.setProperty("--g",dOp.toFixed(3));
 
     // logo del header: versión oscura sobre la escena clara
     var b2=document.getElementById("s2").getBoundingClientRect().bottom;
