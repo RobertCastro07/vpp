@@ -6,20 +6,20 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#070605">
 <title>Visual Point</title>
-<meta name="description" content="Una noche solo para invitados. Abre tu invitación personal.">
+<meta name="description" content="Una noche solo para invitados. Su invitación personal le espera.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Visual Point">
 <meta property="og:locale" content="es_LA">
-<meta property="og:title" content="Tienes una invitación personal · Visual Point">
-<meta property="og:description" content="Una noche solo para invitados. Ábrela para descubrirla.">
+<meta property="og:title" content="Una invitación personal · Visual Point">
+<meta property="og:description" content="Una noche solo para invitados. Ábrala para descubrirla.">
 <meta property="og:image" content="https://visualpointopticas.com/inauguracion/og.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Visual Point · Tienes una invitación personal">
+<meta property="og:image:alt" content="Visual Point · Una invitación personal">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tienes una invitación personal · Visual Point">
-<meta name="twitter:description" content="Una noche solo para invitados. Ábrela para descubrirla.">
+<meta name="twitter:title" content="Una invitación personal · Visual Point">
+<meta name="twitter:description" content="Una noche solo para invitados. Ábrala para descubrirla.">
 <meta name="twitter:image" content="https://visualpointopticas.com/inauguracion/og.png">
 <noscript><style>.nojs{display:flex!important}#main,#bokeh,#bar{display:none!important}</style></noscript>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070605'/%3E%3Cpath d='M12 40Q32 14 52 40' fill='none' stroke='%23eab649' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='47' r='4' fill='%23eab649'/%3E%3C/svg%3E">
@@ -84,6 +84,8 @@
   .kicker{font-size:12.5px;letter-spacing:.36em;text-transform:uppercase;color:var(--mute);margin-bottom:28px;font-weight:400}
   h2{text-wrap:balance;font-weight:200;font-size:clamp(38px,8.2vw,112px);line-height:1.03;letter-spacing:-.045em;max-width:11em}
   h2 em{font-size:1.06em}
+  .nm{display:inline-block;white-space:nowrap}
+  .and{display:block;font-size:.42em;letter-spacing:.02em;line-height:1.2;margin-top:.12em}
   .name{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(84px,24vw,340px);line-height:.95;letter-spacing:-.03em;background:linear-gradient(180deg,#fff 20%,var(--gold) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .1em .08em}
   .sub{font-size:clamp(16px,2.2vw,24px);color:var(--mute);margin-top:18px;letter-spacing:.02em}
   .para{font-size:clamp(16px,1.8vw,21px);line-height:1.6;max-width:30em;margin-top:30px;color:var(--mute)}
@@ -277,12 +279,12 @@
 </style>
 </head>
 <body class="nolg nochap">
-<div class="denied" id="denied">Este link no es válido. Revisa que sea el que te enviamos por WhatsApp.</div>
-<div class="denied nojs">Tienes una invitación personal de Visual Point. Para verla, activa JavaScript o ábrela en otro navegador.</div>
+<div class="denied" id="denied">Este link no es válido. Revise que sea el que le enviamos por WhatsApp.</div>
+<div class="denied nojs">Hay una invitación personal de Visual Point para usted. Para verla, active JavaScript o ábrala en otro navegador.</div>
 <canvas id="bokeh"></canvas><div id="spot"></div><div id="bar"></div>
 
 <div id="main" role="main">
-  <h1 class="sr-only">Visual Point · Tienes una invitación personal</h1>
+  <h1 class="sr-only">Visual Point · Una invitación personal</h1>
   <header class="top"><span class="lg"><img class="gold" src="/inauguracion/logo/logo-gold.svg" alt="Visual Point"><img class="ink" src="/inauguracion/logo/logo-ink.svg" alt="" aria-hidden="true"></span></header>
 
   <!-- I · del desenfoque al foco -->
@@ -291,17 +293,17 @@
       <div class="halo" data-ring="1"></div><div class="halo b" data-ring="-1"></div>
       <div class="layer" data-in="-.5,0" data-out=".06,.16" data-blur="18">
         <img class="logo-hero" src="/inauguracion/logo/logo-gold.svg" alt="Visual Point Óptica Panamá">
-        <p class="foryou" id="foryou">Esto es para ti</p>
+        <p class="foryou" id="foryou">Esto es para usted</p>
       </div>
       <div class="layer" data-in=".10,.30" data-out=".42,.52" data-blur="26">
-        <h2 data-split>Hay cosas que solo se aprecian <em>cuando&nbsp;las&nbsp;enfocas.</em></h2>
+        <h2 data-split id="t_intro">Hay cosas que solo se aprecian <em>cuando&nbsp;las&nbsp;enfoca.</em></h2>
       </div>
       <div class="layer" data-in=".5,.68" data-out="" data-blur="16">
         <div class="kicker">Una invitación personal</div>
         <div class="name" id="name">—</div>
-        <div class="sub" id="sub1" data-in=".6,.78" style="opacity:0">serás de las primeras personas en vivir lo que viene.</div>
+        <div class="sub" id="sub1" data-in=".6,.78" style="opacity:0">será de las primeras personas en vivir lo que viene.</div>
       </div>
-      <div class="hint" id="hint">Desliza</div>
+      <div class="hint" id="hint">Deslice</div>
     </div>
   </section>
 
@@ -321,7 +323,7 @@
         <div class="layer" data-in=".34,.54" data-blur="22">
           <div class="kicker">Costa del Este · Panamá</div>
           <h2 data-split>Una nueva forma <em>de&nbsp;ver.</em></h2>
-          <p class="para" id="mpara" data-in=".54,.7" style="opacity:0">Visual Point continúa creciendo.<br><br>Llegamos a Costa del Este con la excelencia, confianza y atención personalizada que nos caracteriza, en un nuevo espacio diseñado para brindarte una experiencia visual donde la innovación y la tecnología son protagonistas.</p>
+          <p class="para" id="mpara" data-in=".54,.7" style="opacity:0">Visual Point continúa creciendo.<br><br>Llegamos a Costa del Este con la excelencia, confianza y atención personalizada que nos caracteriza, en un nuevo espacio diseñado para brindarle una experiencia visual donde la innovación y la tecnología son protagonistas.</p>
         </div>
       </div>
     </div>
@@ -331,7 +333,7 @@
   <section class="stage" data-h="340" id="s3">
     <div class="pin">
       <div class="layer" data-in="0,.14" data-out=".3,.38" data-blur="22">
-        <div class="tech"><div><div class="idx">I · Diagnóstico</div><h3 data-split>Tu visión, <em>al&nbsp;detalle.</em></h3><p>Equipos de nueva generación para conocer cómo ves y cómo cuidarte mejor, con tiempo y sin complicaciones.</p></div><div class="vis"><svg viewBox="0 0 200 200" aria-hidden="true">
+        <div class="tech"><div><div class="idx">I · Diagnóstico</div><h3 data-split id="t_h1">Su visión, <em>al&nbsp;detalle.</em></h3><p id="t_p1">Equipos de nueva generación para conocer cómo ve y cómo cuidarse mejor, con tiempo y sin complicaciones.</p></div><div class="vis"><svg viewBox="0 0 200 200" aria-hidden="true">
             <circle class="ln faint" cx="100" cy="100" r="94"/>
             <circle class="ln faint spin" cx="100" cy="100" r="80" stroke-dasharray="1.5 7"/>
             <path class="ln dr" style="--len:360" d="M22 100C50 60 150 60 178 100C150 140 50 140 22 100Z"/>
@@ -342,7 +344,7 @@
           </svg></div></div>
       </div>
       <div class="layer" data-in=".38,.5" data-out=".62,.7" data-blur="22">
-        <div class="tech"><div><div class="idx">II · Diseño</div><h3 data-split>Lentes hechos <em>a&nbsp;tu&nbsp;medida.</em></h3><p>Cada lente y cada montura se eligen contigo: tu rostro, tu estilo y tu forma de ver el mundo.</p></div>
+        <div class="tech"><div><div class="idx">II · Diseño</div><h3 data-split id="t_h2">Lentes hechos <em>a&nbsp;su&nbsp;medida.</em></h3><p id="t_p2">Cada lente y cada montura se eligen con usted: su rostro, su estilo y su forma de ver el mundo.</p></div>
           <div class="vis"><svg viewBox="0 0 200 200" aria-hidden="true">
             <circle class="ln faint" cx="100" cy="100" r="94"/>
             <rect class="ln dr" style="--len:270" x="24" y="72" width="66" height="54" rx="22"/>
@@ -356,7 +358,7 @@
           </svg></div></div>
       </div>
       <div class="layer" data-in=".7,.82" data-blur="22">
-        <div class="tech"><div><div class="idx">III · Experiencia</div><h3 data-split>Una experiencia <em>pensada&nbsp;para&nbsp;ti.</em></h3><p>Un espacio nuevo donde cada detalle está cuidado, desde que entras hasta que sales viendo mejor.</p></div><div class="vis"><svg viewBox="0 0 200 200" aria-hidden="true">
+        <div class="tech"><div><div class="idx">III · Experiencia</div><h3 data-split id="t_h3">Una experiencia <em>pensada&nbsp;para&nbsp;usted.</em></h3><p id="t_p3">Un espacio nuevo donde cada detalle está cuidado, desde que entra hasta que sale viendo mejor.</p></div><div class="vis"><svg viewBox="0 0 200 200" aria-hidden="true">
             <circle class="ln faint" cx="100" cy="100" r="94"/>
             <circle class="ln dr" style="--len:420" cx="100" cy="100" r="66"/>
             <circle class="ln dr" style="--len:300" cx="100" cy="100" r="46"/>
@@ -375,7 +377,7 @@
       <div class="door" id="door"><i class="doorlight"></i></div>
       <div class="layer" data-in="0,.22" data-blur="22">
         <h2 data-split>Hay cosas que no se cuentan. <em>Se&nbsp;ven.</em></h2>
-        <p class="serifline2" id="sg2" data-in=".3,.52" style="opacity:0">Y esa noche, <em>las&nbsp;ves&nbsp;tú&nbsp;primero.</em></p>
+        <p class="serifline2" id="sg2" data-in=".3,.52" style="opacity:0">Y esa noche, <em>las&nbsp;verá&nbsp;usted&nbsp;primero.</em></p>
         <p class="hush" id="hush" data-in=".6,.8" style="opacity:0">Tú estás en la lista</p>
       </div>
     </div>
@@ -399,8 +401,8 @@
 
   <!-- V · pase -->
   <section class="pase" id="pase">
-    <div class="kicker rv">Tu pase personal</div>
-    <h2 class="rv d1">Este es <em>tu&nbsp;pase.</em></h2>
+    <div class="kicker rv" id="t_pk">Su pase personal</div>
+    <h2 class="rv d1" id="t_ph">Este es <em>su&nbsp;pase.</em></h2>
     <div class="scene rv d2"><div class="passwrap">
       <div class="pass idle" id="pass">
         <div class="foil"></div>
@@ -427,12 +429,12 @@
         <div class="stub">
           <div id="bars"></div>
           <div class="p-code" id="pcode">—</div>
-          <div class="p-cap">Preséntalo en la entrada</div>
+          <div class="p-cap" id="t_cap">Preséntelo en la entrada</div>
         </div>
       </div>
     </div></div>
     <div class="fsrow rv"><button class="btn primary" id="fsOpen" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>Ver en pantalla completa</button></div>
-    <p class="note rv">Haz una captura o muéstralo así en la entrada.</p>
+    <p class="note rv" id="t_note">Haga una captura o muéstrelo así en la entrada.</p>
     <div class="links rv"><a class="tl" href="#noche">Cómo llegar</a></div>
   </section>
 
@@ -464,7 +466,7 @@
         <span class="coord" aria-hidden="true">9.0151° N · 79.4764° O</span>
         <span class="cap">Ubicación</span>
         <h3>Costa del Este, Panamá</h3>
-        <p>Abre la ruta directo en tu aplicación de mapas.</p>
+        <p id="t_map">Abra la ruta directo en su aplicación de mapas.</p>
         <div class="acts">
           <a class="btn primary" href="https://maps.app.goo.gl/pAk8LXnZUUqg3zVq5?g_st=ic" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>Cómo llegar</a>
           <a class="btn ghost" href="https://waze.com/ul?ll=9.015088,-79.476425&amp;navigate=yes" target="_blank" rel="noopener">Abrir en Waze</a>
@@ -475,7 +477,7 @@
     </div>
   </section>
 
-  <div class="fs" id="fs" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Tu pase en pantalla completa">
+  <div class="fs" id="fs" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Pase en pantalla completa">
     <button class="fs-x" id="fsClose" type="button" aria-label="Cerrar">&times;</button>
     <div class="fs-stage" id="fsStage"></div>
     <div class="fs-cap">Muestra este pase en la entrada · Toca para cerrar</div>
@@ -494,11 +496,17 @@
   var g=(window.GUESTS||{})[code];
   if(!g){document.getElementById("main").style.display="none";document.getElementById("bokeh").style.display="none";document.getElementById("denied").style.display="flex";return;}
 
-  var first=g.name.split(" ")[0];
+  // tratamiento: siempre de usted; plural si es pareja (spouse) o grupo (plural)
+  var pl=!!(g.plural||g.spouse);
+  var first=g.short||((g.title?g.title+" ":"")+g.name.split(" ")[0]);
+  var full=g.short||((g.title?g.title+" ":"")+g.name);
+  var andTxt=g.spouse?"y Sra.":"";
+  function nameHTML(t){return '<span class="nm"></span>'+(andTxt?'<span class="and"></span>':'');}
+  function setName(el,t){el.innerHTML=nameHTML();el.querySelector(".nm").textContent=t;if(andTxt)el.querySelector(".and").textContent=andTxt;}
   var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
   if(rm) document.documentElement.classList.add("rm");
-  document.getElementById("name").textContent=first;
-  document.getElementById("pname").textContent=g.name;
+  setName(document.getElementById("name"),first);
+  setName(document.getElementById("pname"),full);
   document.getElementById("pcode").textContent=(g.code||code).toUpperCase();
   (function(){
     var c=(g.code||code).toUpperCase(),num=(c.match(/\d+/)||["0"])[0];
@@ -514,9 +522,48 @@
     }
     document.getElementById("bars").innerHTML='<svg viewBox="0 0 '+x+' 40" preserveAspectRatio="none" aria-hidden="true">'+out+'</svg>';
   })();
-  document.getElementById("hush").textContent=first+", tú estás en la lista";
-  document.getElementById("foryou").textContent=first+", esto es para ti";
-  document.title=first+", tienes una invitación · Visual Point";
+  // textos: la versión base está escrita para una persona (usted); aquí van los cambios al plural (ustedes)
+  var V={sub1:"será de las primeras personas en vivir lo que viene.",sub1Post:"fue de las primeras personas en vivir lo que vino.",
+    sg2:'Y esa noche, <em>las&nbsp;verá&nbsp;usted&nbsp;primero.</em>',sg2Post:'Y esa noche, <em>las&nbsp;vio&nbsp;usted&nbsp;primero.</em>',
+    hush:"usted está en la lista",foryou:"esto es para usted"};
+  if(pl){
+    var P={
+      t_intro:'Hay cosas que solo se aprecian <em>cuando&nbsp;las&nbsp;enfocan.</em>',
+      t_p1:"Equipos de nueva generación para conocer cómo ven y cómo cuidarse mejor, con tiempo y sin complicaciones.",
+      t_p2:"Cada lente y cada montura se eligen con ustedes: su rostro, su estilo y su forma de ver el mundo.",
+      t_h3:'Una experiencia <em>pensada&nbsp;para&nbsp;ustedes.</em>',
+      t_p3:"Un espacio nuevo donde cada detalle está cuidado, desde que entran hasta que salen viendo mejor.",
+      t_cap:"Preséntenlo en la entrada",
+      t_note:"Hagan una captura o muéstrenlo así en la entrada.",
+      t_map:"Abran la ruta directo en su aplicación de mapas.",
+      hint:"Deslicen",
+      mpara:document.getElementById("mpara").innerHTML.replace("brindarle","brindarles")
+    };
+    for(var id in P)document.getElementById(id).innerHTML=P[id];
+    V.sub1="serán de las primeras personas en vivir lo que viene.";V.sub1Post="fueron de las primeras personas en vivir lo que vino.";
+    V.sg2='Y esa noche, <em>las&nbsp;verán&nbsp;ustedes&nbsp;primero.</em>';V.sg2Post='Y esa noche, <em>las&nbsp;vieron&nbsp;ustedes&nbsp;primero.</em>';
+    V.hush="ustedes están en la lista";V.foryou="esto es para ustedes";
+  }
+  document.getElementById("sub1").textContent=V.sub1;
+  document.getElementById("sg2").innerHTML=V.sg2;
+  document.getElementById("hush").textContent=first+", "+V.hush;
+  document.getElementById("foryou").textContent=first+", "+V.foryou;
+  document.title=first+(pl?", tienen":", tiene")+" una invitación · Visual Point";
+
+  // ajusta el tamaño del nombre para que quepa en una línea (títulos y apellidos largos)
+  function fitName(el,maxW){
+    var nm=el.querySelector(".nm");if(!nm)return;
+    el.style.fontSize="";
+    var fs=parseFloat(getComputedStyle(el).fontSize),w=nm.offsetWidth;
+    if(w>maxW)el.style.fontSize=(fs*maxW/w).toFixed(2)+"px";
+  }
+  function fitNames(){
+    fitName(document.getElementById("name"),innerWidth-56);
+    var pp=document.getElementById("pass");fitName(document.getElementById("pname"),pp.offsetWidth-76);
+  }
+  addEventListener("resize",fitNames);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitNames);
+  fitNames();
 
   /* ---------- antes / durante / después de la noche ---------- */
   // (para probar: agrega ?now=2026-10-20T20:00:00-05:00 al link)
@@ -532,8 +579,8 @@
     }else{
       document.getElementById("dkick").textContent="La primera noche";
       document.getElementById("dcap").textContent="Gracias por ser parte de esta lista.";
-      document.getElementById("sub1").textContent="fuiste de las primeras personas en vivir lo que vino.";
-      document.getElementById("sg2").innerHTML='Y esa noche, <em>las&nbsp;viste&nbsp;tú&nbsp;primero.</em>';
+      document.getElementById("sub1").textContent=V.sub1Post;
+      document.getElementById("sg2").innerHTML=V.sg2Post;
     }
   }
 
@@ -647,7 +694,7 @@
   }
 
   /* ---------- navegación por capítulos ---------- */
-  var chapDefs=[["s1","Invitación"],["s2","El lente"],["s3","Tecnología"],["sg","Esa noche"],["s4","La fecha"],["pase","Tu pase"]];
+  var chapDefs=[["s1","Invitación"],["s2","El lente"],["s3","Tecnología"],["sg","Esa noche"],["s4","La fecha"],["pase","Su pase"]];
   var chapEls=chapDefs.map(function(d){return {el:$(d[0])};});
   var nav=document.createElement("nav");nav.className="chap";nav.setAttribute("aria-label","Capítulos");
   var chapBtns=chapDefs.map(function(d,k){
