@@ -386,8 +386,8 @@
     <div class="pin">
       <div class="layer" data-in="-.1,.12" data-blur="26">
         <div class="kicker" id="dkick" style="margin-bottom:10px">Reserva la noche</div>
-        <div class="day">Lunes</div>
-        <div class="big19" id="b19">19</div>
+        <div class="day">Martes</div>
+        <div class="big19" id="b19">20</div>
         <div class="when" data-in=".36,.46" style="opacity:0">Octubre · 7:00 pm</div>
         <div class="count" id="count" data-in=".5,.62" style="opacity:0">
           <div><b id="cd">0</b><small>Días</small></div><div><b id="ch">00</b><small>Horas</small></div><div><b id="cm">00</b><small>Min</small></div><div><b id="cs">00</b><small>Seg</small></div>
@@ -420,7 +420,7 @@
           <div class="p-name" id="pname">—</div>
           <div class="p-sub">Costa del Este · Panamá</div>
           <div class="p-row">
-            <div><small>Fecha</small><b>Lun 19 Oct</b></div>
+            <div><small>Fecha</small><b>Mar 20 Oct</b></div>
             <div><small>Hora</small><b>7:00 pm</b></div>
           </div>
         </div>
@@ -470,7 +470,7 @@
           <a class="btn ghost" href="https://waze.com/ul?ll=9.015088,-79.476425&amp;navigate=yes" target="_blank" rel="noopener">Abrir en Waze</a>
         </div>
       </div>
-      <div class="ncard rv d1"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><small>Fecha</small><b>Lunes 19<br>de octubre</b></div>
+      <div class="ncard rv d1"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><small>Fecha</small><b>Martes 20<br>de octubre</b></div>
       <div class="ncard rv d2"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><small>Hora</small><b>7:00 pm</b></div>
     </div>
   </section>
@@ -519,8 +519,8 @@
   document.title=first+", tienes una invitación · Visual Point";
 
   /* ---------- antes / durante / después de la noche ---------- */
-  // (para probar: agrega ?now=2026-10-19T20:00:00-05:00 al link)
-  var T0=new Date("2026-10-19T19:00:00-05:00").getTime();
+  // (para probar: agrega ?now=2026-10-20T20:00:00-05:00 al link)
+  var T0=new Date("2026-10-20T19:00:00-05:00").getTime();
   var nowQ=new URLSearchParams(location.search).get("now"),nowFix=nowQ?Date.parse(nowQ):NaN;
   function nowMs(){return isNaN(nowFix)?Date.now():nowFix;}
   var phase=nowMs()<T0?0:(nowMs()<T0+5*3600*1000?1:2);   // 0 antes · 1 durante · 2 después
