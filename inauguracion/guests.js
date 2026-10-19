@@ -27,4 +27,5 @@ window.GUESTS = {
   "julian-acosta": { name: "Julián Acosta", title: "Sr.", spouse: true, code: "VPP-019" },
   "nidia-mendoza": { name: "Nidia Mendoza", title: "Sra.", code: "VPP-020" },
   "domirene-tachon": { name: "Domirene Tachón", title: "Dra.", code: "VPP-021" },
+  "santiago-barco": { name: "Santiago Barco", title: "Sr.", code: "VPP-022" },
 };
