@@ -28,4 +28,6 @@ window.GUESTS = {
   "nidia-mendoza": { name: "Nidia Mendoza", title: "Sra.", code: "VPP-020" },
   "domirene-tachon": { name: "Domirene Tachón", title: "Dra.", code: "VPP-021" },
   "santiago-barco": { name: "Santiago Barco", title: "Sr.", code: "VPP-022" },
+  "ana-batista": { name: "Ana Batista", title: "Sra.", code: "VPP-023" },
+  "andres-tirado": { name: "Andrés Tirado", title: "Arzobispo", code: "VPP-024" },
 };
